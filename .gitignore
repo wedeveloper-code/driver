@@ -1,0 +1,12 @@
+# Extracted source archive (temporary working directory)
+extracted/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
