@@ -1,0 +1,87 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+# ========================================================
+# Old URL Redirects — tricountydrivingacademy.com migration
+# ========================================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Home page variants
+RewriteRule ^home\.htm$                                                       /                           [R=301,L]
+RewriteRule ^home\.html$                                                      /                           [R=301,L]
+RewriteRule ^driver\.html$                                                    /                           [R=301,L]
+
+# About Us
+RewriteRule ^about-us\.htm$                                                   /about-us/                  [R=301,L]
+RewriteRule ^about-us\.html$                                                  /about-us/                  [R=301,L]
+RewriteRule ^about\.html$                                                     /about-us/                  [R=301,L]
+
+# Courses
+RewriteRule ^courses\.htm$                                                    /courses/                   [R=301,L]
+RewriteRule ^courses\.html$                                                   /courses/                   [R=301,L]
+
+# Individual programs
+RewriteRule ^Products/1/tractor-trailer-training.*$                           /courses/tractor-trailer-training/   [R=301,L]
+RewriteRule ^commercial-driver-training-class--a--cdl\.html$                 /courses/tractor-trailer-training/   [R=301,L]
+
+RewriteRule ^Products/2/heavy-equipment-training.*$                           /courses/heavy-equipment-training/   [R=301,L]
+RewriteRule ^certified-heavy-equipment-training\.html$                       /courses/heavy-equipment-training/   [R=301,L]
+
+RewriteRule ^Products/3/fiber-optics-training.*$                              /courses/fiber-optics-training/      [R=301,L]
+RewriteRule ^fiber\.html$                                                     /courses/fiber-optics-training/      [R=301,L]
+
+RewriteRule ^Products/6/diesel-school.*$                                      /courses/diesel-school/              [R=301,L]
+RewriteRule ^diesel-mechanics-heavy-truck-maintenance\.html$                 /courses/diesel-school/              [R=301,L]
+
+RewriteRule ^Products/7/OSHA-and-Hazmat-Training.*$                           /courses/osha-hazmat-training/       [R=301,L]
+RewriteRule ^Products/8/surface-mining-papers.*$                              /courses/surface-mining-papers/      [R=301,L]
+
+RewriteRule ^Products/9/Virginia-Online-Driver-Improvement-Course.*$         /courses/virginia-online-driver-improvement/  [R=301,L]
+RewriteRule ^driver-improvement\.html$                                       /courses/virginia-online-driver-improvement/  [R=301,L]
+
+# Info pages
+RewriteRule ^info/tuition\.htm$                                               /info/tuition/              [R=301,L]
+RewriteRule ^info/info-for-tn-students\.htm$                                  /info/info-for-tn-students/ [R=301,L]
+
+# Directions / Contact
+RewriteRule ^directions\.htm$                                                 /directions/                [R=301,L]
+RewriteRule ^directions\.html$                                                /directions/                [R=301,L]
+RewriteRule ^contact\.htm$                                                    /contact-us/                [R=301,L]
+RewriteRule ^contact\.html$                                                   /contact-us/                [R=301,L]
+RewriteRule ^contact-us\.html$                                                /contact-us/                [R=301,L]
+
+# News
+RewriteRule ^our-news\.htm$                                                   /news/                      [R=301,L]
+
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/xml
+</IfModule>
+
+# Browser caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
