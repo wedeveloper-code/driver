@@ -27,20 +27,14 @@ get_template_part('template-parts/content', 'page-banner');
         <?php
         $courses = [
           [
-            'title' => 'Virginia Online Driver Improvement Course',
-            'price' => '$50',
-            'url'   => home_url('/courses/virginia-online-driver-improvement/'),
-            'desc'  => 'State-certified online Driver Improvement Course accepted at any Virginia Court that allows online driver improvement courses.',
-          ],
-          [
             'title' => 'Tractor Trailer Training (CDL Class A)',
-            'price' => '$4,500',
+            'price' => '$4,500 (VA) / $3,450 (TN)',
             'url'   => home_url('/courses/tractor-trailer-training/'),
             'desc'  => 'The trucking industry is experiencing driver shortages. Graduates earn Class "A" CDL and are qualified to drive long distances, regionally, or locally. Price includes training, books, supplies, DOT physical, and drug screen.',
           ],
           [
             'title' => 'Heavy Equipment Training',
-            'price' => '$4,900',
+            'price' => '$4,900 (VA) / $4,250 (TN)',
             'url'   => home_url('/courses/heavy-equipment-training/'),
             'desc'  => 'Construction is a thriving business in constant need of safe, competent heavy equipment operators. Operate dozers, end loaders, excavators, and back-hoes. Earn NCCER industry credentials.',
           ],
@@ -48,7 +42,13 @@ get_template_part('template-parts/content', 'page-banner');
             'title' => 'Fiber Optics Training',
             'price' => '$2,500',
             'url'   => home_url('/courses/fiber-optics-training/'),
-            'desc'  => 'Fiber Optic design, installation, and maintenance is a profession that will see increasing demands in the future. Become a certified Assembler or Installer/Technician.',
+            'desc'  => 'Fiber Optic design, installation, and maintenance is a profession that will see increasing demands in the future. Become a certified Assembler or Installer/Technician. Classes start the first Monday of each month.',
+          ],
+          [
+            'title' => 'Diesel School',
+            'price' => '$21,500',
+            'url'   => home_url('/courses/diesel-school/'),
+            'desc'  => 'Program Length: 11 months. Training covers diesel engines, transmissions, fuel injection systems, computerized systems, truck electricity, and more. Financial aid available for Virginia residents.',
           ],
           [
             'title' => 'Surface Mining Papers',
@@ -63,10 +63,22 @@ get_template_part('template-parts/content', 'page-banner');
             'desc'  => 'Program Length: Two days. Classes start once per month. Includes tuition, books, and supplies.',
           ],
           [
-            'title' => 'Diesel School',
-            'price' => '$21,500',
-            'url'   => home_url('/courses/diesel-school/'),
-            'desc'  => 'Program Length: 11 months. Training covers diesel engines, transmissions, fuel injection systems, computerized systems, truck electricity, and more. Financial aid available for Virginia residents.',
+            'title' => 'Virginia Online Driver Improvement Course',
+            'price' => '$75',
+            'url'   => home_url('/courses/virginia-online-driver-improvement/'),
+            'desc'  => 'State-certified online Driver Improvement Course accepted at any Virginia Court that allows online driver improvement courses.',
+          ],
+          [
+            'title' => 'Driver Improvement Class (In-Person)',
+            'price' => '$75',
+            'url'   => home_url('/courses/driver-improvement/'),
+            'desc'  => 'In-person Driver Improvement class held at Tri-County Driving Academy, 1714 US Hwy 19, Lebanon, VA. Classes held 8am–5pm. Call for schedule.',
+          ],
+          [
+            'title' => 'NCCER Training',
+            'price' => 'Included with Heavy Equipment Training',
+            'url'   => home_url('/courses/nccer-training/'),
+            'desc'  => 'Earn industry-recognized credentials verifiable through the NCCER Automated National Registry upon completing Heavy Equipment Operations Level One.',
           ],
         ];
 

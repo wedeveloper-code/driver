@@ -46,7 +46,8 @@ RewriteRule ^Products/7/OSHA-and-Hazmat-Training.*$                           /c
 RewriteRule ^Products/8/surface-mining-papers.*$                              /courses/surface-mining-papers/      [R=301,L]
 
 RewriteRule ^Products/9/Virginia-Online-Driver-Improvement-Course.*$         /courses/virginia-online-driver-improvement/  [R=301,L]
-RewriteRule ^driver-improvement\.html$                                       /courses/virginia-online-driver-improvement/  [R=301,L]
+RewriteRule ^driver-improvement\.html$                                       /courses/driver-improvement/                  [R=301,L]
+RewriteRule ^nccer-training\.html$                                           /courses/nccer-training/                      [R=301,L]
 
 # Info pages
 RewriteRule ^info/tuition\.htm$                                               /info/tuition/              [R=301,L]
