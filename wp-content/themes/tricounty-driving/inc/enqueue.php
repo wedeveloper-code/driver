@@ -34,17 +34,6 @@ function tcda_enqueue_assets(): void
         true // load in footer
     );
 
-    // Slider — only on front page
-    if (is_front_page()) {
-        wp_enqueue_script(
-            'tcda-slider',
-            TCDA_URI . '/assets/js/slider.js',
-            [],
-            $v,
-            true
-        );
-    }
-
     // Main JS (stats counter, misc)
     wp_enqueue_script(
         'tcda-main',
@@ -60,7 +49,7 @@ add_filter('script_loader_tag', 'tcda_defer_scripts', 10, 3);
 
 function tcda_defer_scripts(string $tag, string $handle, string $src): string
 {
-    $defer_handles = ['tcda-navigation', 'tcda-slider', 'tcda-main'];
+    $defer_handles = ['tcda-navigation', 'tcda-main'];
 
     if (in_array($handle, $defer_handles, true)) {
         return str_replace(' src=', ' defer src=', $tag);

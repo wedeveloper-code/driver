@@ -166,7 +166,7 @@ p { margin-bottom: 1em; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  background: url('../images/hero-bg.svg') center/cover no-repeat;
   opacity: .18;
 }
 #hero .container { position: relative; z-index: 1; }
