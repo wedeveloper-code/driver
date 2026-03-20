@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 600" width="1400" height="600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2040"/>
+      <stop offset="100%" stop-color="#1a3a6e"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="1400" height="600" fill="url(#sky)"/>
+  <!-- Mountains -->
+  <polygon points="0,400 150,200 300,350 450,180 600,350 700,400" fill="#0a1a30" opacity="0.8"/>
+  <polygon points="700,400 850,220 1000,320 1150,160 1300,300 1400,380 1400,400" fill="#0d2040" opacity="0.7"/>
+  <!-- Road -->
+  <rect x="0" y="380" width="1400" height="220" fill="url(#road)"/>
+  <!-- Road markings -->
+  <rect x="680" y="390" width="40" height="80" rx="3" fill="#f0c040" opacity="0.4"/>
+  <rect x="680" y="490" width="40" height="80" rx="3" fill="#f0c040" opacity="0.4"/>
+  <!-- Truck silhouette -->
+  <rect x="900" y="280" width="280" height="100" rx="6" fill="#222" opacity="0.7"/>
+  <rect x="1140" y="300" width="120" height="80" rx="5" fill="#1a1a1a" opacity="0.8"/>
+  <rect x="1148" y="308" width="50" height="40" rx="3" fill="#f0c040" opacity="0.15"/>
+  <circle cx="950" cy="385" r="20" fill="#333" opacity="0.8"/>
+  <circle cx="1100" cy="385" r="20" fill="#333" opacity="0.8"/>
+  <circle cx="1210" cy="385" r="20" fill="#333" opacity="0.8"/>
+</svg>
