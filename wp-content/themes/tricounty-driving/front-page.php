@@ -42,19 +42,19 @@
         'title' => 'Tractor Trailer Training',
         'url'   => home_url('/courses/tractor-trailer-training/'),
         'desc'  => 'The trucking industry is experiencing driver shortages. Graduates earn Class "A" CDL qualification for long-haul, regional, or local driving.',
-        'img'   => get_template_directory_uri() . '/assets/images/tractor-trailer.jpg',
+        'img'   => get_template_directory_uri() . '/assets/images/tractor_trailer_services.jpg',
       ]); ?>
       <?php get_template_part('template-parts/home', 'service-box', [
         'title' => 'Heavy Equipment Training',
         'url'   => home_url('/courses/heavy-equipment-training/'),
         'desc'  => 'Construction demands safe, competent operators. Gain skills to operate dozers, end loaders, excavators, and back-hoes.',
-        'img'   => get_template_directory_uri() . '/assets/images/heavy-equipment.jpg',
+        'img'   => get_template_directory_uri() . '/assets/images/heavy.jpg',
       ]); ?>
       <?php get_template_part('template-parts/home', 'service-box', [
         'title' => 'Fiber Optics Training',
         'url'   => home_url('/courses/fiber-optics-training/'),
         'desc'  => 'Fiber Optic design, installation, and maintenance — a profession with increasing future demand. Become a certified Assembler or Installer/Technician.',
-        'img'   => get_template_directory_uri() . '/assets/images/fiber-optics.jpg',
+        'img'   => get_template_directory_uri() . '/assets/images/truck.jpg',
       ]); ?>
     </div>
     <div class="text-center mt-3">

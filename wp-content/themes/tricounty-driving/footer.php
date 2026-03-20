@@ -46,10 +46,13 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <p>Tri-County Driving Academy<br>
+        1714 US Hwy 19, Hansonville<br>
         P.O. Box 2109<br>
         Lebanon, VA 24266</p>
         <p><strong>Phone:</strong><br>
         <a href="tel:2767947660">276-794-7660</a></p>
+        <p><strong>Email:</strong><br>
+        <a href="mailto:tcda1@hotmail.com">tcda1@hotmail.com</a></p>
       </div>
 
     </div><!-- /.footer-grid -->

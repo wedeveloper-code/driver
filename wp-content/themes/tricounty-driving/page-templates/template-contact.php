@@ -21,7 +21,8 @@ get_template_part('template-parts/content', 'page-banner');
         <div>
           <h3 style="margin-bottom:16px;">Our Location</h3>
           <p>
-            <strong>Tri-County Driving Academy</strong><br>
+            <strong>Tri-County Driving Academy, Inc.</strong><br>
+            1714 US Hwy 19, Hansonville<br>
             P.O. Box 2109<br>
             Lebanon, VA 24266
           </p>
@@ -29,14 +30,18 @@ get_template_part('template-parts/content', 'page-banner');
             <strong>Phone:</strong><br>
             <a href="tel:2767947660" style="font-size:1.2rem;font-weight:700;color:#b22222;">276-794-7660</a>
           </p>
+          <p style="margin-top:8px;">
+            <strong>Email:</strong><br>
+            <a href="mailto:tcda1@hotmail.com">tcda1@hotmail.com</a>
+          </p>
           <p style="margin-top:14px;color:#555;font-size:.9rem;">
-            Located between Lebanon and Abingdon, Virginia.
+            Located between Lebanon and Abingdon, Virginia on US Hwy 19.
           </p>
 
           <div style="margin-top:24px;">
             <iframe
               class="map-embed"
-              src="https://maps.google.com/maps?q=Lebanon,+VA+24266&output=embed"
+              src="https://maps.google.com/maps?q=1714+US+Hwy+19,+Hansonville,+VA&output=embed"
               allowfullscreen
               loading="lazy"
               title="Tri-County Driving Academy location map">

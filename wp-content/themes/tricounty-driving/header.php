@@ -17,8 +17,8 @@
 <!-- Top Bar -->
 <div id="top-bar">
   <div class="container">
-    <span>&#128205; P.O. Box 2109, Lebanon, VA 24266</span>
-    <span>&#128222; <a href="tel:2767947660">276-794-7660</a></span>
+    <span>1714 US Hwy 19, Hansonville / P.O. Box 2109, Lebanon, VA 24266</span>
+    <span><a href="tel:2767947660">276-794-7660</a> &nbsp;|&nbsp; <a href="mailto:tcda1@hotmail.com">tcda1@hotmail.com</a></span>
   </div>
 </div>
 

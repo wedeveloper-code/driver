@@ -33,16 +33,16 @@ get_template_part('template-parts/content', 'page-banner');
             'desc'  => 'State-certified online Driver Improvement Course accepted at any Virginia Court that allows online driver improvement courses.',
           ],
           [
-            'title' => 'Tractor Trailer Training',
-            'price' => '$3,800',
+            'title' => 'Tractor Trailer Training (CDL Class A)',
+            'price' => '$4,500',
             'url'   => home_url('/courses/tractor-trailer-training/'),
-            'desc'  => 'The trucking industry is experiencing driver shortages. Graduates earn Class "A" CDL and are qualified to drive long distances, regionally, or locally.',
+            'desc'  => 'The trucking industry is experiencing driver shortages. Graduates earn Class "A" CDL and are qualified to drive long distances, regionally, or locally. Price includes training, books, supplies, DOT physical, and drug screen.',
           ],
           [
             'title' => 'Heavy Equipment Training',
-            'price' => '$4,250',
+            'price' => '$4,900',
             'url'   => home_url('/courses/heavy-equipment-training/'),
-            'desc'  => 'Construction is a thriving business in constant need of safe, competent heavy equipment operators. Operate dozers, end loaders, excavators, and back-hoes.',
+            'desc'  => 'Construction is a thriving business in constant need of safe, competent heavy equipment operators. Operate dozers, end loaders, excavators, and back-hoes. Earn NCCER industry credentials.',
           ],
           [
             'title' => 'Fiber Optics Training',

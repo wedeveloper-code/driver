@@ -17,16 +17,36 @@ get_template_part('template-parts/content', 'page-banner');
 
         <h2>About Tri-County Driving Academy</h2>
         <p>
-          Tri-County Driving Academy has been providing professional driver and trade training
-          to students in Virginia and Tennessee since 2005. We are located between Lebanon and
-          Abingdon, Virginia.
+          Tri-County Driving Academy/Skill Center was established in <strong>1996</strong> by
+          <strong>D. Carter McGlothlin</strong>. The organization started out as a school for
+          Class "A" CDL instruction. Over the years the Center has grown into a school that now
+          includes training for Heavy Equipment Operators and Diesel Mechanics/Heavy Truck
+          Maintenance. The school provides personal training to each student.
+        </p>
+        <p>
+          We are located between Lebanon and Abingdon, Virginia at
+          <strong>1714 US Hwy 19, Hansonville, VA</strong>.
         </p>
 
-        <h3 style="margin-top:28px;">Our Commitment to You</h3>
+        <h3 style="margin-top:28px;">Our Staff &amp; Instructors</h3>
         <p>
-          We strive to produce skilled, motivated, and safe workers. To accomplish this, we have
-          set the highest standards for our staff and our students. The result: our graduates are
-          some of the most accepted new operators in the industry.
+          Our instructors are certified in their fields and offer the needed "one on one" assistance
+          to make sure that our students are ready to pursue their career before completing their
+          training.
+        </p>
+        <p>
+          All of our classes are fully equipped with up-to-date training materials to provide
+          sufficient training in your area of interest. We also provide informational materials
+          along with brochures to anyone inquiring about our school. Our staff is always helpful
+          and ready to offer assistance with training and lodging. We can also direct you to the
+          right person who can offer financial assistance.
+        </p>
+
+        <h3 style="margin-top:28px;">Career Placement</h3>
+        <p>
+          With the growing need for qualified tractor trailer drivers, heavy equipment operators,
+          and diesel mechanics, we can point you in the right direction to get you started in the
+          industry. We assist with job placement in all areas.
         </p>
         <ul class="checklist" style="margin:16px 0 24px;">
           <li>Individual students receive both classroom and job-site training.</li>

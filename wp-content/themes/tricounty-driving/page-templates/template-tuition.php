@@ -25,14 +25,14 @@ get_template_part('template-parts/content', 'page-banner');
           <tr>
             <td><a href="<?php echo esc_url(home_url('/courses/tractor-trailer-training/')); ?>">Tractor Trailer Training (CDL Class A)</a></td>
             <td>4 weeks</td>
-            <td>$3,800</td>
-            <td>Tuition &amp; books</td>
+            <td>$4,500</td>
+            <td>Tuition, books, supplies, DOT physical &amp; drug screen</td>
           </tr>
           <tr>
             <td><a href="<?php echo esc_url(home_url('/courses/heavy-equipment-training/')); ?>">Heavy Equipment Training</a></td>
-            <td>4 weeks</td>
-            <td>$4,250</td>
-            <td>Tuition &amp; books</td>
+            <td>6 weeks</td>
+            <td>$4,900</td>
+            <td>Tuition, books, supplies &amp; certifications</td>
           </tr>
           <tr>
             <td><a href="<?php echo esc_url(home_url('/courses/fiber-optics-training/')); ?>">Fiber Optics Training</a></td>
