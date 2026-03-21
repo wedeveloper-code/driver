@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Aid & Funding Options | Tri-County Driving Academy</title>
+    <meta name="description" content="Explore financial aid options for CDL training at Tri-County Driving Academy. Learn about WIOA grants, Veterans benefits, payment plans, and student loans.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Настройки Tailwind для фирменных цветов -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1e3a8a',    // blue-900
+                            light: '#3b82f6',   // blue-500
+                            accent: '#f59e0b',  // amber-500
+                            accentHover: '#d97706' // amber-600
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Выпадающее меню для десктопа */
+        @media (min-width: 1024px) {
+            .group:hover .group-hover\:block {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50 pt-20">
+
+    <!-- ================= HEADER / НАВИГАЦИЯ ================= -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Логотип -->
+                <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                    <i class="fa-solid fa-truck-moving text-brand-blue text-3xl mr-2"></i>
+                    <span class="font-bold text-xl md:text-2xl text-brand-blue uppercase tracking-tight">
+                        Tri-County <span class="text-brand-accent">Academy</span>
+                    </span>
+                </a>
+
+                <!-- Десктопное меню -->
+                <nav class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-brand-blue font-medium transition-colors">Home</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-brand-blue font-medium transition-colors">About Us</a>
+                    
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-brand-blue font-medium transition-colors">
+                            Training Programs
+                            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-100 shadow-xl rounded-md hidden group-hover:block transition-all duration-300">
+                            <div class="py-2">
+                                <a href="cdl-program.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-blue transition-colors">CDL Class "A" Training</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-blue transition-colors">Heavy Equipment Training</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-blue transition-colors">Diesel Mechanics</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Активный пункт меню "Admissions & Funding" указывает на текущий раздел -->
+                    <a href="admissions.html" class="text-brand-blue font-medium transition-colors pb-1 border-b-2 border-brand-blue">Admissions & Funding</a>
+                    <a href="index.html#placement" class="text-gray-700 hover:text-brand-blue font-medium transition-colors">Career Placement</a>
+                    <a href="#consultation" class="bg-brand-blue text-white px-6 py-2.5 rounded-md font-semibold hover:bg-blue-800 transition-colors shadow-lg shadow-blue-900/20">Apply Now</a>
+                </nav>
+
+                <!-- Кнопка мобильного меню -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-blue focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-brand-blue rounded-md">Home</a>
+                <a href="cdl-program.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-brand-blue rounded-md">Programs</a>
+                <a href="admissions.html" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-brand-blue rounded-md">Admissions</a>
+                <a href="financial-aid.html" class="block px-3 py-3 text-base font-bold text-brand-blue rounded-md bg-blue-50">Financial Aid</a>
+                <a href="#consultation" class="block px-3 py-3 mt-4 text-center text-base font-bold bg-brand-accent text-white rounded-md shadow-md">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO БЛОК ================= -->
+    <section class="relative h-[45vh] min-h-[400px] w-full bg-gray-900 flex items-center">
+        <!-- Фоновое изображение (деньги, рукопожатие, контракт или студент) -->
+        <div class="absolute inset-0 w-full h-full">
+            <div class="absolute inset-0 bg-brand-blue/80 mix-blend-multiply z-10"></div>
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1920" alt="Financial Aid Consultation" class="w-full h-full object-cover grayscale">
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center mt-10">
+            <span class="text-brand-accent font-bold tracking-wider uppercase text-sm mb-2 block">Invest in your future</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+                Financial Aid & <span class="text-brand-accent">Funding Options</span>
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
+                Don't let the cost of tuition stand in the way of your new career. We offer multiple financial assistance programs, state grants, and flexible payment plans to fit your needs.
+            </p>
+            <div class="mt-8">
+                <a href="#consultation" class="inline-block bg-brand-accent text-white px-8 py-3 rounded-md font-bold text-lg hover:bg-brand-accentHover transition-colors shadow-lg">
+                    Speak with a Financial Advisor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= НАВИГАЦИЯ ПО РАЗДЕЛАМ (Суб-меню) ================= -->
+    <div class="bg-white border-b border-gray-200 sticky top-20 z-40 hidden md:block shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ul class="flex space-x-8 overflow-x-auto">
+                <li><a href="admissions.html" class="block py-4 text-gray-500 hover:text-brand-blue font-medium transition-colors whitespace-nowrap">Admissions Process</a></li>
+                <li><a href="#" class="block py-4 text-brand-blue font-bold border-b-2 border-brand-blue whitespace-nowrap">Financial Aid</a></li>
+                <li><a href="index.html#placement" class="block py-4 text-gray-500 hover:text-brand-blue font-medium transition-colors whitespace-nowrap">Career Placement</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ================= STATE GRANTS (WIOA) БЛОК ================= -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                
+                <!-- Текстовая часть -->
+                <div class="lg:w-1/2">
+                    <div class="inline-flex items-center justify-center p-3 bg-blue-50 rounded-lg text-brand-blue mb-4">
+                        <i class="fa-solid fa-building-columns text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">State Grants (WIOA)</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        The <strong>Workforce Innovation and Opportunity Act (WIOA)</strong> is a federal program that provides funding for individuals who need training to enter or re-enter the workforce. If you qualify, WIOA can cover up to <strong>100% of your CDL training tuition</strong>.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Who may qualify?</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i>
+                            <span class="text-gray-700">Dislocated workers (recently laid off or receiving unemployment).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i>
+                            <span class="text-gray-700">Low-income individuals looking to improve their earning potential.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i>
+                            <span class="text-gray-700">Underemployed individuals currently working part-time.</span>
+                        </li>
+                    </ul>
+
+                    <div class="bg-gray-50 border-l-4 border-brand-blue p-5 rounded-r-lg">
+                        <p class="text-sm text-gray-700">
+                            <strong>How to apply:</strong> Our admissions staff works directly with local Workforce Development boards. We will guide you through the application process, provide the necessary school documentation, and help you secure your training voucher.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Картинка/Иллюстрация -->
+                <div class="lg:w-1/2 relative">
+                    <!-- Декоративный фон -->
+                    <div class="absolute -top-6 -right-6 w-full h-full bg-brand-accent/20 rounded-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800" alt="Student receiving WIOA grant advice" class="relative z-10 rounded-2xl shadow-xl w-full object-cover h-[450px]">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= VETERANS BENEFITS БЛОК ================= -->
+    <section class="py-16 bg-gray-900 text-white relative overflow-hidden">
+        <!-- Текстура или паттерн (флаг/милитари стиль - абстрактно) -->
+        <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+            <i class="fa-solid fa-star text-[30rem] -mt-20 -mr-20"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <i class="fa-solid fa-ribbon text-4xl text-brand-accent mb-4"></i>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Military & Veterans Benefits</h2>
+                <p class="text-gray-300 text-lg">
+                    Tri-County Driving Academy is proud to support our active-duty military, reservists, and veterans. We are approved to accept various VA educational benefits for our commercial driving programs.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- GI Bill -->
+                <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-brand-accent transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-3">Post-9/11 GI Bill®</h3>
+                    <p class="text-gray-400 text-sm">
+                        Eligible veterans can use Chapter 33 benefits to cover the cost of tuition, and may also qualify for a monthly housing allowance while attending full-time training.
+                    </p>
+                </div>
+
+                <!-- VR&E -->
+                <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-brand-accent transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-3">VR&E (Chapter 31)</h3>
+                    <p class="text-gray-400 text-sm">
+                        The Veteran Readiness and Employment program provides services to eligible service members and veterans with service-connected disabilities to help them prepare for, find, and maintain suitable careers.
+                    </p>
+                </div>
+
+                <!-- Montgomery GI Bill -->
+                <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl hover:border-brand-accent transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-3">Montgomery GI Bill®</h3>
+                    <p class="text-gray-400 text-sm">
+                        Active Duty (Chapter 30) and Selected Reserve (Chapter 1606) benefits can be applied toward our CDL training programs. Let our certifying official assist you with the paperwork.
+                    </p>
+                </div>
+            </div>
+            
+            <p class="text-center text-xs text-gray-500 mt-8 max-w-4xl mx-auto">
+                *GI Bill® is a registered trademark of the U.S. Department of Veterans Affairs (VA). More information about education benefits offered by VA is available at the official U.S. government Web site at <a href="https://www.benefits.va.gov/gibill" target="_blank" class="underline hover:text-white">https://www.benefits.va.gov/gibill</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= КРЕДИТЫ, РАССРОЧКА И ВОЗМЕЩЕНИЕ ================= -->
+    <section class="py-16 md:py-24 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Alternative Financing Options</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">If you don't qualify for state or federal grants, we offer several flexible ways to fund your CDL education.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- In-House Payment Plans -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full border border-gray-100 relative">
+                    <div class="h-2 w-full bg-brand-light"></div>
+                    <div class="p-8 flex-grow">
+                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-brand-light text-2xl mb-6">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">In-House Payment Plans</h3>
+                        <p class="text-gray-600 mb-6">
+                            Pay as you go! We offer interest-free, short-term installment plans directly through the school. 
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-700 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-angle-right text-brand-accent mr-2"></i> Requires an initial down payment.</li>
+                            <li class="flex items-center"><i class="fa-solid fa-angle-right text-brand-accent mr-2"></i> Weekly payments during training.</li>
+                            <li class="flex items-center"><i class="fa-solid fa-angle-right text-brand-accent mr-2"></i> Zero interest charges.</li>
+                            <li class="flex items-center"><i class="fa-solid fa-angle-right text-brand-accent mr-2"></i> No credit check required.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Partner Lenders -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full border border-gray-100 relative">
+                    <div class="h-2 w-full bg-brand-blue"></div>
+                    <div class="p-8 flex-grow">
+                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-brand-blue text-2xl mb-6">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Partner Lenders</h3>
+                        <p class="text-gray-600 mb-6">
+                            We partner with leading financial institutions that specialize in career training and trade school loans.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-700 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-angle-right text-brand-accent mr-2"></i> Fixed or variable interest rates.</li>
+                            <li class="flex items-center"><i class="fa-solid fa-angle-right text-brand-accent mr-2"></i> Options to defer payments until after graduation.</li>
+                            <li class="flex items-center"><i class="fa-solid fa-angle-right text-brand-accent mr-2"></i> Co-signer options available.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tuition Reimbursement -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full border-2 border-brand-accent relative transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Most Popular Route</div>
+                    <div class="p-8 flex-grow">
+                        <div class="w-14 h-14 bg-amber-50 rounded-full flex items-center justify-center text-brand-accent text-2xl mb-6">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Employer Tuition Reimbursement</h3>
+                        <p class="text-gray-600 mb-6">
+                            Many major trucking companies offer tuition reimbursement programs (up to $7,000+) as a sign-on incentive.
+                        </p>
+                        <p class="text-sm text-gray-700 mb-6">
+                            You pay for your schooling upfront (or via loan), and once you are hired, your new employer pays you back in monthly installments on top of your regular paycheck! Our placement team will connect you with carriers offering these programs.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CTA / КОНСУЛЬТАЦИЯ ================= -->
+    <section id="consultation" class="py-16 md:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-blue rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                
+                <!-- Текстовая панель -->
+                <div class="w-full md:w-5/12 p-8 md:p-10 bg-brand-blue text-white flex flex-col justify-center relative">
+                    <div class="absolute inset-0 bg-black/10 z-0"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-extrabold mb-4">Not sure what you qualify for?</h3>
+                        <p class="text-blue-100 mb-6">
+                            Fill out the form, and our Financial Aid Advisor will review your profile and contact you with your best funding options.
+                        </p>
+                        <div class="flex items-center mt-auto">
+                            <i class="fa-solid fa-phone-volume text-brand-accent text-2xl mr-4"></i>
+                            <div>
+                                <span class="block text-xs text-blue-200 uppercase tracking-wide">Or call us now</span>
+                                <a href="tel:+15551234567" class="text-xl font-bold hover:text-brand-accent transition-colors">(555) 123-4567</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма -->
+                <div class="w-full md:w-7/12 p-8 md:p-10 bg-white">
+                    <form class="space-y-5">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-blue outline-none" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-blue outline-none" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-blue outline-none" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-blue outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Which option interests you?</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-blue outline-none text-gray-700">
+                                <option>I want to check WIOA Grant eligibility</option>
+                                <option>Military / VA Benefits</option>
+                                <option>In-House Payment Plans</option>
+                                <option>Private Student Loans</option>
+                                <option>I'm not sure / Need advice</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="w-full mt-4 bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3 px-4 rounded-md transition-colors shadow-md text-lg">
+                            Request Funding Info
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t-4 border-brand-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fa-solid fa-truck-moving text-brand-accent text-2xl mr-2"></i>
+                        <span class="font-bold text-xl text-white uppercase tracking-tight">
+                            Tri-County <span class="text-brand-accent">Academy</span>
+                        </span>
+                    </div>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-brand-accent"></i>
+                            <span>123 Training Road<br/>Lebanon, VA 24266</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3 text-brand-accent"></i>
+                            <a href="tel:+15551234567" class="hover:text-white transition-colors">(555) 123-4567</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Our Programs</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="cdl-program.html" class="hover:text-brand-accent transition-colors">CDL Class "A" Training</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Heavy Equipment Training</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Diesel Mechanics</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Student Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="admissions.html" class="hover:text-brand-accent transition-colors">Admissions Process</a></li>
+                        <li><a href="financial-aid.html" class="text-brand-accent transition-colors">Financial Aid & Grants</a></li>
+                        <li><a href="index.html#placement" class="hover:text-brand-accent transition-colors">Career & Job Placement</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Legal & Useful</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Frequently Asked Questions</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Privacy Policy</a></li>
+                    </ul>
+                    
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2024 Tri-County Driving Academy, Inc. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Lebanon, Virginia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        // Скрипт для открытия/закрытия мобильного меню
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
+        // Плавный скролл для якорных ссылок (включая кнопку Apply Now)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    menu.classList.add('hidden'); // Закрываем моб. меню при клике
+                    
+                    const headerOffset = 80; // Высота хедера
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
