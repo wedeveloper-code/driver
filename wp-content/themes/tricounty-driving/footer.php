@@ -35,13 +35,12 @@
       <div class="footer-col">
         <h4>Our Programs</h4>
         <ul>
-          <li><a href="<?php echo esc_url(home_url('/courses/tractor-trailer-training/')); ?>">Tractor Trailer Training</a></li>
-          <li><a href="<?php echo esc_url(home_url('/courses/heavy-equipment-training/')); ?>">Heavy Equipment Training</a></li>
-          <li><a href="<?php echo esc_url(home_url('/courses/fiber-optics-training/')); ?>">Fiber Optics Training</a></li>
-          <li><a href="<?php echo esc_url(home_url('/courses/diesel-school/')); ?>">Diesel School</a></li>
-          <li><a href="<?php echo esc_url(home_url('/courses/surface-mining-papers/')); ?>">Surface Mining Papers</a></li>
-          <li><a href="<?php echo esc_url(home_url('/courses/osha-hazmat-training/')); ?>">OSHA &amp; Hazmat Training</a></li>
-          <li><a href="http://www.va-drivercourses.com/clickIn.php?school=13" target="_blank" rel="noopener">VA Online Driver Improvement</a></li>
+          <li><a href="<?php echo esc_url(home_url('/commercial-driver-training-class-a-cdl/')); ?>">CDL Class A Training</a></li>
+          <li><a href="<?php echo esc_url(home_url('/certified-heavy-equipment-training/')); ?>">Heavy Equipment Training</a></li>
+          <li><a href="<?php echo esc_url(home_url('/diesel-mechanics-heavy-truck-maintenance/')); ?>">Diesel Mechanics</a></li>
+          <li><a href="<?php echo esc_url(home_url('/nccer-training/')); ?>">NCCER Training</a></li>
+          <li><a href="<?php echo esc_url(home_url('/driver-improvement/')); ?>">Driver Improvement</a></li>
+          <li><a href="<?php echo esc_url(home_url('/training-programs/')); ?>">All Programs</a></li>
         </ul>
       </div>
 
@@ -50,11 +49,12 @@
         <h4>Student Resources</h4>
         <ul>
           <li><a href="<?php echo esc_url(home_url('/about-us/')); ?>">About Us</a></li>
-          <li><a href="<?php echo esc_url(home_url('/info/tuition/')); ?>">Tuition &amp; Financial Aid</a></li>
-          <li><a href="<?php echo esc_url(home_url('/courses/')); ?>">Course Catalog</a></li>
-          <li><a href="<?php echo esc_url(home_url('/directions/')); ?>">Directions</a></li>
+          <li><a href="<?php echo esc_url(home_url('/admissions-funding/')); ?>">Admissions &amp; Funding</a></li>
+          <li><a href="<?php echo esc_url(home_url('/financial-aid/')); ?>">Financial Aid</a></li>
+          <li><a href="<?php echo esc_url(home_url('/career-placement/')); ?>">Career Placement</a></li>
+          <li><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQ</a></li>
+          <li><a href="<?php echo esc_url(home_url('/tennessee-student-information/')); ?>">TN Student Info</a></li>
           <li><a href="<?php echo esc_url(home_url('/news/')); ?>">Our News</a></li>
-          <li><a href="<?php echo esc_url(home_url('/info/info-for-tn-students/')); ?>">Info for TN Students</a></li>
         </ul>
       </div>
 
@@ -70,7 +70,7 @@
         <div class="tn-notice">
           <strong style="color:#f1f5f9;">Tennessee Students:</strong> Tri-County Driving Academy is authorized for operation as a post-secondary educational institution by the Tennessee Higher Education Commission.
           Visit <a href="http://www.state.tn.us/thec" target="_blank" rel="noopener">www.state.tn.us/thec</a> for placement information.
-          <a href="<?php echo esc_url(home_url('/info/info-for-tn-students/')); ?>">Transferability of credits &amp; tuition fees</a>.
+          <a href="<?php echo esc_url(home_url('/tennessee-student-information/')); ?>">Transferability of credits &amp; tuition fees</a>.
         </div>
       </div>
 

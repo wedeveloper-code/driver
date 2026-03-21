@@ -9,59 +9,87 @@ RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
 
-# ========================================================
-# Old URL Redirects — tricountydrivingacademy.com migration
-# ========================================================
+# ── Tri-County Driving Academy 301 Redirects ──
+# Old static HTML URLs → new WordPress URLs (per PROJECT_PLAN.md)
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
 # Home page variants
-RewriteRule ^home\.htm$                                                       /                           [R=301,L]
-RewriteRule ^home\.html$                                                      /                           [R=301,L]
-RewriteRule ^driver\.html$                                                    /                           [R=301,L]
+RewriteRule ^index\.html$                                                     /                                           [R=301,L]
+RewriteRule ^home\.htm$                                                       /                                           [R=301,L]
+RewriteRule ^home\.html$                                                      /                                           [R=301,L]
 
 # About Us
-RewriteRule ^about-us\.htm$                                                   /about-us/                  [R=301,L]
-RewriteRule ^about-us\.html$                                                  /about-us/                  [R=301,L]
-RewriteRule ^about\.html$                                                     /about-us/                  [R=301,L]
+RewriteRule ^about-us\.htm$                                                   /about-us/                                  [R=301,L]
+RewriteRule ^about-us\.html$                                                  /about-us/                                  [R=301,L]
+RewriteRule ^about\.html$                                                     /about-us/                                  [R=301,L]
+RewriteRule ^info/business-neighbors\.htm$                                    /about-us/                                  [R=301,L]
+RewriteRule ^links\.html$                                                     /about-us/                                  [R=301,L]
 
-# Courses
-RewriteRule ^courses\.htm$                                                    /courses/                   [R=301,L]
-RewriteRule ^courses\.html$                                                   /courses/                   [R=301,L]
+# Programs overview
+RewriteRule ^programs\.html$                                                  /training-programs/                         [R=301,L]
+RewriteRule ^courses\.htm$                                                    /training-programs/                         [R=301,L]
+RewriteRule ^courses\.html$                                                   /training-programs/                         [R=301,L]
+RewriteRule ^courses/?$                                                       /training-programs/                         [R=301,L]
 
-# Individual programs
-RewriteRule ^Products/1/tractor-trailer-training.*$                           /courses/tractor-trailer-training/   [R=301,L]
-RewriteRule ^commercial-driver-training-class--a--cdl\.html$                 /courses/tractor-trailer-training/   [R=301,L]
+# CDL Class A
+RewriteRule ^commercial-driver-training-class--a--cdl\.html$                 /commercial-driver-training-class-a-cdl/    [R=301,L]
+RewriteRule ^Products/1(/.*)?$                                                /commercial-driver-training-class-a-cdl/    [R=301,L]
+RewriteRule ^courses/tractor-trailer-training/?$                              /commercial-driver-training-class-a-cdl/    [R=301,L]
 
-RewriteRule ^Products/2/heavy-equipment-training.*$                           /courses/heavy-equipment-training/   [R=301,L]
-RewriteRule ^certified-heavy-equipment-training\.html$                       /courses/heavy-equipment-training/   [R=301,L]
+# Heavy Equipment
+RewriteRule ^certified-heavy-equipment-training\.html$                       /certified-heavy-equipment-training/        [R=301,L]
+RewriteRule ^Products/2(/.*)?$                                                /certified-heavy-equipment-training/        [R=301,L]
+RewriteRule ^courses/heavy-equipment-training/?$                              /certified-heavy-equipment-training/        [R=301,L]
+RewriteRule ^operator\.html$                                                  /certified-heavy-equipment-training/        [R=301,L]
 
-RewriteRule ^Products/3/fiber-optics-training.*$                              /courses/fiber-optics-training/      [R=301,L]
-RewriteRule ^fiber\.html$                                                     /courses/fiber-optics-training/      [R=301,L]
+# Diesel Mechanics
+RewriteRule ^diesel-mechanics-heavy-truck-maintenance\.html$                 /diesel-mechanics-heavy-truck-maintenance/  [R=301,L]
+RewriteRule ^Products/6(/.*)?$                                                /diesel-mechanics-heavy-truck-maintenance/  [R=301,L]
+RewriteRule ^courses/diesel-school/?$                                         /diesel-mechanics-heavy-truck-maintenance/  [R=301,L]
 
-RewriteRule ^Products/6/diesel-school.*$                                      /courses/diesel-school/              [R=301,L]
-RewriteRule ^diesel-mechanics-heavy-truck-maintenance\.html$                 /courses/diesel-school/              [R=301,L]
+# NCCER Training
+RewriteRule ^nccer-training\.html$                                            /nccer-training/                            [R=301,L]
+RewriteRule ^courses/nccer-training/?$                                        /nccer-training/                            [R=301,L]
 
-RewriteRule ^Products/7/OSHA-and-Hazmat-Training.*$                           /courses/osha-hazmat-training/       [R=301,L]
-RewriteRule ^Products/8/surface-mining-papers.*$                              /courses/surface-mining-papers/      [R=301,L]
+# Driver Improvement
+RewriteRule ^driver-improvement\.html$                                        /driver-improvement/                        [R=301,L]
+RewriteRule ^driver\.html$                                                    /driver-improvement/                        [R=301,L]
+RewriteRule ^courses/driver-improvement/?$                                    /driver-improvement/                        [R=301,L]
+RewriteRule ^courses/virginia-online-driver-improvement/?$                    /driver-improvement/                        [R=301,L]
 
-RewriteRule ^Products/9/Virginia-Online-Driver-Improvement-Course.*$         /courses/virginia-online-driver-improvement/  [R=301,L]
-RewriteRule ^driver-improvement\.html$                                       /courses/driver-improvement/                  [R=301,L]
-RewriteRule ^nccer-training\.html$                                           /courses/nccer-training/                      [R=301,L]
+# Fiber Optics (old program — redirect to training programs overview)
+RewriteRule ^fiber\.html$                                                     /training-programs/                         [R=301,L]
+RewriteRule ^Products/3(/.*)?$                                                /training-programs/                         [R=301,L]
+RewriteRule ^courses/fiber-optics-training/?$                                 /training-programs/                         [R=301,L]
 
-# Info pages
-RewriteRule ^info/tuition\.htm$                                               /info/tuition/              [R=301,L]
-RewriteRule ^info/info-for-tn-students\.htm$                                  /info/info-for-tn-students/ [R=301,L]
+# Surface Mining / OSHA / Hazmat (old programs)
+RewriteRule ^Products/7(/.*)?$                                                /training-programs/                         [R=301,L]
+RewriteRule ^Products/8(/.*)?$                                                /training-programs/                         [R=301,L]
+RewriteRule ^Products/9(/.*)?$                                                /driver-improvement/                        [R=301,L]
+RewriteRule ^courses/surface-mining-papers/?$                                 /training-programs/                         [R=301,L]
+RewriteRule ^courses/osha-hazmat-training/?$                                  /training-programs/                         [R=301,L]
+
+# Financial Aid / Admissions / Tuition
+RewriteRule ^virginia-residents-financial-aid--pell-grant--packet\.html$     /financial-aid/                             [R=301,L]
+RewriteRule ^info/tuition\.htm$                                               /admissions-funding/                        [R=301,L]
+RewriteRule ^info/tuition/?$                                                  /admissions-funding/                        [R=301,L]
+
+# Tennessee Student Information
+RewriteRule ^info/info-for-tn-students\.htm$                                  /tennessee-student-information/             [R=301,L]
+RewriteRule ^info/info-for-tn-students/?$                                     /tennessee-student-information/             [R=301,L]
+RewriteRule ^tennessee-student-information\.html$                             /tennessee-student-information/             [R=301,L]
 
 # Directions / Contact
-RewriteRule ^directions\.htm$                                                 /directions/                [R=301,L]
-RewriteRule ^directions\.html$                                                /directions/                [R=301,L]
-RewriteRule ^contact\.htm$                                                    /contact-us/                [R=301,L]
-RewriteRule ^contact\.html$                                                   /contact-us/                [R=301,L]
-RewriteRule ^contact-us\.html$                                                /contact-us/                [R=301,L]
+RewriteRule ^directions\.htm$                                                 /contact-us/                                [R=301,L]
+RewriteRule ^directions\.html$                                                /contact-us/                                [R=301,L]
+RewriteRule ^directions/?$                                                    /contact-us/                                [R=301,L]
+RewriteRule ^contact\.htm$                                                    /contact-us/                                [R=301,L]
+RewriteRule ^contact\.html$                                                   /contact-us/                                [R=301,L]
+RewriteRule ^contact-us\.html$                                                /contact-us/                                [R=301,L]
 
 # News
-RewriteRule ^our-news\.htm$                                                   /news/                      [R=301,L]
+RewriteRule ^our-news\.htm$                                                   /news/                                      [R=301,L]
 
 </IfModule>
 
@@ -70,11 +98,12 @@ RewriteRule ^our-news\.htm$                                                   /n
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
 # Compression
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/xml
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/xml application/json
 </IfModule>
 
 # Browser caching
@@ -82,7 +111,10 @@ RewriteRule ^our-news\.htm$                                                   /n
   ExpiresActive On
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-font-woff2 "access plus 1 year"
 </IfModule>

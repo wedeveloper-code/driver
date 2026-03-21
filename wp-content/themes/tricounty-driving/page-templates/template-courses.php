@@ -27,58 +27,34 @@ get_template_part('template-parts/content', 'page-banner');
         <?php
         $courses = [
           [
-            'title' => 'Tractor Trailer Training (CDL Class A)',
-            'price' => '$4,500 (VA) / $3,450 (TN)',
-            'url'   => home_url('/courses/tractor-trailer-training/'),
-            'desc'  => 'The trucking industry is experiencing driver shortages. Graduates earn Class "A" CDL and are qualified to drive long distances, regionally, or locally. Price includes training, books, supplies, DOT physical, and drug screen.',
+            'title' => 'CDL Class "A" Training',
+            'price' => '$4,500 (VA) / $3,450 (TN) / $3,950 (other states)',
+            'url'   => home_url('/commercial-driver-training-class-a-cdl/'),
+            'desc'  => 'Earn your Class A CDL in just 4 weeks. Train on real tractor-trailers. Tuition includes training, books, supplies, DOT physical, and drug screen. Classes begin every 3 weeks.',
           ],
           [
-            'title' => 'Heavy Equipment Training',
-            'price' => '$4,900 (VA) / $4,250 (TN)',
-            'url'   => home_url('/courses/heavy-equipment-training/'),
-            'desc'  => 'Construction is a thriving business in constant need of safe, competent heavy equipment operators. Operate dozers, end loaders, excavators, and back-hoes. Earn NCCER industry credentials.',
+            'title' => 'Certified Heavy Equipment Training',
+            'price' => '$4,900 (VA) / $4,250 (TN &amp; other states)',
+            'url'   => home_url('/certified-heavy-equipment-training/'),
+            'desc'  => '6-week program. Operate backhoes, excavators, dozers, and forklifts. Earn NCCER Heavy Equipment Operations Level One credentials. OSHA, flagman, and forklift certifications included.',
           ],
           [
-            'title' => 'Fiber Optics Training',
-            'price' => '$2,500',
-            'url'   => home_url('/courses/fiber-optics-training/'),
-            'desc'  => 'Fiber Optic design, installation, and maintenance is a profession that will see increasing demands in the future. Become a certified Assembler or Installer/Technician. Classes start the first Monday of each month.',
-          ],
-          [
-            'title' => 'Diesel School',
-            'price' => '$21,500',
-            'url'   => home_url('/courses/diesel-school/'),
-            'desc'  => 'Program Length: 11 months. Training covers diesel engines, transmissions, fuel injection systems, computerized systems, truck electricity, and more. Financial aid available for Virginia residents.',
-          ],
-          [
-            'title' => 'Surface Mining Papers',
-            'price' => '$125',
-            'url'   => home_url('/courses/surface-mining-papers/'),
-            'desc'  => 'Program Length: Two days. Classes start once per month. Includes tuition and books.',
-          ],
-          [
-            'title' => 'OSHA &amp; Hazmat Training',
-            'price' => '$125',
-            'url'   => home_url('/courses/osha-hazmat-training/'),
-            'desc'  => 'Program Length: Two days. Classes start once per month. Includes tuition, books, and supplies.',
-          ],
-          [
-            'title' => 'Virginia Online Driver Improvement Course',
-            'price' => '$75',
-            'url'   => home_url('/courses/virginia-online-driver-improvement/'),
-            'desc'  => 'State-certified online Driver Improvement Course accepted at any Virginia Court that allows online driver improvement courses.',
-          ],
-          [
-            'title' => 'Driver Improvement Class (In-Person)',
-            'price' => '$75',
-            'url'   => home_url('/courses/driver-improvement/'),
-            'desc'  => 'In-person Driver Improvement class held at Tri-County Driving Academy, 1714 US Hwy 19, Lebanon, VA. Classes held 8am–5pm. Call for schedule.',
+            'title' => 'Diesel Mechanics / Heavy Truck Maintenance',
+            'price' => '$21,500 (VA) — financial aid available',
+            'url'   => home_url('/diesel-mechanics-heavy-truck-maintenance/'),
+            'desc'  => '11-month program covering diesel engines, computerized systems, truck electronics, brakes, and HVAC. Includes ASE certification exam prep. Median wage ~$18.94/hr.',
           ],
           [
             'title' => 'NCCER Training',
             'price' => 'Included with Heavy Equipment Training',
-            'url'   => home_url('/courses/nccer-training/'),
-            'desc'  => 'Earn industry-recognized credentials verifiable through the NCCER Automated National Registry upon completing Heavy Equipment Operations Level One.',
+            'url'   => home_url('/nccer-training/'),
+            'desc'  => 'Earn industry-recognized NCCER credentials verifiable through the NCCER Automated National Registry upon completing Heavy Equipment Operations Level One.',
+          ],
+          [
+            'title' => 'Virginia Driver Improvement Course',
+            'price' => '$75',
+            'url'   => home_url('/driver-improvement/'),
+            'desc'  => 'Virginia-certified driver improvement course accepted at any Virginia court allowing driver improvement courses. In-person at our Lebanon, VA location. Hours: 8am–5pm.',
           ],
         ];
 

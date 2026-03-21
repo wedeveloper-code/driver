@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- WordPress eXtended RSS (WXR) - Tri-County Driving Academy content import -->
+<!-- Updated 2026-03-21: URL structure aligned with PROJECT_PLAN.md -->
 <rss version="2.0"
   xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -10,7 +11,7 @@
 <channel>
   <title>Tri-County Driving Academy</title>
   <link>http://tricountydrivingacademy.com</link>
-  <description>Professional driving and trade training in Virginia and Tennessee</description>
+  <description>Job Training Programs &amp; Career Training — SCHEV Certified, Lebanon VA</description>
   <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
   <language>en-US</language>
   <wp:wxr_version>1.2</wp:wxr_version>
@@ -27,7 +28,7 @@
 
   <!-- ===================== PAGES ===================== -->
 
-  <!-- Home page (content managed via front-page.php template) -->
+  <!-- Home page — rendered by front-page.php -->
   <item>
     <title>Home</title>
     <link>http://tricountydrivingacademy.com/</link>
@@ -52,19 +53,24 @@
     <dc:creator><![CDATA[admin]]></dc:creator>
     <content:encoded><![CDATA[
 <h2>About Tri-County Driving Academy</h2>
-<p>Tri-County Driving Academy/Skill Center was established in <strong>1996</strong> by <strong>D. Carter McGlothlin</strong>. The organization started out as a school for Class "A" CDL instruction. Over the years the Center has grown into a school that now includes training for Heavy Equipment Operators and Diesel Mechanics/Heavy Truck Maintenance. The school provides personal training to each student.</p>
-<p>We are located at <strong>1714 US Hwy 19, Hansonville, Virginia</strong> — between Lebanon and Abingdon, VA.</p>
+<p>Tri-County Driving Academy/Skill Center was established in <strong>1996</strong> by <strong>D. Carter McGlothlin</strong>. The organization started as a school for Class "A" CDL instruction. Over the years the Center has grown to include training for Heavy Equipment Operators and Diesel Mechanics/Heavy Truck Maintenance. The school provides personal, one-on-one training to each student.</p>
+<p>We are located at <strong>1714 US Hwy 19, Hansonville, Virginia</strong> — conveniently situated between Lebanon and Abingdon, VA, near I-81 Exit 14.</p>
 <h3>Our Instructors</h3>
-<p>Our instructors are certified in their fields and offer the needed "one on one" assistance to make sure that our students are ready to pursue their career before completing their training. All of our classes are fully equipped with up-to-date training materials to provide sufficient training in your area of interest.</p>
-<h3>Career Placement</h3>
-<p>We assist with job placement in all areas. With the growing need for qualified tractor trailer drivers, heavy equipment operators, and diesel mechanics, we can point you in the right direction to get you started in the industry.</p>
+<p>Our instructors are certified in their fields and provide the "one-on-one" attention that ensures our students are job-ready before completing their training. All classes are fully equipped with up-to-date training materials to provide comprehensive, hands-on education in your area of interest.</p>
+<h3>Our Credentials</h3>
 <ul>
-  <li>Individual students receive both classroom and job-site training.</li>
-  <li>Students handle equipment in a variety of real-world situations.</li>
-  <li>Today's equipment complexity demands professional, well-trained operators.</li>
-  <li>Companies depend on us to supply that level of skilled, motivated employee.</li>
+  <li>Certified by the <strong>State Council of Higher Education for Virginia (SCHEV)</strong></li>
+  <li>Authorized for operation as a post-secondary educational institution by the <strong>Tennessee Higher Education Commission (THEC)</strong></li>
+  <li>NCCER-affiliated training center for Heavy Equipment Operations</li>
 </ul>
-<p>Our programs are certified by the Commonwealth of Virginia and authorized by the Tennessee Higher Education Commission. Graduates may receive up to 12 college credits and a Career Studies Diploma from Southwest Virginia Community College or Mountain Empire Community College.</p>
+<h3>Career Placement</h3>
+<p>We assist with job placement in all areas. With the growing need for qualified tractor-trailer drivers, heavy equipment operators, and diesel mechanics, we actively work with employers to connect graduates with career opportunities. Many students receive job offers before they complete their training.</p>
+<ul>
+  <li>Individual students receive both classroom and hands-on job-site training</li>
+  <li>Students handle real equipment in a variety of real-world situations</li>
+  <li>Today's equipment complexity demands professional, well-trained operators</li>
+  <li>Companies depend on us to supply skilled, motivated employees</li>
+</ul>
     ]]></content:encoded>
     <wp:post_id>3</wp:post_id>
     <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
@@ -76,91 +82,90 @@
     <wp:page_template><![CDATA[page-templates/template-about.php]]></wp:page_template>
   </item>
 
-  <!-- Courses (archive) -->
+  <!-- Training Programs overview (replaces old /courses/) -->
   <item>
-    <title>Courses</title>
-    <link>http://tricountydrivingacademy.com/courses/</link>
+    <title>Training Programs</title>
+    <link>http://tricountydrivingacademy.com/training-programs/</link>
     <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <content:encoded><![CDATA[<!-- Rendered by template-courses.php -->]]></content:encoded>
+    <content:encoded><![CDATA[<!-- Rendered by template-training-programs.php -->]]></content:encoded>
     <wp:post_id>4</wp:post_id>
     <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
     <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[courses]]></wp:post_name>
+    <wp:post_name><![CDATA[training-programs]]></wp:post_name>
     <wp:post_type><![CDATA[page]]></wp:post_type>
     <wp:post_parent>0</wp:post_parent>
     <wp:menu_order>2</wp:menu_order>
-    <wp:page_template><![CDATA[page-templates/template-courses.php]]></wp:page_template>
+    <wp:page_template><![CDATA[page-templates/template-training-programs.php]]></wp:page_template>
   </item>
 
-  <!-- Tractor Trailer Training (CDL Class A) -->
+  <!-- CDL Class A Training — /commercial-driver-training-class-a-cdl/ -->
   <item>
-    <title>Tractor Trailer Training (CDL Class A)</title>
-    <link>http://tricountydrivingacademy.com/courses/tractor-trailer-training/</link>
+    <title>CDL Class "A" Training</title>
+    <link>http://tricountydrivingacademy.com/commercial-driver-training-class-a-cdl/</link>
     <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
     <content:encoded><![CDATA[
-<p>Tri-County Driving Academy's Commercial Driver / Class "A" CDL Training program will provide you with the knowledge and skills to become a Class "A" licensed driver qualifying you to drive long distances, regionally or for a local carrier. The occupational scale for a Commercial Driver averages $2,400 – $3,600 monthly.</p>
-<p>Price includes cost of training, books, supplies, DOT medical physical, and drug screen.</p>
+<p>Tri-County Driving Academy's Commercial Driver / Class "A" CDL Training program provides you with the knowledge and skills to become a licensed Class A CDL driver, qualifying you to drive long-haul, regionally, or for a local carrier. The typical pay scale for a Commercial Driver averages <strong>$2,400 – $3,600 monthly</strong>.</p>
+<p>Tuition includes the cost of training, books, supplies, DOT medical physical, and drug screen.</p>
 <h3>What You Will Learn</h3>
 <ul>
-  <li>Preparation for the Class-A Commercial Written Exams</li>
-  <li>Class-A Commercial Road Test</li>
+  <li>Preparation for the Class A Commercial Written Exams</li>
+  <li>Class A Commercial Road Test preparation</li>
   <li>Pre-trip Inspection</li>
-  <li>Backing Maneuvers</li>
+  <li>Backing Maneuvers (straight-line, 45-degree, parallel)</li>
   <li>Coupling and Uncoupling</li>
   <li>Defensive Driving and Safety</li>
-  <li>DOT Physical included</li>
+  <li>DOT Physical (included in tuition)</li>
 </ul>
 <h3>Training Schedule</h3>
-<p>The training program is four weeks. The first week is preparation for the Class "A" commercial driver's learner permit. During class hours you will also be scheduled to complete your DOT physical (included in the price). The remaining three weeks are hands-on training in the trucks. DMV testing is completed during the last week of class.</p>
-<p><strong>Classes begin every three weeks</strong> — call for scheduling.</p>
+<p>The training program is <strong>four weeks</strong>. The first week is preparation for the Class A Commercial Driver's Learner Permit. During class hours you will also be scheduled to complete your DOT physical (included in tuition). The remaining weeks provide hands-on training in the trucks. DMV testing is completed during the last week.</p>
+<p><strong>Classes begin every three weeks</strong> — call <a href="tel:2767947660">(276) 794-7660</a> for the next available start date.</p>
 <h3>Job Placement</h3>
-<p>Tri-County Driving Academy helps place its graduates for employment with several major carriers. Many of our graduates complete employment applications and interviews before graduation, allowing them to go to work immediately after training.</p>
+<p>Tri-County Driving Academy actively works to place graduates with major carriers. Many graduates complete employment applications and interviews <strong>before graduation</strong>, allowing them to go to work immediately after training.</p>
 <h3>Admission Requirements</h3>
 <ul>
   <li>Valid Driver's License</li>
-  <li>DMV driving record</li>
-  <li>Must pass a DOT physical</li>
+  <li>DMV driving record (obtainable at your state DMV)</li>
+  <li>Must pass a DOT physical (included in tuition)</li>
+  <li>18 years of age or older</li>
 </ul>
-<p>Upon completion, graduates may also receive 12 college credits and a Career Studies Diploma from Southwest Virginia Community College or Mountain Empire Community College. (College credits may not apply to all states — call 276-794-7660 for eligibility.)</p>
     ]]></content:encoded>
     <wp:post_id>10</wp:post_id>
     <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
     <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[tractor-trailer-training]]></wp:post_name>
+    <wp:post_name><![CDATA[commercial-driver-training-class-a-cdl]]></wp:post_name>
     <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
+    <wp:post_parent>0</wp:post_parent>
     <wp:menu_order>0</wp:menu_order>
     <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$4,500 (VA) / $3,450 (TN) / $3,950 (WV, KY & other states)]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$4,500 (VA) / $3,450 (TN) / $3,950 (other states) — includes training, books, supplies, DOT physical & drug screen]]></wp:meta_value></wp:postmeta>
     <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[4 weeks]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Classes begin every three weeks — call for scheduling]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Classes begin every three weeks — call (276) 794-7660 for scheduling]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- Heavy Equipment Training -->
+  <!-- Certified Heavy Equipment Training — /certified-heavy-equipment-training/ -->
   <item>
-    <title>Heavy Equipment Training</title>
-    <link>http://tricountydrivingacademy.com/courses/heavy-equipment-training/</link>
+    <title>Certified Heavy Equipment Training</title>
+    <link>http://tricountydrivingacademy.com/certified-heavy-equipment-training/</link>
     <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
     <content:encoded><![CDATA[
-<p>The construction industry is a thriving business in constant need of competent employees. Companies are looking for safe and professional employees and Tri-County can help you become one of the best. The typical pay scale for Construction / Equipment Operators is $1,800–$3,600 monthly. Many graduates enjoy full benefits including major medical and retirement programs.</p>
-<p>The Heavy Equipment Training program prepares students for entry level positions as operators with various construction companies.</p>
+<p>The construction industry is a thriving business in constant need of safe, competent heavy equipment operators. Companies are looking for professional, well-trained employees — and Tri-County Driving Academy can help you become one. The typical pay scale for Construction / Equipment Operators is <strong>$1,800 – $3,600 monthly</strong>. Many graduates enjoy full benefits including major medical and retirement programs.</p>
+<p>Our Heavy Equipment Training program prepares students for entry-level positions as operators with various construction companies. Tuition includes tuition fee, books, supplies, and certifications.</p>
 <h3>Equipment &amp; Skills Covered</h3>
 <ul>
-  <li>Backhoe</li>
-  <li>Excavator</li>
-  <li>Dozer</li>
+  <li>Backhoe operation</li>
+  <li>Excavator operation</li>
+  <li>Dozer (bulldozer) operation</li>
   <li>Blueprint reading</li>
   <li>Industrial safety concepts</li>
-  <li>OSHA training</li>
+  <li>OSHA safety certification</li>
   <li>Flagman certification</li>
   <li>Forklift certification</li>
 </ul>
-<h3>Industry Credentials</h3>
-<p>Students successfully completing Heavy Equipment Operations Level One through Tri-County Driving Academy will earn industry-recognized credentials verifiable through the <strong>NCCER Automated National Registry</strong>.</p>
-<p>Tuition includes tuition fee, books, supplies, and certifications. Call for more information.</p>
+<h3>NCCER Industry Credentials</h3>
+<p>Students successfully completing Heavy Equipment Operations Level One through Tri-County Driving Academy earn <strong>industry-recognized NCCER credentials</strong> verifiable through the NCCER Automated National Registry. This certification is recognized by employers across the construction industry nationwide.</p>
 <h3>Admission Requirements</h3>
 <ul>
   <li>Must be 18 years or older prior to the first day of class</li>
@@ -170,67 +175,25 @@
     <wp:post_id>11</wp:post_id>
     <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
     <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[heavy-equipment-training]]></wp:post_name>
+    <wp:post_name><![CDATA[certified-heavy-equipment-training]]></wp:post_name>
     <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
+    <wp:post_parent>0</wp:post_parent>
     <wp:menu_order>1</wp:menu_order>
     <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$4,900 (VA) / $4,250 (TN) — includes tuition, books, supplies & certifications]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$4,900 (VA) / $4,250 (TN &amp; other states) — includes tuition, books, supplies &amp; certifications]]></wp:meta_value></wp:postmeta>
     <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[6 weeks]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Call for scheduling]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Call (276) 794-7660 for scheduling]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- Fiber Optics Training -->
+  <!-- Diesel Mechanics — /diesel-mechanics-heavy-truck-maintenance/ -->
   <item>
-    <title>Fiber Optics Training</title>
-    <link>http://tricountydrivingacademy.com/courses/fiber-optics-training/</link>
+    <title>Diesel Mechanics / Heavy Truck Maintenance</title>
+    <link>http://tricountydrivingacademy.com/diesel-mechanics-heavy-truck-maintenance/</link>
     <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
     <content:encoded><![CDATA[
-<p>Fiber Optic design, installation and maintenance is a profession that will see increasing demands in the future. Our course provides the student with the knowledge and skills to become a Fiber Optic Assembler or Installer/Technician.</p>
-<p>Job placement potential: Telephone companies, Internet companies, and Cable companies.</p>
-<h3>Program Details</h3>
-<p>Program Length: <strong>Three (3) weeks / 120 hours.</strong> 10 credit hours.</p>
-<p>Exams Required: Certified Fiber Optic Technician (CFOT) Exam and classroom tests.</p>
-<p>Schedule: <strong>Classes start on the first Monday of each month.</strong></p>
-<h3>Topics Covered</h3>
-<ul>
-  <li>Introduction to the basics of fiber optics</li>
-  <li>Guidelines for fiber optic design and installation</li>
-  <li>Techniques for pulling and preparing cable</li>
-  <li>Cable termination and testing</li>
-  <li>Splicing techniques</li>
-  <li>Safety practices</li>
-</ul>
-<h3>Admission Requirements</h3>
-<ul>
-  <li>18 years of age or older</li>
-  <li>Basic knowledge of reading and math skills</li>
-</ul>
-<p>Financial aid may be available depending on locality of residence and household income. Call 276-794-7660 for details.</p>
-    ]]></content:encoded>
-    <wp:post_id>12</wp:post_id>
-    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
-    <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[fiber-optics-training]]></wp:post_name>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
-    <wp:menu_order>2</wp:menu_order>
-    <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$2,500 (all states) — includes tuition, books, supplies & tools]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[3 weeks (120 hours)]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Classes start on the first Monday of each month]]></wp:meta_value></wp:postmeta>
-  </item>
-
-  <!-- Diesel School -->
-  <item>
-    <title>Diesel School</title>
-    <link>http://tricountydrivingacademy.com/courses/diesel-school/</link>
-    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-    <dc:creator><![CDATA[admin]]></dc:creator>
-    <content:encoded><![CDATA[
-<p>The need for diesel mechanics is increasing because the diesel engine is becoming standard in most of the nation's trucks, locomotives, and buses. They are also becoming more prevalent in light vehicles such as pickups and passenger vehicles. The Median hourly wages of Diesel Engine Specialists was $18.94 in 2008 (BLS), with the middle 50% earning between $15.25 and $23.58 an hour.</p>
-<p>Our training will provide you with the knowledge and skills needed for an exciting and excellent paying career — with hands-on training and lab/classroom instruction providing a foundation in the latest diesel technology service and repair.</p>
+<p>The need for diesel mechanics is increasing as the diesel engine becomes standard in most of the nation's trucks, locomotives, and buses. The median hourly wage for Diesel Engine Specialists is approximately <strong>$18.94/hour</strong> (BLS), with experienced technicians earning significantly more.</p>
+<p>Our 11-month program provides hands-on training and lab/classroom instruction, building a foundation in the latest diesel technology service and repair. Tuition includes training, books, supplies, and first testing fees for ASE Certification.</p>
 <h3>Curriculum</h3>
 <ul>
   <li>Diesel Engine Fundamentals</li>
@@ -240,150 +203,92 @@
   <li>Truck Steering, Suspension, and Wheels</li>
   <li>Truck Brakes</li>
   <li>Truck Driveline Systems</li>
-  <li>Truck Heating, Ventilation, and Air Conditioning Systems</li>
+  <li>Truck Heating, Ventilation, and Air Conditioning (HVAC) Systems</li>
 </ul>
-<p>Upon completion, the student will receive a Diesel Mechanic/Heavy Truck Maintenance Certificate. Price includes tuition, books, supplies, and first testing fees for ASE Certification.</p>
+<h3>Certification</h3>
+<p>Upon completion, students receive a <strong>Diesel Mechanic/Heavy Truck Maintenance Certificate</strong>. Tuition includes first testing fees for ASE (Automotive Service Excellence) Certification.</p>
 <h3>Financial Aid</h3>
-<p>Financial aid is available for Virginia residents. Please call our office at <a href="tel:2767947660">276-794-7660</a> for more information about eligibility and application.</p>
+<p>Financial aid may be available for Virginia residents. Please call our office at <a href="tel:2767947660">(276) 794-7660</a> for more information about eligibility and application.</p>
 <h3>Admission Requirements</h3>
 <ul>
   <li>Must be 18 years of age or older</li>
+  <li>High school diploma or GED required</li>
 </ul>
     ]]></content:encoded>
     <wp:post_id>13</wp:post_id>
     <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
     <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[diesel-school]]></wp:post_name>
+    <wp:post_name><![CDATA[diesel-mechanics-heavy-truck-maintenance]]></wp:post_name>
     <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
-    <wp:menu_order>3</wp:menu_order>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>2</wp:menu_order>
     <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$21,500 (VA students) — includes tuition, books, supplies & ASE testing fees. Financial aid available.]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$21,500 (VA) — includes tuition, books, supplies &amp; ASE exam fees. Financial aid available for Virginia residents.]]></wp:meta_value></wp:postmeta>
     <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[11 months]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Call for scheduling]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Call (276) 794-7660 for scheduling]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- Surface Mining Papers -->
-  <item>
-    <title>Surface Mining Papers</title>
-    <link>http://tricountydrivingacademy.com/courses/surface-mining-papers/</link>
-    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-    <dc:creator><![CDATA[admin]]></dc:creator>
-    <content:encoded><![CDATA[
-<p>The Surface Mining Papers course prepares students for Virginia surface mining certifications required to work in surface mining operations in the Commonwealth of Virginia.</p>
-<p>Price includes cost of all training, materials, and books.</p>
-<p>Please call our office at <a href="tel:2767947660">276-794-7660</a> for more information and upcoming class dates.</p>
-    ]]></content:encoded>
-    <wp:post_id>14</wp:post_id>
-    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
-    <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[surface-mining-papers]]></wp:post_name>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
-    <wp:menu_order>4</wp:menu_order>
-    <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$125 (all states) — includes tuition and books]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[Two days]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Classes start once per month — call for dates]]></wp:meta_value></wp:postmeta>
-  </item>
-
-  <!-- OSHA & Hazmat Training -->
-  <item>
-    <title>OSHA and Hazmat Training</title>
-    <link>http://tricountydrivingacademy.com/courses/osha-hazmat-training/</link>
-    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-    <dc:creator><![CDATA[admin]]></dc:creator>
-    <content:encoded><![CDATA[
-<p>Our OSHA and Hazmat Training course prepares students to work safely in regulated industrial environments and to transport hazardous materials in compliance with DOT regulations.</p>
-<p>Note: We teach all of the HAZMAT Endorsement content, however students are required to pay for the background check and endorsement fees at the DMV to get the HAZMAT endorsement added to their license.</p>
-<p>Price includes cost of all training, materials, books, and supplies. Please call our office at <a href="tel:2767947660">276-794-7660</a> for more information and upcoming class dates.</p>
-    ]]></content:encoded>
-    <wp:post_id>15</wp:post_id>
-    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
-    <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[osha-hazmat-training]]></wp:post_name>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
-    <wp:menu_order>5</wp:menu_order>
-    <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$125 (all states) — includes tuition, books & supplies]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[Two days]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Classes start once per month — call for dates]]></wp:meta_value></wp:postmeta>
-  </item>
-
-  <!-- Virginia Online Driver Improvement Course -->
-  <item>
-    <title>Virginia Online Driver Improvement Course</title>
-    <link>http://tricountydrivingacademy.com/courses/virginia-online-driver-improvement/</link>
-    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-    <dc:creator><![CDATA[admin]]></dc:creator>
-    <content:encoded><![CDATA[
-<p>This Driver Improvement Course is certified by the Commonwealth of Virginia and is acceptable at any Virginia Court that allows online driver improvement courses.</p>
-<p>The course is available online and can be completed at your own pace.</p>
-<p>To access the online course, visit: <a href="http://www.va-drivercourses.com/clickIn.php?school=13" target="_blank" rel="noopener">VA Online Driver Improvement Course</a></p>
-    ]]></content:encoded>
-    <wp:post_id>16</wp:post_id>
-    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
-    <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[virginia-online-driver-improvement]]></wp:post_name>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
-    <wp:menu_order>6</wp:menu_order>
-    <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$75]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[Online / self-paced]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Available anytime online]]></wp:meta_value></wp:postmeta>
-  </item>
-
-  <!-- Driver Improvement (in-person) -->
-  <item>
-    <title>Driver Improvement Class</title>
-    <link>http://tricountydrivingacademy.com/courses/driver-improvement/</link>
-    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-    <dc:creator><![CDATA[admin]]></dc:creator>
-    <content:encoded><![CDATA[
-<p>Driver Improvement classes are held at Tri-County Driving Academy, Inc., 1714 US HWY 19, Lebanon, VA 24266. Call for our class schedule: <a href="tel:2767947660">(276) 794-7660</a>.</p>
-<p>Classes are held from <strong>8:00am until 5:00pm</strong>.</p>
-<p>This Driver Improvement Course is certified by the Commonwealth of Virginia and is acceptable at any Virginia Court that allows driver improvement courses.</p>
-    ]]></content:encoded>
-    <wp:post_id>17</wp:post_id>
-    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
-    <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[driver-improvement]]></wp:post_name>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
-    <wp:menu_order>7</wp:menu_order>
-    <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$75]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[One day (8am–5pm)]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Call for class schedule: (276) 794-7660]]></wp:meta_value></wp:postmeta>
-  </item>
-
-  <!-- NCCER Training -->
+  <!-- NCCER Training — /nccer-training/ -->
   <item>
     <title>NCCER Training</title>
-    <link>http://tricountydrivingacademy.com/courses/nccer-training/</link>
+    <link>http://tricountydrivingacademy.com/nccer-training/</link>
     <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
     <content:encoded><![CDATA[
-<p>Tri-County Driving Academy is now offering NCCER Training in Heavy Equipment Operations Level One.</p>
-<p>Students successfully completing Heavy Equipment Operations Level One through Tri-County Driving Academy will earn <strong>industry-recognized credentials</strong> verifiable through the NCCER Automated National Registry.</p>
-<p>This certification is recognized by employers across the construction industry nationwide. Call us at <a href="tel:2767947660">276-794-7660</a> for more information.</p>
+<p>Tri-County Driving Academy offers <strong>NCCER Heavy Equipment Operations Level One</strong> training as part of our Heavy Equipment Training program.</p>
+<p>Students successfully completing Heavy Equipment Operations Level One through Tri-County Driving Academy earn <strong>industry-recognized NCCER credentials</strong> verifiable through the NCCER Automated National Registry. Employers across the country recognize and trust NCCER credentials when hiring equipment operators.</p>
+<h3>About NCCER</h3>
+<p>The National Center for Construction Education and Research (NCCER) is a not-for-profit education foundation established to develop standardized curricula and assessments for the construction and maintenance industries. NCCER credentials give employers confidence that you have the skills and knowledge needed for safe, productive work.</p>
+<h3>How to Earn Your NCCER Credential</h3>
+<p>Enroll in our <a href="/certified-heavy-equipment-training/">Certified Heavy Equipment Training</a> program. NCCER certification is included as part of that program's curriculum and tuition.</p>
+<p>Call <a href="tel:2767947660">(276) 794-7660</a> for more information.</p>
     ]]></content:encoded>
     <wp:post_id>18</wp:post_id>
     <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
     <wp:post_status><![CDATA[publish]]></wp:post_status>
     <wp:post_name><![CDATA[nccer-training]]></wp:post_name>
     <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>4</wp:post_parent>
-    <wp:menu_order>8</wp:menu_order>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>3</wp:menu_order>
     <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[Included with Heavy Equipment Training — call for details]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[Included in Heavy Equipment Training program]]></wp:meta_value></wp:postmeta>
-    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Call for scheduling]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[Included with Heavy Equipment Training — see Heavy Equipment program for tuition]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[Included in the 6-week Heavy Equipment Training program]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Call (276) 794-7660 for scheduling]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- Contact Us -->
+  <!-- Virginia Driver Improvement Course — /driver-improvement/ -->
+  <item>
+    <title>Virginia Driver Improvement Course</title>
+    <link>http://tricountydrivingacademy.com/driver-improvement/</link>
+    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[
+<p>Tri-County Driving Academy offers the <strong>Virginia Driver Improvement Course</strong>, certified by the Commonwealth of Virginia. This course is acceptable at any Virginia Court that allows driver improvement courses.</p>
+<h3>Course Details</h3>
+<ul>
+  <li><strong>Price:</strong> $75</li>
+  <li><strong>Hours:</strong> 8:00 AM – 5:00 PM</li>
+  <li><strong>Location:</strong> 1714 US HWY 19, Lebanon, VA 24266</li>
+</ul>
+<h3>Schedule</h3>
+<p>Call our office at <a href="tel:2767947660">(276) 794-7660</a> for the current schedule and available class dates.</p>
+<h3>Online Option</h3>
+<p>Prefer to complete your driver improvement course online? Visit <a href="http://www.va-drivercourses.com/clickIn.php?school=13" target="_blank" rel="noopener">VA Online Driver Improvement Course</a> — available anytime, at your own pace.</p>
+    ]]></content:encoded>
+    <wp:post_id>17</wp:post_id>
+    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
+    <wp:post_status><![CDATA[publish]]></wp:post_status>
+    <wp:post_name><![CDATA[driver-improvement]]></wp:post_name>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>4</wp:menu_order>
+    <wp:page_template><![CDATA[page-templates/template-program.php]]></wp:page_template>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_price]]></wp:meta_key><wp:meta_value><![CDATA[$75]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_length]]></wp:meta_key><wp:meta_value><![CDATA[One day (8:00 AM – 5:00 PM)]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_program_schedule]]></wp:meta_key><wp:meta_value><![CDATA[Call (276) 794-7660 for class schedule]]></wp:meta_value></wp:postmeta>
+  </item>
+
+  <!-- Contact Us — /contact-us/ -->
   <item>
     <title>Contact Us</title>
     <link>http://tricountydrivingacademy.com/contact-us/</link>
@@ -400,58 +305,92 @@
     <wp:page_template><![CDATA[page-templates/template-contact.php]]></wp:page_template>
   </item>
 
-  <!-- Directions -->
+  <!-- Admissions & Funding — /admissions-funding/ -->
   <item>
-    <title>Directions</title>
-    <link>http://tricountydrivingacademy.com/directions/</link>
+    <title>Admissions &amp; Funding</title>
+    <link>http://tricountydrivingacademy.com/admissions-funding/</link>
     <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <content:encoded><![CDATA[<!-- Rendered by template-directions.php -->]]></content:encoded>
-    <wp:post_id>21</wp:post_id>
-    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
-    <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[directions]]></wp:post_name>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_parent>0</wp:post_parent>
-    <wp:menu_order>5</wp:menu_order>
-    <wp:page_template><![CDATA[page-templates/template-directions.php]]></wp:page_template>
-  </item>
-
-  <!-- Tuition -->
-  <item>
-    <title>Tuition</title>
-    <link>http://tricountydrivingacademy.com/info/tuition/</link>
-    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-    <dc:creator><![CDATA[admin]]></dc:creator>
-    <content:encoded><![CDATA[<!-- Rendered by template-tuition.php -->]]></content:encoded>
+    <content:encoded><![CDATA[<!-- Rendered by template-admissions.php -->]]></content:encoded>
     <wp:post_id>30</wp:post_id>
     <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
     <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[tuition]]></wp:post_name>
+    <wp:post_name><![CDATA[admissions-funding]]></wp:post_name>
     <wp:post_type><![CDATA[page]]></wp:post_type>
     <wp:post_parent>0</wp:post_parent>
-    <wp:menu_order>0</wp:menu_order>
-    <wp:page_template><![CDATA[page-templates/template-tuition.php]]></wp:page_template>
+    <wp:menu_order>7</wp:menu_order>
+    <wp:page_template><![CDATA[page-templates/template-admissions.php]]></wp:page_template>
   </item>
 
-  <!-- Info for TN Students -->
+  <!-- Financial Aid — /financial-aid/ -->
   <item>
-    <title>Info for Tennessee Students</title>
-    <link>http://tricountydrivingacademy.com/info/info-for-tn-students/</link>
+    <title>Financial Aid &amp; Tuition Assistance</title>
+    <link>http://tricountydrivingacademy.com/financial-aid/</link>
+    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[<!-- Rendered by template-financial-aid.php -->]]></content:encoded>
+    <wp:post_id>32</wp:post_id>
+    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
+    <wp:post_status><![CDATA[publish]]></wp:post_status>
+    <wp:post_name><![CDATA[financial-aid]]></wp:post_name>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>8</wp:menu_order>
+    <wp:page_template><![CDATA[page-templates/template-financial-aid.php]]></wp:page_template>
+  </item>
+
+  <!-- Career Placement — /career-placement/ -->
+  <item>
+    <title>Career Placement Assistance</title>
+    <link>http://tricountydrivingacademy.com/career-placement/</link>
+    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[<!-- Rendered by template-career-placement.php -->]]></content:encoded>
+    <wp:post_id>33</wp:post_id>
+    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
+    <wp:post_status><![CDATA[publish]]></wp:post_status>
+    <wp:post_name><![CDATA[career-placement]]></wp:post_name>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>9</wp:menu_order>
+    <wp:page_template><![CDATA[page-templates/template-career-placement.php]]></wp:page_template>
+  </item>
+
+  <!-- FAQ — /faq/ -->
+  <item>
+    <title>Frequently Asked Questions</title>
+    <link>http://tricountydrivingacademy.com/faq/</link>
+    <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[<!-- Rendered by template-faq.php -->]]></content:encoded>
+    <wp:post_id>34</wp:post_id>
+    <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
+    <wp:post_status><![CDATA[publish]]></wp:post_status>
+    <wp:post_name><![CDATA[faq]]></wp:post_name>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>10</wp:menu_order>
+    <wp:page_template><![CDATA[page-templates/template-faq.php]]></wp:page_template>
+  </item>
+
+  <!-- Tennessee Student Information — /tennessee-student-information/ -->
+  <item>
+    <title>Tennessee Student Information</title>
+    <link>http://tricountydrivingacademy.com/tennessee-student-information/</link>
     <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
     <content:encoded><![CDATA[<!-- Rendered by template-tn-students.php -->]]></content:encoded>
     <wp:post_id>31</wp:post_id>
     <wp:post_date><![CDATA[2015-01-01 00:00:00]]></wp:post_date>
     <wp:post_status><![CDATA[publish]]></wp:post_status>
-    <wp:post_name><![CDATA[info-for-tn-students]]></wp:post_name>
+    <wp:post_name><![CDATA[tennessee-student-information]]></wp:post_name>
     <wp:post_type><![CDATA[page]]></wp:post_type>
     <wp:post_parent>0</wp:post_parent>
-    <wp:menu_order>1</wp:menu_order>
+    <wp:menu_order>11</wp:menu_order>
     <wp:page_template><![CDATA[page-templates/template-tn-students.php]]></wp:page_template>
   </item>
 
-  <!-- Our News -->
+  <!-- Our News — /news/ -->
   <item>
     <title>Our News</title>
     <link>http://tricountydrivingacademy.com/news/</link>
@@ -464,11 +403,11 @@
     <wp:post_name><![CDATA[news]]></wp:post_name>
     <wp:post_type><![CDATA[page]]></wp:post_type>
     <wp:post_parent>0</wp:post_parent>
-    <wp:menu_order>4</wp:menu_order>
+    <wp:menu_order>12</wp:menu_order>
     <wp:page_template><![CDATA[page-templates/template-news.php]]></wp:page_template>
   </item>
 
-  <!-- ===================== SAMPLE NEWS POSTS ===================== -->
+  <!-- ===================== SAMPLE NEWS POST ===================== -->
 
   <item>
     <title>Welcome to the New Tri-County Driving Academy Website</title>
@@ -477,7 +416,8 @@
     <dc:creator><![CDATA[admin]]></dc:creator>
     <content:encoded><![CDATA[
 <p>Welcome to the new Tri-County Driving Academy website! We have updated our online presence to better serve our students and prospective applicants.</p>
-<p>Browse our <a href="/courses/">programs page</a> to learn about our CDL, Heavy Equipment, Fiber Optics, Diesel, OSHA and Surface Mining training programs. For questions, please <a href="/contact-us/">contact us</a> or call <a href="tel:2767947660">276-794-7660</a>.</p>
+<p>Browse our <a href="/training-programs/">programs page</a> to learn about our CDL Class A, Heavy Equipment, Diesel Mechanics, and Driver Improvement training programs. For questions, please <a href="/contact-us/">contact us</a> or call <a href="tel:2767947660">(276) 794-7660</a>.</p>
+<p>Financial aid, including Pell Grants, WIOA funding, and Veterans benefits, may be available. <a href="/financial-aid/">Learn more about financial aid options.</a></p>
     ]]></content:encoded>
     <excerpt:encoded><![CDATA[Welcome to the updated Tri-County Driving Academy website. Browse our programs and contact us today to get your career started.]]></excerpt:encoded>
     <wp:post_id>50</wp:post_id>

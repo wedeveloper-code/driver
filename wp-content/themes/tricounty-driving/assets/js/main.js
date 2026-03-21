@@ -1,34 +1,7 @@
-/* Tri-County Driving Academy – Main JS */
+/* Tri-County Driving Academy — Main JS */
+/* Navigation is handled by navigation.js — this file covers page interactions */
 (function () {
   'use strict';
-
-  /* Mobile nav toggle */
-  var toggle = document.querySelector('.nav-toggle');
-  var nav    = document.getElementById('primary-nav');
-
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
-    });
-
-    /* Sub-menu toggle on mobile */
-    nav.querySelectorAll('.menu-item-has-children > a').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          link.closest('li').classList.toggle('open');
-        }
-      });
-    });
-  }
-
-  /* Close nav on outside click */
-  document.addEventListener('click', function (e) {
-    if (nav && !nav.contains(e.target) && toggle && !toggle.contains(e.target)) {
-      nav.classList.remove('open');
-    }
-  });
 
   /* Smooth scroll for anchor links */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -41,13 +14,58 @@
     });
   });
 
-  /* Active nav highlighting */
-  var current = window.location.pathname;
-  document.querySelectorAll('#primary-nav a').forEach(function (a) {
-    if (a.getAttribute('href') && a.getAttribute('href') !== '#' &&
-        current.indexOf(a.getAttribute('href')) > -1) {
-      a.closest('li') && a.closest('li').classList.add('current-menu-item');
+  /* Stats counter animation on scroll */
+  var counters = document.querySelectorAll('.stat-number[data-target]');
+  if (counters.length > 0) {
+    var animated = false;
+
+    function animateCounters() {
+      if (animated) return;
+      counters.forEach(function (counter) {
+        var target = parseInt(counter.getAttribute('data-target'), 10);
+        var duration = 1500;
+        var start = Date.now();
+
+        function step() {
+          var elapsed = Date.now() - start;
+          var progress = Math.min(elapsed / duration, 1);
+          var ease = 1 - Math.pow(1 - progress, 3);
+          counter.textContent = Math.round(target * ease);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          }
+        }
+        requestAnimationFrame(step);
+      });
+      animated = true;
     }
-  });
+
+    var statsSection = document.querySelector('.stats-section');
+    if (statsSection && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          animateCounters();
+          observer.disconnect();
+        }
+      }, { threshold: 0.3 });
+      observer.observe(statsSection);
+    }
+  }
+
+  /* FAQ accordion — one item open at a time */
+  var faqItems = document.querySelectorAll('.faq-item');
+  if (faqItems.length > 0) {
+    faqItems.forEach(function (item) {
+      item.addEventListener('toggle', function () {
+        if (item.open) {
+          faqItems.forEach(function (other) {
+            if (other !== item && other.open) {
+              other.removeAttribute('open');
+            }
+          });
+        }
+      });
+    });
+  }
 
 })();

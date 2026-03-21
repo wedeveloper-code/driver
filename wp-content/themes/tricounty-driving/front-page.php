@@ -17,7 +17,7 @@
           Apply Now
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-        <a href="<?php echo esc_url(home_url('/courses/')); ?>" class="btn-outline-white">
+        <a href="<?php echo esc_url(home_url('/training-programs/')); ?>" class="btn-outline-white">
           View Programs
         </a>
       </div>
@@ -76,12 +76,12 @@
           <?php echo tcda_icon('truck'); ?>
         </div>
         <div class="program-card-body">
-          <h3>Tractor Trailer Training (CDL Class&nbsp;&ldquo;A&rdquo;)</h3>
+          <h3>CDL Class&nbsp;&ldquo;A&rdquo; Training</h3>
           <p>
-            The trucking industry faces an ongoing driver shortage. Earn your Class&nbsp;&ldquo;A&rdquo; CDL
-            qualification for long-haul, regional, or local driving on modern equipment.
+            Earn your Class&nbsp;A CDL in just 4&nbsp;weeks. Train on real tractor-trailers and be
+            qualified for long-haul, regional, or local driving careers.
           </p>
-          <a href="<?php echo esc_url(home_url('/courses/tractor-trailer-training/')); ?>" class="program-card-link">
+          <a href="<?php echo esc_url(home_url('/commercial-driver-training-class-a-cdl/')); ?>" class="program-card-link">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
@@ -96,10 +96,10 @@
         <div class="program-card-body">
           <h3>Heavy Equipment Training</h3>
           <p>
-            Construction demands safe, competent operators. Gain the skills to operate dozers,
-            end loaders, excavators, and backhoes — all on real job-site equipment.
+            6-week NCCER-certified program. Operate backhoes, excavators, dozers, and
+            forklifts on real job-site equipment with industry-recognized credentials.
           </p>
-          <a href="<?php echo esc_url(home_url('/courses/heavy-equipment-training/')); ?>" class="program-card-link">
+          <a href="<?php echo esc_url(home_url('/certified-heavy-equipment-training/')); ?>" class="program-card-link">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
@@ -112,30 +112,30 @@
           <?php echo tcda_icon('wrench'); ?>
         </div>
         <div class="program-card-body">
-          <h3>Diesel School (Mechanics)</h3>
+          <h3>Diesel Mechanics / Heavy Truck Maintenance</h3>
           <p>
-            Become a certified diesel technician. Hands-on training in engine repair,
-            diagnostics, and maintenance on the commercial vehicles that power our economy.
+            11-month program covering diesel engines, computerized systems, and truck
+            electronics. Includes ASE certification prep. Median wage ~$18.94/hr.
           </p>
-          <a href="<?php echo esc_url(home_url('/courses/diesel-school/')); ?>" class="program-card-link">
+          <a href="<?php echo esc_url(home_url('/diesel-mechanics-heavy-truck-maintenance/')); ?>" class="program-card-link">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- NCCER / Fiber Optics -->
+      <!-- NCCER -->
       <div class="program-card">
         <div class="program-card-icon">
           <?php echo tcda_icon('cert'); ?>
         </div>
         <div class="program-card-body">
-          <h3>Fiber Optics Training</h3>
+          <h3>NCCER Training</h3>
           <p>
-            Fiber optic design, installation, and maintenance — a profession with rapidly
-            increasing demand. Earn your Assembler or Installer/Technician certification.
+            Earn nationally recognized NCCER Heavy Equipment Operations Level&nbsp;One credentials,
+            verifiable through the NCCER Automated National Registry.
           </p>
-          <a href="<?php echo esc_url(home_url('/courses/fiber-optics-training/')); ?>" class="program-card-link">
+          <a href="<?php echo esc_url(home_url('/nccer-training/')); ?>" class="program-card-link">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
@@ -148,12 +148,12 @@
           <?php echo tcda_icon('wheel'); ?>
         </div>
         <div class="program-card-body">
-          <h3>Driver Improvement</h3>
+          <h3>Driver Improvement Course</h3>
           <p>
-            VA-approved driver improvement courses for point reduction, court-mandated
-            classes, and defensive driving refreshers — available online or in-person.
+            Virginia-certified driver improvement course, $75. Accepted at any Virginia
+            court. In-person at our Lebanon, VA location. Call for schedule.
           </p>
-          <a href="http://www.va-drivercourses.com/clickIn.php?school=13" target="_blank" rel="noopener" class="program-card-link">
+          <a href="<?php echo esc_url(home_url('/driver-improvement/')); ?>" class="program-card-link">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
@@ -163,7 +163,7 @@
     </div><!-- /.programs-grid -->
 
     <div class="programs-footer">
-      <a href="<?php echo esc_url(home_url('/courses/')); ?>" class="btn btn-primary">See All Programs</a>
+      <a href="<?php echo esc_url(home_url('/training-programs/')); ?>" class="btn btn-primary">See All Programs</a>
     </div>
 
   </div>
@@ -199,7 +199,7 @@
             <span>Flexible payment plans directly through the academy — no third-party lenders required.</span>
           </li>
         </ul>
-        <a href="<?php echo esc_url(home_url('/info/tuition/')); ?>" class="btn-amber">
+        <a href="<?php echo esc_url(home_url('/financial-aid/')); ?>" class="btn-amber">
           View Tuition &amp; Funding Options
         </a>
       </div>
@@ -236,7 +236,7 @@
       throughout the region. Most of our graduates receive job offers before they even
       complete their program!
     </p>
-    <a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="btn-dark">
+    <a href="<?php echo esc_url(home_url('/career-placement/')); ?>" class="btn-dark">
       Learn About Career Placement
     </a>
 
