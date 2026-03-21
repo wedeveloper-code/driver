@@ -14,33 +14,24 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- Top Bar -->
-<div id="top-bar">
-  <div class="container">
-    <span>1714 US Hwy 19, Hansonville / P.O. Box 2109, Lebanon, VA 24266</span>
-    <span><a href="tel:2767947660">276-794-7660</a> &nbsp;|&nbsp; <a href="mailto:tcda1@hotmail.com">tcda1@hotmail.com</a></span>
-  </div>
-</div>
-
 <!-- Site Header -->
 <header id="site-header">
-  <div class="container">
+  <div class="header-inner container">
+
+    <!-- Logo -->
     <a class="site-logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-      <?php
-      if (has_custom_logo()) {
-        the_custom_logo();
-      } else { ?>
-        <div class="site-logo-text">
-          <span class="site-name"><?php bloginfo('name'); ?></span>
-          <span class="site-tagline"><?php bloginfo('description'); ?></span>
+      <?php if (has_custom_logo()) : ?>
+        <div class="logo-icon"><?php the_custom_logo(); ?></div>
+      <?php else : ?>
+        <div class="logo-icon"><?php echo tcda_icon('truck'); ?></div>
+        <div class="logo-text">
+          <span class="logo-name">TRI-COUNTY</span>
+          <span class="logo-tagline">Driving Academy</span>
         </div>
-      <?php } ?>
+      <?php endif; ?>
     </a>
 
-    <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
-      &#9776; <span class="sr-only">Menu</span>
-    </button>
-
+    <!-- Desktop + Mobile Nav -->
     <nav id="primary-nav" aria-label="Primary Navigation">
       <?php wp_nav_menu([
         'theme_location' => 'primary',
@@ -48,7 +39,16 @@
         'container'      => false,
         'fallback_cb'    => 'tricounty_fallback_nav',
       ]); ?>
+      <a href="<?php echo esc_url(home_url('/contact-us/')); ?>" id="nav-contact-btn">Contact Us</a>
     </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+      <span class="hamburger-icon" aria-hidden="true">&#9776;</span>
+      <span class="close-icon"     aria-hidden="true">&#10005;</span>
+      <span class="sr-only">Menu</span>
+    </button>
+
   </div>
 </header>
 <!-- /Site Header -->
