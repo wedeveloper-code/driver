@@ -1424,4 +1424,484 @@ ul.checklist li::before { content: '✓'; position: absolute; left: 0; color: #f
   .programs-aid-banner { flex-direction: column; text-align: center; }
   .admissions-timeline::before { left: 20px; }
   .timeline-number { width: 40px; height: 40px; font-size: 1rem; }
+  .fleet-truck-grid { grid-template-columns: 1fr; }
+  .fleet-equipment-grid { grid-template-columns: 1fr; }
+  .fleet-bays-inner { flex-direction: column; }
+  .fleet-bays-images { display: none; }
+  .fleet-tour-inner { flex-direction: column; gap: 20px; }
+  .jp-stats-grid { grid-template-columns: 1fr; gap: 24px; }
+  .jp-stat-divider { width: 60px; height: 1px; background: rgba(255,255,255,.25); margin: 0 auto; }
+  .jp-partners-grid { grid-template-columns: repeat(2, 1fr); }
+  .jp-process-layout { flex-direction: column; }
+  .jp-process-sidebar { position: static; }
+  .fleet-trust-grid { grid-template-columns: 1fr; }
+}
+
+/* ─────────────────────────────────────────
+   OUR FLEET PAGE
+───────────────────────────────────────── */
+
+/* Hero (extends .page-banner with a photo background) */
+.fleet-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 80px 0 72px;
+  text-align: center;
+  color: #fff;
+}
+.fleet-hero .page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15,23,42,.88) 0%, rgba(30,58,95,.82) 100%);
+  z-index: 1;
+}
+.fleet-hero .container { position: relative; z-index: 2; }
+.fleet-hero h1 { color: #fbbf24; font-size: 2.6rem; margin: 8px 0 12px; }
+.fleet-hero p { color: #cbd5e1; max-width: 680px; margin: 0 auto; font-size: 1.05rem; }
+.fleet-hero-label {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #f59e0b;
+  margin-bottom: 8px;
+}
+
+/* E-E-A-T trust cards — float up from below hero */
+.fleet-trust-wrap {
+  background: #f8fafc;
+  padding-top: 0;
+  padding-bottom: 56px;
+}
+.fleet-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: -52px;
+}
+.fleet-trust-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,.07);
+}
+.fleet-trust-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.fleet-trust-icon--blue  { background: #dbeafe; color: #1e40af; }
+.fleet-trust-icon--amber { background: #fef3c7; color: #b45309; }
+.fleet-trust-icon--green { background: #dcfce7; color: #166534; }
+.fleet-trust-card h3 { font-size: 1.05rem; color: #0f172a; margin-bottom: 10px; }
+.fleet-trust-card p { font-size: .9rem; color: #475569; }
+
+/* Section structure */
+.fleet-section { padding: 72px 0; }
+.fleet-section--white { background: #fff; }
+.fleet-section--light { background: #f8fafc; border-top: 1px solid #e2e8f0; }
+.fleet-section-header { margin-bottom: 40px; }
+.fleet-section-header h2 { font-size: 2rem; color: #0f172a; margin: 0 0 8px; }
+.fleet-section-sub { color: #64748b; margin-top: 8px; max-width: 600px; }
+.fleet-section-rule {
+  display: inline-block;
+  width: 48px;
+  height: 4px;
+  background: #f59e0b;
+  margin-bottom: 12px;
+}
+
+/* Truck cards */
+.fleet-truck-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+.fleet-truck-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  transition: box-shadow .25s;
+}
+.fleet-truck-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.12); }
+.fleet-truck-img-wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+.fleet-truck-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.fleet-truck-card:hover .fleet-truck-img-wrap img { transform: scale(1.05); }
+.fleet-truck-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 4px;
+  z-index: 2;
+}
+.fleet-truck-badge--navy  { background: #0f172a; color: #fff; }
+.fleet-truck-badge--amber { background: #f59e0b; color: #0f172a; }
+.fleet-truck-body { padding: 28px 32px; }
+.fleet-truck-body h3 { font-size: 1.4rem; color: #0f172a; margin-bottom: 4px; }
+.fleet-truck-subtitle { color: #f59e0b; font-weight: 600; font-size: .95rem; margin-bottom: 20px; }
+.fleet-specs { list-style: none; padding: 0; margin: 0 0 20px; border-top: 1px solid #e2e8f0; padding-top: 16px; }
+.fleet-specs li { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
+.fleet-spec-label { font-size: .8rem; color: #94a3b8; min-width: 100px; margin-top: 2px; }
+.fleet-spec-value { font-weight: 600; color: #0f172a; font-size: .92rem; }
+.fleet-truck-note { font-size: .88rem; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 16px; }
+
+/* Trailer banner */
+.fleet-trailer-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  border-radius: 14px;
+  padding: 36px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.fleet-trailer-body h3 { color: #f59e0b; font-size: 1.4rem; margin-bottom: 10px; }
+.fleet-trailer-body p { color: #cbd5e1; font-size: .95rem; max-width: 580px; }
+.fleet-trailer-stat { text-align: center; flex-shrink: 0; }
+.fleet-trailer-number { display: block; font-size: 3.2rem; font-weight: 800; color: #fff; line-height: 1; }
+.fleet-trailer-label { display: block; font-size: .78rem; color: #94a3b8; text-transform: uppercase; letter-spacing: .08em; margin-top: 6px; }
+
+/* Heavy equipment cards */
+.fleet-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.fleet-equipment-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.fleet-equipment-img { height: 200px; overflow: hidden; }
+.fleet-equipment-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.fleet-equipment-card:hover .fleet-equipment-img img { transform: scale(1.05); }
+.fleet-equipment-body { padding: 20px 24px; }
+.fleet-equipment-body h4 { font-size: 1.05rem; color: #0f172a; margin-bottom: 4px; }
+.fleet-equipment-model { font-size: .85rem; color: #f59e0b; font-weight: 600; margin-bottom: 14px; }
+.fleet-check-list { list-style: none; padding: 0; margin: 0; }
+.fleet-check-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: .88rem;
+  color: #475569;
+  margin-bottom: 8px;
+}
+.fleet-check-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid #22c55e;
+  border-bottom: 2px solid #22c55e;
+  transform: rotate(-45deg);
+}
+
+/* Repair bays (dark section) */
+.fleet-bays {
+  background: #0f172a;
+  padding: 80px 0;
+  color: #fff;
+}
+.fleet-bays-inner {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+.fleet-bays-text { flex: 1 1 0; }
+.fleet-bays-label {
+  display: block;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+.fleet-bays h2 { font-size: 2rem; color: #fff; margin-bottom: 16px; }
+.fleet-bays > .container > .fleet-bays-inner > .fleet-bays-text > p { color: #94a3b8; margin-bottom: 28px; font-size: 1.02rem; }
+.fleet-bays-list { list-style: none; padding: 0; margin: 0; }
+.fleet-bays-list li { display: flex; gap: 16px; margin-bottom: 24px; }
+.fleet-bays-icon {
+  flex-shrink: 0;
+  color: #f59e0b;
+  margin-top: 2px;
+}
+.fleet-bays-list strong { display: block; color: #fff; margin-bottom: 4px; }
+.fleet-bays-list span { font-size: .88rem; color: #94a3b8; }
+.fleet-bays-images {
+  flex: 0 0 380px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.fleet-bays-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+.fleet-bays-img--bottom { margin-top: 16px; }
+
+/* Campus tour CTA */
+.fleet-tour-cta {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 60px 0;
+}
+.fleet-tour-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.fleet-tour-text h2 { font-size: 1.7rem; color: #0f172a; margin-bottom: 8px; }
+.fleet-tour-text p { color: #475569; max-width: 520px; }
+.fleet-tour-action { flex-shrink: 0; text-align: center; }
+.fleet-tour-hours {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .82rem;
+  color: #64748b;
+  margin-top: 10px;
+  justify-content: center;
+}
+.fleet-tour-hours a { color: #0f172a; font-weight: 600; }
+.fleet-tour-hours svg { flex-shrink: 0; }
+
+/* ─────────────────────────────────────────
+   JOB PLACEMENT / CAREER PAGE
+───────────────────────────────────────── */
+
+/* Hero */
+.jp-hero {
+  position: relative;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  padding: 80px 0 76px;
+  overflow: hidden;
+}
+.jp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+}
+.jp-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+.jp-hero-tag {
+  display: inline-block;
+  background: rgba(245,158,11,.2);
+  border: 1px solid rgba(245,158,11,.5);
+  color: #f59e0b;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: .04em;
+}
+.jp-hero h1 { font-size: 2.8rem; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+.jp-hero-accent { color: #f59e0b; }
+.jp-hero > .container > p, .jp-hero-inner > p { color: #94a3b8; font-size: 1.05rem; margin-bottom: 28px; }
+.jp-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Stats bar */
+.jp-stats-bar {
+  background: #0f172a;
+  border-bottom: 4px solid #f59e0b;
+  padding: 32px 0 28px;
+}
+.jp-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+}
+.jp-stat-number { font-size: 2.4rem; font-weight: 800; color: #fff; line-height: 1; }
+.jp-stat-label { font-size: .78rem; color: #94a3b8; text-transform: uppercase; letter-spacing: .08em; margin-top: 6px; }
+.jp-stat-divider { width: 1px; height: 56px; background: rgba(255,255,255,.15); margin: 0 32px; }
+.jp-stats-note { text-align: center; font-size: .78rem; color: #64748b; margin-top: 16px; }
+
+/* Sections */
+.jp-section { padding: 80px 0; }
+.jp-section--white { background: #fff; }
+.jp-section--light { background: #f8fafc; border-top: 1px solid #e2e8f0; }
+
+/* Partners grid */
+.jp-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.jp-partner-tile {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  height: 96px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  transition: box-shadow .2s, border-color .2s;
+  cursor: default;
+}
+.jp-partner-tile:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+  border-color: #0f172a;
+}
+.jp-partner-name { font-weight: 800; font-size: 1.1rem; letter-spacing: -.01em; }
+.jp-partner-icon { color: #64748b; }
+.jp-partner--blue   { color: #1e40af; }
+.jp-partner--red    { color: #dc2626; }
+.jp-partner--orange { color: #ea580c; font-style: italic; }
+.jp-partner--green  { color: #15803d; letter-spacing: .06em; }
+.jp-partner--maroon { color: #7f1d1d; font-family: Georgia, serif; }
+.jp-partner--dark   { color: #1e293b; font-size: .95rem; }
+.jp-partners-note { text-align: center; font-size: .83rem; color: #64748b; font-style: italic; }
+
+/* Process layout */
+.jp-process-layout {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
+}
+.jp-process-sidebar {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 100px;
+}
+.jp-section-label {
+  display: block;
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #f59e0b;
+  margin-bottom: 8px;
+}
+.jp-process-sidebar h2 { font-size: 1.7rem; color: #0f172a; margin-bottom: 12px; }
+.jp-process-sidebar > p { color: #64748b; margin-bottom: 20px; font-size: .95rem; }
+.jp-lifetime-box {
+  background: #f0f7ff;
+  border-left: 4px solid #0f172a;
+  padding: 18px 20px;
+  border-radius: 0 8px 8px 0;
+}
+.jp-lifetime-box h4 {
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.jp-lifetime-box p { font-size: .88rem; color: #475569; margin: 0; }
+.jp-process-steps { flex: 1 1 0; display: flex; flex-direction: column; gap: 20px; }
+.jp-step {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 32px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  border-left: 4px solid #3b82f6;
+  transition: box-shadow .2s;
+}
+.jp-step:hover { box-shadow: 0 6px 20px rgba(0,0,0,.09); }
+.jp-step-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: #f0f7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+}
+.jp-step h3 { font-size: 1.1rem; color: #0f172a; margin-bottom: 8px; }
+.jp-step p { font-size: .92rem; color: #475569; margin: 0; }
+
+/* Testimonial */
+.jp-testimonial {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  padding: 72px 0;
+}
+.jp-quote {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 24px;
+}
+.jp-quote-icon { color: rgba(245,158,11,.35); margin-bottom: 20px; }
+.jp-quote p {
+  font-size: 1.3rem;
+  color: #fff;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.jp-quote footer strong { display: block; color: #f59e0b; font-size: 1.05rem; }
+.jp-quote footer span { color: #94a3b8; font-size: .88rem; }
+
+/* Get Hired form */
+.jp-form-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.jp-form-header h2 { font-size: 2rem; color: #0f172a; margin-bottom: 12px; }
+.jp-form-header p { color: #64748b; margin-bottom: 32px; font-size: 1rem; }
+.jp-form {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 36px 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.07);
+  text-align: left;
+}
+.jp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.jp-form-field label { display: block; font-size: .85rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+.jp-form-field input, .jp-form-field select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: .95rem;
+  color: #1e293b;
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+  box-sizing: border-box;
+}
+.jp-form-field input:focus, .jp-form-field select:focus {
+  outline: none;
+  border-color: #0f172a;
+  box-shadow: 0 0 0 3px rgba(15,23,42,.1);
 }

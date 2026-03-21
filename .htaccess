@@ -91,6 +91,12 @@ RewriteRule ^contact-us\.html$                                                /c
 # News
 RewriteRule ^our-news\.htm$                                                   /news/                                      [R=301,L]
 
+# New pages (Our Fleet, Job Placement)
+RewriteRule ^our-fleet\.html?$                                                /our-fleet/                                 [R=301,L]
+RewriteRule ^job-placement\.html?$                                            /career-placement/                          [R=301,L]
+RewriteRule ^career\.html?$                                                   /career-placement/                          [R=301,L]
+RewriteRule ^fleet\.html?$                                                    /our-fleet/                                 [R=301,L]
+
 </IfModule>
 
 # Security headers

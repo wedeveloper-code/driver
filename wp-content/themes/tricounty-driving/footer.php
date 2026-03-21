@@ -49,6 +49,7 @@
         <h4>Student Resources</h4>
         <ul>
           <li><a href="<?php echo esc_url(home_url('/about-us/')); ?>">About Us</a></li>
+          <li><a href="<?php echo esc_url(home_url('/our-fleet/')); ?>">Our Fleet &amp; Equipment</a></li>
           <li><a href="<?php echo esc_url(home_url('/admissions-funding/')); ?>">Admissions &amp; Funding</a></li>
           <li><a href="<?php echo esc_url(home_url('/financial-aid/')); ?>">Financial Aid</a></li>
           <li><a href="<?php echo esc_url(home_url('/career-placement/')); ?>">Career Placement</a></li>
