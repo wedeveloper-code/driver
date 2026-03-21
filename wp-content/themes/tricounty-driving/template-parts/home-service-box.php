@@ -7,7 +7,7 @@ $img   = isset($args['img'])   ? $args['img']   : '';
 ?>
 <div class="service-box">
   <?php if ($img) : ?>
-    <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($title); ?>">
+    <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($title); ?>" loading="lazy" width="400" height="250">
   <?php endif; ?>
   <div class="service-box-body">
     <h4><a href="<?php echo esc_url($url); ?>"><?php echo esc_html($title); ?></a></h4>
