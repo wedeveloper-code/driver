@@ -170,6 +170,54 @@
 </section>
 
 <!-- ══════════════════════════════════════
+     STATS COUNTER SECTION
+══════════════════════════════════════ -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+
+      <div class="stat-item">
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-target="30">0</span>
+          <span class="stat-suffix">+</span>
+        </div>
+        <span class="stat-label">Years in Business</span>
+      </div>
+
+      <div class="stat-divider" aria-hidden="true"></div>
+
+      <div class="stat-item">
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-suffix">wk</span>
+        </div>
+        <span class="stat-label">To Earn Your CDL</span>
+      </div>
+
+      <div class="stat-divider" aria-hidden="true"></div>
+
+      <div class="stat-item">
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-target="5">0</span>
+        </div>
+        <span class="stat-label">Training Programs</span>
+      </div>
+
+      <div class="stat-divider" aria-hidden="true"></div>
+
+      <div class="stat-item">
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-suffix">%</span>
+        </div>
+        <span class="stat-label">Job Placement Assistance</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
      FUNDING & GRANTS SECTION
 ══════════════════════════════════════ -->
 <section class="funding-section">

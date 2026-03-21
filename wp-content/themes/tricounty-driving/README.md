@@ -1,6 +1,6 @@
 # Tri-County Driving Academy — WordPress Theme
 
-Custom WordPress theme recreating **tricountydrivingacademy.com** for use with a self-hosted WordPress installation.
+Custom WordPress theme for **tricountydrivingacademy.com** — a SCHEV-certified vocational training school in Lebanon, Virginia.
 
 ---
 
@@ -9,8 +9,9 @@ Custom WordPress theme recreating **tricountydrivingacademy.com** for use with a
 | Software | Version |
 |---|---|
 | WordPress | 6.4+ |
-| PHP | 8.1+ |
+| PHP | **8.3+** |
 | MySQL | 5.7+ / MariaDB 10.4+ |
+| Apache | mod_rewrite enabled |
 
 ---
 
@@ -36,7 +37,7 @@ In WordPress Admin → **Appearance → Themes** — activate **Tri-County Drivi
 4. Map authors to your admin user
 5. Click **Submit**
 
-This creates all pages with the correct page templates assigned.
+This creates all pages with the correct page templates and slugs.
 
 ---
 
@@ -55,13 +56,16 @@ This creates all pages with the correct page templates assigned.
 3. Add pages in this order:
    - Home
    - About Us
-   - Courses
-   - Info *(section header — no link)*
-     - Tuition
-     - Info for Tennessee Students
-     - VA Online Driver Improvement *(custom link: http://www.va-drivercourses.com/clickIn.php?school=13)*
-   - Our News
-   - Directions
+   - Training Programs *(links to /training-programs/)*
+     - CDL Class A Training
+     - Heavy Equipment Training
+     - Diesel Mechanics
+     - NCCER Training
+     - Driver Improvement
+   - Admissions & Funding
+   - Financial Aid
+   - Career Placement
+   - FAQ
    - Contact Us
 4. Assign to **Primary** location
 5. Save
@@ -75,62 +79,81 @@ Replace SVG placeholders in `assets/images/` with real photos:
 | File | Recommended size | Used on |
 |---|---|---|
 | `hero-bg.svg` / `hero-bg.jpg` | 1400×600 px | Home hero background |
-| `tractor-trailer.svg` / `.jpg` | 800×400 px | Home — featured course card |
-| `heavy-equipment.svg` / `.jpg` | 800×400 px | Home — featured course card |
-| `fiber-optics.svg` / `.jpg` | 800×400 px | Home — featured course card |
+| `heavy.jpg` | 800×400 px | Funding section |
+| `truck.jpg` | 800×400 px | Program pages |
+| `tractor_trailer_services.jpg` | 800×400 px | Program pages |
 
 ---
 
 ### 6. Configure Contact Form
 
-The theme ships with a built-in contact form handler (`tcda_contact_form()`).
-If you prefer **Contact Form 7**:
+The theme ships with a built-in contact form handler (`tcda_contact_form()`) in `inc/helpers.php`.
 
-1. Install and activate the Contact Form 7 plugin
-2. Create a form with ID slug `contact`
-3. The template will automatically use CF7 if the shortcode exists
-
-Emails are sent to the WordPress admin email (`Settings → General → Email Address`).
+Emails are sent to the WordPress admin email (**Settings → General → Email Address**). Ensure your server's `wp_mail()` is configured (use WP Mail SMTP plugin if needed).
 
 ---
 
 ### 7. URL Redirects (.htaccess)
 
-The root `.htaccess` file contains 301 redirects from all old `.htm` / `.html` URLs to the new WordPress permalinks. Make sure **mod_rewrite** is enabled on your server.
+The root `.htaccess` file at the repo root contains 301 redirects from all old `.htm` / `.html` URLs to the new WordPress permalinks. Merge this file with your WordPress installation's `.htaccess`, placing the redirect rules **above** the `# BEGIN WordPress` block.
+
+Make sure **mod_rewrite** is enabled:
+```bash
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+```
+
+---
+
+### 8. Add Testimonials (optional)
+
+1. Go to **WP Admin → Testimonials → Add New**
+2. Post title = student name
+3. Post content = quote text
+4. In the **Testimonial Details** sidebar: set *Program Completed* and *Now Working At*
+5. Add 3–4 testimonials — they appear automatically on the homepage
 
 ---
 
 ## Page Templates
 
-| Template file | Used for |
-|---|---|
-| `front-page.php` | Homepage (hero, featured courses, features) |
-| `page-templates/template-about.php` | About Us |
-| `page-templates/template-courses.php` | Courses archive listing |
-| `page-templates/template-program.php` | Individual program/course detail |
-| `page-templates/template-contact.php` | Contact Us |
-| `page-templates/template-directions.php` | Directions |
-| `page-templates/template-tuition.php` | Tuition table |
-| `page-templates/template-tn-students.php` | Info for Tennessee Students |
-| `page-templates/template-news.php` | Our News (blog archive) |
-| `index.php` | Blog index / search results |
-| `single.php` | Single post |
-| `page.php` | Generic page fallback |
-| `404.php` | 404 Not Found |
+| Template file | Page slug | Used for |
+|---|---|---|
+| `front-page.php` | *(front page)* | Homepage — hero, trust bar, programs, stats, funding, testimonials, contact |
+| `page-templates/template-about.php` | `/about-us/` | About Us |
+| `page-templates/template-training-programs.php` | `/training-programs/` | All programs overview |
+| `page-templates/template-program.php` | `/commercial-driver-training-class-a-cdl/` etc. | Individual program detail |
+| `page-templates/template-admissions.php` | `/admissions-funding/` | Admissions & Funding |
+| `page-templates/template-financial-aid.php` | `/financial-aid/` | Financial Aid |
+| `page-templates/template-career-placement.php` | `/career-placement/` | Career Placement |
+| `page-templates/template-faq.php` | `/faq/` | FAQ accordion |
+| `page-templates/template-contact.php` | `/contact-us/` | Contact Us + map |
+| `page-templates/template-directions.php` | *(legacy)* | Directions |
+| `page-templates/template-tuition.php` | *(legacy)* | Tuition table |
+| `page-templates/template-tn-students.php` | `/tennessee-student-information/` | TN Student Info |
+| `page-templates/template-news.php` | `/news/` | News archive |
+| `page-templates/template-courses.php` | *(legacy)* | Courses listing |
+| `index.php` | — | Blog index fallback |
+| `single.php` | — | Single post |
+| `page.php` | — | Generic page fallback |
+| `404.php` | — | 404 Not Found |
+| `search.php` | — | Search results |
+| `archive.php` | — | Post archive |
 
 ---
 
-## Program Custom Fields
+## Program Pages (Custom Fields)
 
-Individual program pages (using `template-program.php`) support these custom fields:
+Individual program pages using `template-program.php` display a meta bar at the top if these custom fields are set. Set them via **Custom Fields** on the page editor (enable via Screen Options if hidden), or they are imported automatically via `content.xml`.
 
 | Meta key | Description | Example |
 |---|---|---|
-| `_program_price` | Tuition cost | `$3,800` |
-| `_program_length` | Duration | `4 weeks` |
-| `_program_schedule` | Start frequency | `Classes start monthly` |
+| `_program_tuition` | Tuition cost | `$4,500 (VA) / $3,450 (TN)` |
+| `_program_duration` | Duration | `4 weeks` |
+| `_program_salary_range` | Typical salary | `$2,400–$3,600/month` |
+| `_program_schedule` | Start frequency | `Classes begin every 3 weeks` |
 
-Set these via **Custom Fields** box on the page editor (enable via Screen Options if hidden).
+> Legacy keys `_program_price` and `_program_length` are also supported for backwards compatibility.
 
 ---
 
@@ -138,16 +161,18 @@ Set these via **Custom Fields** box on the page editor (enable via Screen Option
 
 | Role | Hex |
 |---|---|
-| Dark navy (header/footer) | `#1a1a2e` |
-| Crimson (primary accent) | `#b22222` |
-| Gold (highlights) | `#f0c040` |
-| Body text | `#333333` |
-| Light background | `#f7f7f7` |
+| Dark navy (header/footer/banners) | `#0f172a` |
+| Amber (primary accent/CTAs) | `#f59e0b` |
+| Amber hover | `#d97706` |
+| Amber gold (logo tagline) | `#fbbf24` |
+| Body text | `#1e293b` |
+| Light background | `#f8fafc` |
+| Slate text | `#475569` |
 
 ---
 
 ## Support
 
-**Tri-County Driving Academy**
-Phone: 276-794-7660
-P.O. Box 2109, Lebanon, VA 24266
+**Tri-County Driving Academy, Inc.**
+1714 US Hwy 19, Hansonville / P.O. Box 2109, Lebanon, VA 24266
+Phone: (276) 794-7660 | Email: tcda1@hotmail.com
