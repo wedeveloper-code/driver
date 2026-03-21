@@ -72,7 +72,7 @@ get_template_part('template-parts/content', 'page-banner');
           as a post-secondary educational institution by the Tennessee Higher Education Commission.
           Visit <a href="http://www.state.tn.us/thec" target="_blank" rel="noopener">www.state.tn.us/thec</a>
           for job placement and completion data. See our
-          <a href="<?php echo esc_url(home_url('/info/info-for-tn-students/')); ?>">Info for TN Students</a>
+          <a href="<?php echo esc_url(home_url('/tennessee-student-information/')); ?>">Info for TN Students</a>
           page for transferability of credits and tuition fees.</p>
         </div>
 

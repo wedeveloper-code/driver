@@ -40,13 +40,12 @@ $submitted = isset($args['submitted']) ? (bool) $args['submitted'] : false;
       <option value="">-- Select a Program --</option>
       <?php
       $programs = [
-        'Tractor Trailer Training (CDL Class A)',
-        'Heavy Equipment Training',
-        'Fiber Optics Training',
-        'Diesel School',
-        'Surface Mining Papers',
-        'OSHA & Hazmat Training',
-        'VA Online Driver Improvement',
+        'CDL Class "A" Training',
+        'Certified Heavy Equipment Training',
+        'Diesel Mechanics / Heavy Truck Maintenance',
+        'NCCER Training',
+        'Virginia Driver Improvement Course',
+        'Admissions & Financial Aid',
         'General Inquiry',
       ];
       $selected_subject = $submitted ? sanitize_text_field(wp_unslash($_POST['contact_subject'] ?? '')) : '';

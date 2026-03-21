@@ -32,7 +32,8 @@ get_template_part('template-parts/content', 'page-banner');
       <h3 style="margin-top:28px;">Admission Requirements for Tennessee Students</h3>
       <p>
         Tennessee students are required to have a <strong>high school diploma or GED</strong>
-        before they take CDL, Heavy Equipment, or Fiber Optics classes at Tri-County Driving Academy.
+        before they enroll in CDL Class A, Heavy Equipment, or Diesel Mechanics programs at
+        Tri-County Driving Academy.
       </p>
 
       <h3 style="margin-top:28px;">Tuition for Tennessee Students</h3>
@@ -40,21 +41,25 @@ get_template_part('template-parts/content', 'page-banner');
         <thead>
           <tr>
             <th>Program</th>
-            <th>Tuition (TN Rate)</th>
+            <th>Duration</th>
+            <th>TN Tuition Rate</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Commercial Driver Training (CDL Class A)</td>
+            <td><a href="<?php echo esc_url(home_url('/commercial-driver-training-class-a-cdl/')); ?>">CDL Class A Training</a></td>
+            <td>4 weeks</td>
             <td>$3,450.00</td>
           </tr>
           <tr>
-            <td>Heavy Equipment Training</td>
+            <td><a href="<?php echo esc_url(home_url('/certified-heavy-equipment-training/')); ?>">Heavy Equipment Training</a></td>
+            <td>6 weeks</td>
             <td>$4,250.00</td>
           </tr>
           <tr>
-            <td>Fiber Optics Training</td>
-            <td>$2,500.00</td>
+            <td><a href="<?php echo esc_url(home_url('/driver-improvement/')); ?>">Driver Improvement Course</a></td>
+            <td>1 day</td>
+            <td>$75.00</td>
           </tr>
         </tbody>
       </table>

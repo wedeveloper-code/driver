@@ -3,13 +3,12 @@
   <div class="sidebar-widget">
     <h4>All Programs</h4>
     <ul>
-      <li><a href="<?php echo esc_url(home_url('/courses/tractor-trailer-training/')); ?>">Tractor Trailer Training</a></li>
-      <li><a href="<?php echo esc_url(home_url('/courses/heavy-equipment-training/')); ?>">Heavy Equipment Training</a></li>
-      <li><a href="<?php echo esc_url(home_url('/courses/fiber-optics-training/')); ?>">Fiber Optics Training</a></li>
-      <li><a href="<?php echo esc_url(home_url('/courses/diesel-school/')); ?>">Diesel School</a></li>
-      <li><a href="<?php echo esc_url(home_url('/courses/surface-mining-papers/')); ?>">Surface Mining Papers</a></li>
-      <li><a href="<?php echo esc_url(home_url('/courses/osha-hazmat-training/')); ?>">OSHA &amp; Hazmat Training</a></li>
-      <li><a href="http://www.va-drivercourses.com/clickIn.php?school=13" target="_blank" rel="noopener">VA Online Driver Improvement</a></li>
+      <li><a href="<?php echo esc_url(home_url('/commercial-driver-training-class-a-cdl/')); ?>">CDL Class A Training</a></li>
+      <li><a href="<?php echo esc_url(home_url('/certified-heavy-equipment-training/')); ?>">Heavy Equipment Training</a></li>
+      <li><a href="<?php echo esc_url(home_url('/diesel-mechanics-heavy-truck-maintenance/')); ?>">Diesel Mechanics</a></li>
+      <li><a href="<?php echo esc_url(home_url('/nccer-training/')); ?>">NCCER Training</a></li>
+      <li><a href="<?php echo esc_url(home_url('/driver-improvement/')); ?>">Driver Improvement ($75)</a></li>
+      <li><a href="<?php echo esc_url(home_url('/training-programs/')); ?>">All Programs →</a></li>
     </ul>
   </div>
 

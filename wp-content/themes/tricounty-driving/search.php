@@ -69,7 +69,7 @@
 
       <?php else : ?>
         <p>No results found for &ldquo;<?php echo esc_html(get_search_query()); ?>&rdquo;.</p>
-        <p>Try a different search term, or browse our <a href="<?php echo esc_url(home_url('/courses/')); ?>">programs</a>.</p>
+        <p>Try a different search term, or browse our <a href="<?php echo esc_url(home_url('/training-programs/')); ?>">programs</a>.</p>
       <?php endif; ?>
 
     </main>

@@ -9,7 +9,7 @@
     </p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-primary">Go to Homepage</a>
-      <a href="<?php echo esc_url(home_url('/courses/')); ?>" class="btn btn-secondary">View Courses</a>
+      <a href="<?php echo esc_url(home_url('/training-programs/')); ?>" class="btn btn-secondary">View Programs</a>
     </div>
   </div>
 </div>
