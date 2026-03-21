@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Tri-County Driving Academy</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1e3a8a',
+                            light: '#3b82f6',
+                            accent: '#f59e0b',
+                        }
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s linear infinite',
+                        'drift': 'drift 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        drift: {
+                            '0%, 100%': { transform: 'translateX(0) rotate(0deg)' },
+                            '50%': { transform: 'translateX(20px) rotate(2deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased h-full bg-gray-50 flex items-center justify-center p-6">
+
+    <div class="max-w-2xl w-full text-center">
+        <!-- Интерактивная иконка -->
+        <div class="relative mb-8 inline-block">
+            <!-- Тень под иконкой -->
+            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-4 bg-gray-200 rounded-[100%] blur-md"></div>
+            
+            <!-- Иконка грузовика с анимацией "дрейфа" -->
+            <div class="animate-drift">
+                <i class="fa-solid fa-truck-moving text-brand-blue text-9xl md:text-[12rem] opacity-20 absolute top-0 left-0 -translate-x-4 -translate-y-4"></i>
+                <i class="fa-solid fa-road-barrier text-brand-accent text-7xl md:text-8xl relative z-10"></i>
+            </div>
+        </div>
+
+        <!-- Текстовый блок -->
+        <h1 class="text-7xl md:text-9xl font-black text-brand-blue mb-2">404</h1>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 uppercase tracking-tight">
+            Wrong Turn! <span class="text-brand-accent">Road Closed</span>
+        </h2>
+        <p class="text-gray-600 text-lg mb-10 max-w-md mx-auto">
+            Oops! It looks like the page you are looking for has been moved, deleted, or never existed in the first place. Let's get you back on the right track.
+        </p>
+
+        <!-- Кнопки навигации -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="index.html" class="w-full sm:w-auto px-8 py-4 bg-brand-blue text-white font-bold rounded-lg shadow-lg shadow-blue-900/20 hover:bg-blue-800 transition-all flex items-center justify-center group">
+                <i class="fa-solid fa-house mr-2 group-hover:-translate-x-1 transition-transform"></i>
+                Back to Homepage
+            </a>
+            <a href="index.html#about" class="w-full sm:w-auto px-8 py-4 bg-white text-brand-blue border-2 border-brand-blue font-bold rounded-lg hover:bg-blue-50 transition-all flex items-center justify-center">
+                About Academy
+            </a>
+        </div>
+
+        <!-- Ссылка на помощь -->
+        <p class="mt-12 text-sm text-gray-500">
+            Lost? <a href="admissions.html" class="text-brand-accent font-semibold hover:underline">Contact our support team</a> and we'll help you find your way.
+        </p>
+    </div>
+
+    <!-- Декоративные элементы по углам -->
+    <div class="fixed top-0 left-0 p-10 opacity-5 hidden lg:block">
+        <i class="fa-solid fa-route text-9xl text-brand-blue"></i>
+    </div>
+    <div class="fixed bottom-0 right-0 p-10 opacity-5 hidden lg:block">
+        <i class="fa-solid fa-map text-9xl text-brand-blue"></i>
+    </div>
+
+</body>
+</html>
