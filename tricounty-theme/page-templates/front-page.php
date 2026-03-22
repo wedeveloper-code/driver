@@ -128,6 +128,46 @@ $img = 'get_template_directory_uri' ;
     </div>
   </section>
 
+  <?php
+  $news_query = new WP_Query(array(
+    'posts_per_page' => 3,
+    'post_status'    => 'publish',
+    'orderby'        => 'date',
+    'order'          => 'DESC',
+  ));
+  if ($news_query->have_posts()) : ?>
+  <section class="section latest-news-section">
+    <div class="container">
+      <h2 class="section-title">Latest News</h2>
+      <p class="section-intro">Stay informed about academy updates, industry trends, and student success stories.</p>
+      <div class="latest-news-grid">
+        <?php while ($news_query->have_posts()) : $news_query->the_post();
+          $cats = get_the_category();
+          $thumb = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'medium_large') : tricounty_img('truck.jpg');
+        ?>
+        <article class="card latest-news-card">
+          <a href="<?php the_permalink(); ?>" class="latest-news-media" style="background-image:url('<?php echo esc_url($thumb); ?>');"></a>
+          <div class="latest-news-body">
+            <div class="latest-news-meta">
+              <?php if ($cats) : ?>
+                <span class="badge"><?php echo esc_html($cats[0]->name); ?></span>
+              <?php endif; ?>
+              <span class="news-date"><?php echo get_the_date('M j, Y'); ?></span>
+            </div>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <p><?php echo wp_trim_words(get_the_excerpt(), 18); ?></p>
+            <a class="news-link" href="<?php the_permalink(); ?>">Read More &rarr;</a>
+          </div>
+        </article>
+        <?php endwhile; ?>
+      </div>
+      <p style="text-align:center;margin-top:2rem;">
+        <a class="btn btn-primary" href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>">All News</a>
+      </p>
+    </div>
+  </section>
+  <?php wp_reset_postdata(); endif; ?>
+
   <section class="lead-area section">
     <div class="container lead-grid">
       <article class="lead-card">

@@ -633,6 +633,83 @@ a {
   margin-top: 0.5rem;
 }
 
+/* Latest News – Front Page */
+.latest-news-section {
+  background: var(--sand);
+}
+
+.latest-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.latest-news-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.latest-news-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 28px rgba(20, 41, 65, 0.13);
+}
+
+.latest-news-media {
+  display: block;
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+}
+
+.latest-news-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.latest-news-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+}
+
+.latest-news-body h3 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.15rem;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.latest-news-body h3 a:hover {
+  color: var(--orange);
+}
+
+.latest-news-body > p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .latest-news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .latest-news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .latest-news-card:last-child {
+    display: none;
+  }
+}
+
 .lead-area {
   background: linear-gradient(180deg, #10233f, #0d1c34);
   color: #fff;
