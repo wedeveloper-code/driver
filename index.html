@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri-County Driving Academy | Commercial Driving & Heavy Equipment Training</title>
+    <meta name="description" content="Start your new career with Tri-County Driving Academy. We offer CDL Class A, Heavy Equipment, Diesel Mechanics, and NCCER Training in Lebanon, VA.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Custom Brand Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1e3a8a',    // blue-900
+                            light: '#3b82f6',   // blue-500
+                            accent: '#f59e0b',  // amber-500 (Safety yellow/orange)
+                            accentHover: '#d97706' // amber-600
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Carousel Transitions */
+        .carousel-slide {
+            transition: opacity 0.7s ease-in-out;
+        }
+        .carousel-slide.active {
+            opacity: 1;
+            z-index: 10;
+        }
+        .carousel-slide.inactive {
+            opacity: 0;
+            z-index: 0;
+        }
+
+        /* Dropdown Hover - Desktop */
+        @media (min-width: 1024px) {
+            .group:hover .group-hover\:block {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white pt-20">
+
+    <!-- ================= HEADER / NAVIGATION ================= -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="images/logo.gif" alt="Tri-County Driving Academy" class="h-14 mr-3">
+                    <span class="font-bold text-xl md:text-2xl text-brand-blue uppercase tracking-tight hidden sm:inline">
+                        Tri-County <span class="text-brand-accent">Academy</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-700 hover:text-brand-blue font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-brand-blue font-medium transition-colors">About Us</a>
+                    
+                    <!-- Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-brand-blue font-medium transition-colors pb-1">
+                            Training Programs
+                            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-100 shadow-xl rounded-md hidden group-hover:block transition-all duration-300">
+                            <div class="py-2">
+                                <a href="#cdl" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-blue hover:text-white transition-colors">CDL Class "A" Training</a>
+                                <a href="#heavy-equipment" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-blue hover:text-white transition-colors">Heavy Equipment Training</a>
+                                <a href="#diesel" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-blue hover:text-white transition-colors">Diesel Mechanics</a>
+                                <a href="#nccer" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-blue hover:text-white transition-colors">NCCER Training</a>
+                                <a href="#driver-improvement" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-blue hover:text-white transition-colors">Driver Improvement</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#funding" class="text-gray-700 hover:text-brand-blue font-medium transition-colors">Admissions & Funding</a>
+                    <a href="#placement" class="text-gray-700 hover:text-brand-blue font-medium transition-colors">Career Placement</a>
+                    <a href="#contact" class="bg-brand-blue text-white px-6 py-2.5 rounded-md font-semibold hover:bg-blue-800 transition-colors shadow-lg shadow-blue-900/20">Contact Us</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-blue focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-brand-blue rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-brand-blue rounded-md">About Us</a>
+                
+                <div class="px-3 py-3">
+                    <div class="text-base font-medium text-brand-blue mb-2">Training Programs</div>
+                    <div class="pl-4 space-y-2 border-l-2 border-gray-100">
+                        <a href="#cdl" class="block py-1 text-sm text-gray-600 hover:text-brand-blue">CDL Class "A" Training</a>
+                        <a href="#heavy-equipment" class="block py-1 text-sm text-gray-600 hover:text-brand-blue">Heavy Equipment Training</a>
+                        <a href="#diesel" class="block py-1 text-sm text-gray-600 hover:text-brand-blue">Diesel Mechanics</a>
+                        <a href="#nccer" class="block py-1 text-sm text-gray-600 hover:text-brand-blue">NCCER Training</a>
+                        <a href="#driver-improvement" class="block py-1 text-sm text-gray-600 hover:text-brand-blue">Driver Improvement</a>
+                    </div>
+                </div>
+
+                <a href="#funding" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-brand-blue rounded-md">Admissions & Funding</a>
+                <a href="#placement" class="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 hover:text-brand-blue rounded-md">Career Placement</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-center text-base font-bold bg-brand-accent text-white rounded-md shadow-md">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION (CAROUSEL) ================= -->
+    <section class="relative h-[85vh] min-h-[600px] w-full bg-gray-900 overflow-hidden">
+        
+        <!-- Slide 1: CDL/Trucking -->
+        <div class="carousel-slide active absolute inset-0 w-full h-full">
+            <div class="absolute inset-0 bg-black/60 z-10"></div> <!-- Overlay -->
+            <img src="images/two-trucks.jpg" alt="CDL Truck Training" class="absolute inset-0 w-full h-full object-cover">
+            <div class="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-accent text-white text-sm font-bold uppercase tracking-wider mb-4 animate-fade-in-up">Start Your Journey</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">Master the Road with <br/><span class="text-brand-accent">CDL Class A</span> Training</h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl drop-shadow-md">Get behind the wheel and start a high-paying career. Comprehensive hands-on training from industry experts.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-lg">Apply Now</a>
+                    <a href="#programs" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/50 px-8 py-4 rounded-md font-bold text-lg transition-colors">View Programs</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Heavy Equipment -->
+        <div class="carousel-slide inactive absolute inset-0 w-full h-full">
+            <div class="absolute inset-0 bg-black/60 z-10"></div> <!-- Overlay -->
+            <img src="images/bulldozer-training.jpg" alt="Heavy Equipment Training" class="absolute inset-0 w-full h-full object-cover">
+            <div class="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-accent text-white text-sm font-bold uppercase tracking-wider mb-4">Build the Future</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">Professional <br/><span class="text-brand-accent">Heavy Equipment</span> Operation</h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl drop-shadow-md">Learn to operate excavators, dozers, and loaders safely and efficiently on real job sites.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-lg">Apply Now</a>
+                    <a href="#programs" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/50 px-8 py-4 rounded-md font-bold text-lg transition-colors">View Programs</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Diesel Mechanic -->
+        <div class="carousel-slide inactive absolute inset-0 w-full h-full">
+            <div class="absolute inset-0 bg-black/70 z-10"></div> <!-- Overlay -->
+            <img src="images/training-in-engine-design.jpg" alt="Diesel Mechanic Training" class="absolute inset-0 w-full h-full object-cover">
+            <div class="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-accent text-white text-sm font-bold uppercase tracking-wider mb-4">High Demand Career</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">Become a Certified <br/><span class="text-brand-accent">Diesel Mechanic</span></h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl drop-shadow-md">Keep the industry moving. Master diesel engine diagnostics, repair, and maintenance.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-lg">Apply Now</a>
+                    <a href="#programs" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/50 px-8 py-4 rounded-md font-bold text-lg transition-colors">View Programs</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="absolute bottom-8 left-0 right-0 z-30 flex justify-center space-x-3">
+            <button class="carousel-dot w-3 h-3 rounded-full bg-brand-accent transition-colors" onclick="goToSlide(0)"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" onclick="goToSlide(1)"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors" onclick="goToSlide(2)"></button>
+        </div>
+    </section>
+
+    <!-- ================= TRUST BAR ================= -->
+    <section class="bg-brand-blue py-6 border-b-4 border-brand-accent relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-center md:justify-around items-center gap-6 md:gap-4 text-white">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                        <i class="fa-solid fa-check-circle text-2xl text-brand-accent"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg leading-tight">DMV Approved</p>
+                        <p class="text-sm text-blue-200">State Certified Training</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block w-px h-10 bg-white/20"></div>
+
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                        <i class="fa-solid fa-award text-2xl text-brand-accent"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg leading-tight">NCCER Certified</p>
+                        <p class="text-sm text-blue-200">National Craft Standards</p>
+                    </div>
+                </div>
+
+                <div class="hidden md:block w-px h-10 bg-white/20"></div>
+
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                        <i class="fa-solid fa-hand-holding-dollar text-2xl text-brand-accent"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg leading-tight">WIOA Eligible</p>
+                        <p class="text-sm text-blue-200">Financial Aid Available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CORE PROGRAMS ================= -->
+    <section id="programs" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-blue font-bold tracking-wide uppercase text-sm mb-2">Our Programs</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Launch Your Career Today</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Choose from our industry-leading certification programs designed to get you hired and on the job fast.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="images/a-lot-of-trucks.jpg" alt="CDL Truck" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-brand-blue text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">CDL Class "A" Training</h4>
+                        <p class="text-gray-600 mb-6 flex-grow">Complete hands-on instruction covering pre-trip inspections, backing maneuvers, and road driving. Get your commercial license fast.</p>
+                        <a href="#" class="inline-block text-center w-full bg-gray-50 hover:bg-brand-blue hover:text-white border border-gray-200 text-brand-blue font-semibold py-3 px-4 rounded transition-colors">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="images/excavator-and-loader-training.jpg" alt="Heavy Equipment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-brand-accent text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+                            <i class="fa-solid fa-tractor"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Heavy Equipment Training</h4>
+                        <p class="text-gray-600 mb-6 flex-grow">Master the operation of bulldozers, backhoes, excavators, and front-end loaders in real-world simulated construction environments.</p>
+                        <a href="#" class="inline-block text-center w-full bg-gray-50 hover:bg-brand-blue hover:text-white border border-gray-200 text-brand-blue font-semibold py-3 px-4 rounded transition-colors">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="images/training-in-engine-design.jpg" alt="Diesel Engine" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-gray-800 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+                            <i class="fa-solid fa-wrench"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Diesel Mechanics</h4>
+                        <p class="text-gray-600 mb-6 flex-grow">Learn diagnostics, preventative maintenance, and repair of heavy-duty diesel engines, brakes, and electrical systems.</p>
+                        <a href="#" class="inline-block text-center w-full bg-gray-50 hover:bg-brand-blue hover:text-white border border-gray-200 text-brand-blue font-semibold py-3 px-4 rounded transition-colors">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-lg flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-hard-hat text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">NCCER Training</h4>
+                        <p class="text-gray-600 mb-6 flex-grow">Standardized construction and maintenance curricula. Get certified by the National Center for Construction Education and Research.</p>
+                        <a href="#" class="inline-block text-center w-full text-brand-blue font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-lg flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-shield-halved text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Driver Improvement</h4>
+                        <p class="text-gray-600 mb-6 flex-grow">Defensive driving courses designed to improve safety, reduce points on your license, and lower insurance premiums.</p>
+                        <a href="#" class="inline-block text-center w-full text-brand-blue font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Promo Card -->
+                <div class="bg-brand-blue rounded-xl shadow-md overflow-hidden flex flex-col justify-center items-center text-center p-8 text-white relative">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+                    <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-24 h-24 bg-brand-accent/20 rounded-full blur-xl"></div>
+                    <i class="fa-solid fa-graduation-cap text-4xl text-brand-accent mb-4 z-10"></i>
+                    <h4 class="text-2xl font-bold mb-3 z-10">Not Sure Where to Start?</h4>
+                    <p class="text-blue-200 mb-6 z-10">Talk to our admissions team to find the perfect career path for you.</p>
+                    <a href="#contact" class="bg-brand-accent hover:bg-brand-accentHover text-white px-6 py-3 rounded font-bold transition-colors z-10">Get Free Consultation</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FUNDING & GRANTS (The Hook) ================= -->
+    <section id="funding" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Image / Graphics -->
+                <div class="w-full lg:w-1/2 relative">
+                    <img src="images/man-studying.jpg" alt="Financial Aid" class="rounded-xl shadow-2xl relative z-10">
+                    <div class="absolute -bottom-6 -right-6 w-48 bg-white p-4 rounded-xl shadow-xl z-20 border border-gray-100 hidden md:block">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <p class="text-sm font-bold text-gray-800">100% Tuition Covered for Eligible Students</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-brand-accent font-bold tracking-wide uppercase text-sm mb-2">Admissions & Funding</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Don't Let Cost Stop You From a Great Career</h3>
+                    <p class="text-gray-600 text-lg mb-6">At Tri-County Driving Academy, we believe everyone deserves a chance to build a solid career. We offer multiple funding options to ensure tuition isn't a barrier.</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-brand-blue mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">WIOA Grants</h4>
+                                <p class="text-gray-600 text-sm">We are a WIOA (Workforce Innovation and Opportunity Act) approved training provider. You may qualify for full tuition coverage.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-brand-blue mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Veterans Assistance</h4>
+                                <p class="text-gray-600 text-sm">Proudly accepting GI Bill® and other military educational benefits.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-circle-check text-brand-blue mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Flexible Payment Plans</h4>
+                                <p class="text-gray-600 text-sm">Affordable weekly/monthly installment plans available for out-of-pocket students.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="inline-flex items-center bg-brand-blue hover:bg-blue-800 text-white px-8 py-3.5 rounded-md font-semibold transition-colors">
+                        Check Your Eligibility
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CAREER PLACEMENT ================= -->
+    <section id="placement" class="py-16 bg-gray-900 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-brand-accent font-bold tracking-wide uppercase text-sm mb-2">Job Placement Assistance</h2>
+            <h3 class="text-3xl md:text-5xl font-extrabold mb-6">Graduate on Friday.<br/>Start Working on Monday.</h3>
+            <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-10">Our job doesn't end when you get your certificate. We have strong partnerships with local, regional, and national employers actively looking to hire our graduates.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-gray-700 pt-10">
+                <div>
+                    <div class="text-4xl font-extrabold text-brand-accent mb-2">95%</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wide">Placement Rate</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-brand-accent mb-2">50+</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wide">Hiring Partners</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-brand-accent mb-2">$65k+</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wide">Avg Starting Salary</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-extrabold text-brand-accent mb-2">Lifetime</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wide">Career Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-blue font-bold tracking-wide uppercase text-sm mb-2">Success Stories</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">Hear From Our Graduates</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-brand-accent/20 absolute top-6 right-6"></i>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="images/truck.jpg" alt="Michael R." class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Michael R.</h4>
+                            <p class="text-sm text-brand-blue">CDL Graduate</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The instructors here are top-notch. They had infinite patience and taught me exactly what I needed to pass my DMV test on the first try. I got hired by a regional carrier the day after I graduated!"</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-brand-accent/20 absolute top-6 right-6"></i>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="images/bulldozer-with-a-bucket.jpg" alt="Sarah J." class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Sarah J.</h4>
+                            <p class="text-sm text-brand-blue">Heavy Equipment Operator</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"I was worried about changing careers at 35, but the WIOA grant covered my tuition, and the hands-on time with the excavators was incredible. I'm making double what I used to make."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-brand-accent/20 absolute top-6 right-6"></i>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="images/nccer-training.jpg" alt="David M." class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900">David M.</h4>
+                            <p class="text-sm text-brand-blue">Diesel Mechanic Alum</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Real engines, real tools, real problems to solve. The diesel program at Tri-County doesn't just teach you theory; it gets your hands dirty. Highly recommend to anyone wanting a solid trade."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LEAD CAPTURE & MAP ================= -->
+    <section id="contact" class="bg-white">
+        <div class="flex flex-col lg:flex-row">
+            
+            <!-- Contact Form -->
+            <div class="w-full lg:w-1/2 px-4 sm:px-6 lg:px-16 py-16 lg:py-20 bg-gray-50 flex flex-col justify-center">
+                <div class="max-w-md w-full mx-auto lg:mx-0">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Still Have Questions?</h2>
+                    <p class="text-gray-600 mb-8">Fill out the form below and our admissions team will get back to you within 24 hours.</p>
+                    
+                    <form class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue outline-none transition-colors" placeholder="John">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue outline-none transition-colors" placeholder="Doe">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue outline-none transition-colors" placeholder="(555) 123-4567">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue outline-none transition-colors" placeholder="john@example.com">
+                        </div>
+
+                        <div>
+                            <label for="program" class="block text-sm font-medium text-gray-700 mb-1">Program of Interest</label>
+                            <select id="program" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue outline-none transition-colors bg-white">
+                                <option>CDL Class "A" Training</option>
+                                <option>Heavy Equipment Training</option>
+                                <option>Diesel Mechanics</option>
+                                <option>NCCER Training</option>
+                                <option>Driver Improvement</option>
+                                <option>Not Sure / Other</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" class="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3 px-4 rounded-md transition-colors shadow-md mt-4">
+                            Request Information
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="w-full lg:w-1/2 h-[400px] lg:h-auto min-h-[500px]">
+                <!-- Using a standard Google Maps embed pointing generally to Lebanon, VA -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101789.31754025175!2d-82.16484305499238!3d36.903808800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884fd2a640db737f%3A0xe549dc29759d5b00!2sLebanon%2C%20VA%2024266!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t-4 border-brand-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Col 1: Contact Info -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="images/logo.gif" alt="Tri-County Driving Academy" class="h-12 mr-3">
+                        <span class="font-bold text-xl text-white uppercase tracking-tight">
+                            Tri-County <span class="text-brand-accent">Academy</span>
+                        </span>
+                    </div>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-brand-accent"></i>
+                            <span>1714 US Hwy 19<br/>Hansonville, VA<br/>P.O. Box 2109, Lebanon, VA 24266</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3 text-brand-accent"></i>
+                            <a href="tel:+12767947660" class="hover:text-white transition-colors">(276) 794-7660</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3 text-brand-accent"></i>
+                            <a href="mailto:tcda1@hotmail.com" class="hover:text-white transition-colors">tcda1@hotmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-clock mt-1 mr-3 text-brand-accent"></i>
+                            <span>Mon - Fri: 8:00 AM - 5:00 PM<br/>Sat - Sun: Closed</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 2: Our Programs -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Our Programs</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">CDL Class "A" Training</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Heavy Equipment Training</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Diesel Mechanics</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">NCCER Training</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Driver Improvement</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Student Resources -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Student Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Admissions Process</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Financial Aid & Grants</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Career & Job Placement</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Our Fleet & Equipment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Legal & Useful -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Legal & Useful</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Frequently Asked Questions</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Sitemap</a></li>
+                    </ul>
+                    
+                    <!-- Social Links -->
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2025 Tri-County Driving Academy, Inc. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Lebanon, Virginia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        // --- Mobile Menu Toggle ---
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // --- Simple Hero Carousel ---
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'inactive');
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.add('inactive');
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-brand-accent');
+                } else {
+                    dot.classList.remove('bg-brand-accent');
+                    dot.classList.add('bg-white/50');
+                }
+            });
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 6000); // Change slide every 6 seconds
+        }
+
+        // Start Carousel
+        slideInterval = setInterval(nextSlide, 6000);
+    </script>
+</body>
+</html>
