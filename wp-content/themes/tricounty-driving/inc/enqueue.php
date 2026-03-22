@@ -17,11 +17,19 @@ function tcda_enqueue_assets(): void
     wp_dequeue_style('wp-block-library-theme');
     wp_dequeue_style('global-styles');
 
+    // Google Fonts — Oswald (headings) + Open Sans (body)
+    wp_enqueue_style(
+        'tcda-fonts',
+        'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap',
+        [],
+        null
+    );
+
     // Main stylesheet
     wp_enqueue_style(
         'tcda-main',
         TCDA_URI . '/assets/css/main.css',
-        [],
+        ['tcda-fonts'],
         $v
     );
 
