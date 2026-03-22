@@ -12,6 +12,9 @@ $img = 'get_template_directory_uri' ;
       <div class="slide active" style="background-image:url('<?php echo tricounty_img('two-trucks.jpg'); ?>');"></div>
       <div class="slide" style="background-image:url('<?php echo tricounty_img('bulldozer-training.jpg'); ?>');"></div>
       <div class="slide" style="background-image:url('<?php echo tricounty_img('training-in-engine-design.jpg'); ?>');"></div>
+      <div class="slide" style="background-image:url('<?php echo tricounty_img('a-lot-of-trucks.jpg'); ?>');"></div>
+      <div class="slide" style="background-image:url('<?php echo tricounty_img('excavator-and-loader-training.jpg'); ?>');"></div>
+      <div class="slide" style="background-image:url('<?php echo tricounty_img('man-studying.jpg'); ?>');"></div>
     </div>
 
     <div class="hero-content">

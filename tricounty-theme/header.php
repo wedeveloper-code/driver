@@ -33,8 +33,13 @@
         </li>
         <li><a href="<?php echo esc_url(home_url('/admissions/')); ?>">Admissions &amp; Funding</a></li>
         <li><a href="<?php echo esc_url(home_url('/job-placement/')); ?>">Career Placement</a></li>
+        <li><a href="<?php echo esc_url(home_url('/news/')); ?>">News</a></li>
         <li><a href="<?php echo esc_url(home_url('/contact-us/')); ?>">Contact Us</a></li>
       </ul>
     </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary header-cta" href="<?php echo esc_url(home_url('/admissions/')); ?>">Apply Now</a>
+    </div>
   </div>
 </header>

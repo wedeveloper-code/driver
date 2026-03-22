@@ -54,7 +54,9 @@ RewriteRule ^Products/9/Virginia-Online-Driver-Improvement-Course\.htm$ /driver-
 RewriteRule ^info/tuition\.htm$ /financial-aid/? [R=301,L]
 RewriteRule ^info/info-for-tn-students\.htm$ /about-us/? [R=301,L]
 RewriteRule ^info/business-neighbors\.htm$ /about-us/? [R=301,L]
-RewriteRule ^our-news\.htm$ /about-us/? [R=301,L]
+RewriteRule ^our-news\.htm$ /news/? [R=301,L]
+RewriteRule ^news\.html$ /news/? [R=301,L]
+RewriteRule ^single-news\.html$ /news/? [R=301,L]
 RewriteRule ^tennessee-student-information\.html$ /about-us/? [R=301,L]
 RewriteRule ^virginia-residents-financial-aid--pell-grant--packet\.html$ /financial-aid/? [R=301,L]
 

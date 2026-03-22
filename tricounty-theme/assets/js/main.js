@@ -52,7 +52,7 @@
       clearInterval(timer);
       timer = setInterval(function () {
         go(current + 1);
-      }, 6500);
+      }, 3000);
     }
 
     slides.forEach(function (_, i) {
@@ -77,7 +77,7 @@
     render();
     timer = setInterval(function () {
       go(current + 1);
-    }, 6500);
+    }, 3000);
   }
 
   const counters = document.querySelectorAll("[data-counter]");
@@ -139,4 +139,72 @@
       sparkline.setAttribute("points", points.join(" "));
     }, 260);
   }
+})();
+
+(function () {
+  var filterButtons = document.querySelectorAll('[data-news-filter]');
+  var newsItems = document.querySelectorAll('[data-news-item]');
+  var loadMoreBtn = document.getElementById('loadMoreNews');
+
+  if (filterButtons.length && newsItems.length) {
+    filterButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterButtons.forEach(function (el) { el.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+
+        var category = btn.getAttribute('data-news-filter');
+        newsItems.forEach(function (item) {
+          var match = category === 'all' || item.getAttribute('data-category') === category;
+          item.style.display = match ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', function () {
+      var hidden = document.querySelectorAll('[data-news-hidden].is-hidden');
+      if (!hidden.length) {
+        loadMoreBtn.style.display = 'none';
+        return;
+      }
+
+      for (var i = 0; i < hidden.length && i < 3; i++) {
+        hidden[i].classList.remove('is-hidden');
+      }
+
+      if (!document.querySelectorAll('[data-news-hidden].is-hidden').length) {
+        loadMoreBtn.textContent = 'No More News';
+        loadMoreBtn.disabled = true;
+      }
+    });
+  }
+})();
+
+(function () {
+  var copyButtons = document.querySelectorAll('[data-copy-link]');
+  if (!copyButtons.length) return;
+
+  copyButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var url = window.location.href;
+      var complete = function () {
+        var old = btn.textContent;
+        btn.textContent = 'Link Copied';
+        setTimeout(function () { btn.textContent = old; }, 1200);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(complete);
+      } else {
+        var input = document.createElement('input');
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        complete();
+      }
+    });
+  });
 })();
