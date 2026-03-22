@@ -1,0 +1,70 @@
+# =============================================================================
+# Tri-County Driving Academy - Old HTML to New WordPress 301 Redirects
+# =============================================================================
+# Add these rules to the WordPress .htaccess file BEFORE the WordPress rewrite rules
+# (before the # BEGIN WordPress section)
+# =============================================================================
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Main pages - old .html URLs to new WordPress pages
+RewriteRule ^index\.html$ /? [R=301,L]
+RewriteRule ^about-us\.html$ /about-us/? [R=301,L]
+RewriteRule ^contact-us\.html$ /contact-us/? [R=301,L]
+RewriteRule ^commercial-driver-training-class--a--cdl\.html$ /cdl-class-a-training/? [R=301,L]
+RewriteRule ^certified-heavy-equipment-training\.html$ /heavy-equipment-training/? [R=301,L]
+RewriteRule ^diesel-mechanics-heavy-truck-maintenance\.html$ /diesel-mechanics/? [R=301,L]
+RewriteRule ^nccer-training\.html$ /nccer-training/? [R=301,L]
+RewriteRule ^driver-improvement\.html$ /driver-improvement/? [R=301,L]
+
+# New design pages that had .html extensions
+RewriteRule ^admissions\.html$ /admissions/? [R=301,L]
+RewriteRule ^financial-aid-tuition\.html$ /financial-aid/? [R=301,L]
+RewriteRule ^job-placement-assistance\.html$ /job-placement/? [R=301,L]
+RewriteRule ^our-fleet-facility\.html$ /our-fleet/? [R=301,L]
+RewriteRule ^faq\.html$ /faq/? [R=301,L]
+RewriteRule ^404\.html$ /? [R=301,L]
+
+# Legacy .htm pages from old site versions
+RewriteRule ^home\.htm$ /? [R=301,L]
+RewriteRule ^about-us\.htm$ /about-us/? [R=301,L]
+RewriteRule ^contact\.htm$ /contact-us/? [R=301,L]
+RewriteRule ^contact\.html$ /contact-us/? [R=301,L]
+RewriteRule ^about\.html$ /about-us/? [R=301,L]
+RewriteRule ^courses\.htm$ /admissions/? [R=301,L]
+RewriteRule ^directions\.htm$ /about-us/? [R=301,L]
+RewriteRule ^directions\.html$ /about-us/? [R=301,L]
+RewriteRule ^driver\.html$ /cdl-class-a-training/? [R=301,L]
+RewriteRule ^fiber\.html$ /about-us/? [R=301,L]
+RewriteRule ^links\.html$ /about-us/? [R=301,L]
+RewriteRule ^operator\.html$ /heavy-equipment-training/? [R=301,L]
+RewriteRule ^programs\.html$ /admissions/? [R=301,L]
+
+# Old product/course pages
+RewriteRule ^Products/1/tractor-trailer-training\.htm$ /cdl-class-a-training/? [R=301,L]
+RewriteRule ^Products/2/heavy-equipment-training\.htm$ /heavy-equipment-training/? [R=301,L]
+RewriteRule ^Products/3/fiber-optics-training\.htm$ /about-us/? [R=301,L]
+RewriteRule ^Products/6/diesel-school\.htm$ /diesel-mechanics/? [R=301,L]
+RewriteRule ^Products/7/OSHA-and-Hazmat-Training\.htm$ /nccer-training/? [R=301,L]
+RewriteRule ^Products/8/surface-mining-papers\.htm$ /nccer-training/? [R=301,L]
+RewriteRule ^Products/9/Virginia-Online-Driver-Improvement-Course\.htm$ /driver-improvement/? [R=301,L]
+
+# Info pages
+RewriteRule ^info/tuition\.htm$ /financial-aid/? [R=301,L]
+RewriteRule ^info/info-for-tn-students\.htm$ /about-us/? [R=301,L]
+RewriteRule ^info/business-neighbors\.htm$ /about-us/? [R=301,L]
+RewriteRule ^our-news\.htm$ /about-us/? [R=301,L]
+RewriteRule ^tennessee-student-information\.html$ /about-us/? [R=301,L]
+RewriteRule ^virginia-residents-financial-aid--pell-grant--packet\.html$ /financial-aid/? [R=301,L]
+
+# Mobile old site
+RewriteRule ^mobile/index\.html$ /? [R=301,L]
+
+# Old page names from current site
+RewriteRule ^Admissions\.html$ /admissions/? [R=301,L]
+RewriteRule ^Financial[%20 ]Aid\.html$ /financial-aid/? [R=301,L]
+RewriteRule ^Job[%20 ]Placement\.html$ /job-placement/? [R=301,L]
+RewriteRule ^Our[%20 ]Fleet\.html$ /our-fleet/? [R=301,L]
+RewriteRule ^main_page\.html$ /? [R=301,L]
+</IfModule>
