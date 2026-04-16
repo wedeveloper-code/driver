@@ -1,28 +1,78 @@
 <?php get_header(); ?>
 
 <!-- ══════════════════════════════════════
-     HERO SECTION
+     HERO SLIDER
 ══════════════════════════════════════ -->
-<section id="hero">
-  <div id="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="container">
-      <h1 class="hero-title">Launch Your Future Career Today</h1>
-      <p class="hero-subtitle">
-        Professional CDL training, heavy equipment operation, and diesel mechanics programs
-        serving Virginia and Tennessee since 1992.
-      </p>
-      <div class="hero-cta">
-        <a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="btn-amber">
-          Apply Now
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <a href="<?php echo esc_url(home_url('/training-programs/')); ?>" class="btn-outline-white">
-          View Programs
-        </a>
+<section id="hero" aria-label="Featured programs">
+
+  <!-- Slide 1: CDL / Tractor-Trailer -->
+  <div class="hero-slide active" style="background-image:url('<?php echo esc_url(TCDA_URI . '/assets/images/tractor_trailer_services.jpg'); ?>')">
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title">Launch Your CDL Career Today</h1>
+        <p class="hero-subtitle">
+          4-week Class A CDL program — FMCSA-certified instructors, on-site range &amp; road training.
+        </p>
+        <div class="hero-cta">
+          <a href="<?php echo esc_url(home_url('/commercial-driver-training-class-a-cdl/')); ?>" class="btn-amber">
+            CDL Program Details
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="btn-outline-white">Apply Now</a>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- Slide 2: Heavy Equipment -->
+  <div class="hero-slide" style="background-image:url('<?php echo esc_url(TCDA_URI . '/assets/images/heavy.jpg'); ?>')">
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title">Heavy Equipment Operator Training</h1>
+        <p class="hero-subtitle">
+          Master excavators, loaders, bulldozers &amp; more — NCCER-certified program with hands-on field time.
+        </p>
+        <div class="hero-cta">
+          <a href="<?php echo esc_url(home_url('/certified-heavy-equipment-training/')); ?>" class="btn-amber">
+            Equipment Program
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="<?php echo esc_url(home_url('/admissions-funding/')); ?>" class="btn-outline-white">Tuition &amp; Aid</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Diesel Mechanics / Truck -->
+  <div class="hero-slide" style="background-image:url('<?php echo esc_url(TCDA_URI . '/assets/images/truck.jpg'); ?>')">
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title">Diesel Mechanics &amp; Maintenance</h1>
+        <p class="hero-subtitle">
+          WIOA &amp; Pell Grant eligible programs — train for a career in a field that will never be outsourced.
+        </p>
+        <div class="hero-cta">
+          <a href="<?php echo esc_url(home_url('/diesel-mechanics-heavy-truck-maintenance/')); ?>" class="btn-amber">
+            Diesel Program
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="<?php echo esc_url(home_url('/admissions-funding/')); ?>" class="btn-outline-white">View Funding</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prev / Next controls -->
+  <button class="hero-prev" aria-label="Previous slide">&#8249;</button>
+  <button class="hero-next" aria-label="Next slide">&#8250;</button>
+
+  <!-- Dots -->
+  <div class="hero-dots" role="tablist" aria-label="Slide indicators">
+    <button class="hero-dot active" role="tab" aria-selected="true"  aria-label="Slide 1"></button>
+    <button class="hero-dot"        role="tab" aria-selected="false" aria-label="Slide 2"></button>
+    <button class="hero-dot"        role="tab" aria-selected="false" aria-label="Slide 3"></button>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════

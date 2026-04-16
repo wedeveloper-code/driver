@@ -17,19 +17,11 @@ function tcda_enqueue_assets(): void
     wp_dequeue_style('wp-block-library-theme');
     wp_dequeue_style('global-styles');
 
-    // Google Fonts — Oswald (headings) + Open Sans (body)
-    wp_enqueue_style(
-        'tcda-fonts',
-        'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap',
-        [],
-        null
-    );
-
-    // Main stylesheet
+    // Main stylesheet (fonts are self-hosted via @font-face — no external CDN)
     wp_enqueue_style(
         'tcda-main',
         TCDA_URI . '/assets/css/main.css',
-        ['tcda-fonts'],
+        [],
         $v
     );
 
@@ -41,6 +33,17 @@ function tcda_enqueue_assets(): void
         $v,
         true // load in footer
     );
+
+    // Hero slider (front page only)
+    if (is_front_page()) {
+        wp_enqueue_script(
+            'tcda-slider',
+            TCDA_URI . '/assets/js/slider.js',
+            [],
+            $v,
+            true
+        );
+    }
 
     // Main JS (stats counter, misc)
     wp_enqueue_script(
@@ -57,7 +60,7 @@ add_filter('script_loader_tag', 'tcda_defer_scripts', 10, 3);
 
 function tcda_defer_scripts(string $tag, string $handle, string $src): string
 {
-    $defer_handles = ['tcda-navigation', 'tcda-main'];
+    $defer_handles = ['tcda-navigation', 'tcda-slider', 'tcda-main'];
 
     if (in_array($handle, $defer_handles, true)) {
         return str_replace(' src=', ' defer src=', $tag);

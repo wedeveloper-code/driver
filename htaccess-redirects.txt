@@ -1,0 +1,50 @@
+# ── Tri-County Driving Academy 301 Redirects ──
+# Merge these rules into the WordPress .htaccess file ABOVE the "# BEGIN WordPress" block.
+# ──────────────────────────────────────────────
+
+RewriteEngine On
+
+# Old home pages
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^home\.html$ / [R=301,L]
+RewriteRule ^home\.htm$ / [R=301,L]
+
+# Main pages
+RewriteRule ^about-us\.html$ /about-us/ [R=301,L]
+RewriteRule ^about-us\.htm$ /about-us/ [R=301,L]
+RewriteRule ^about\.html$ /about-us/ [R=301,L]
+RewriteRule ^contact-us\.html$ /contact-us/ [R=301,L]
+RewriteRule ^contact\.html$ /contact-us/ [R=301,L]
+RewriteRule ^contact\.htm$ /contact-us/ [R=301,L]
+
+# Program pages (double-dash → single-dash in new slugs)
+RewriteRule ^commercial-driver-training-class--a--cdl\.html$ /commercial-driver-training-class-a-cdl/ [R=301,L]
+RewriteRule ^certified-heavy-equipment-training\.html$ /certified-heavy-equipment-training/ [R=301,L]
+RewriteRule ^diesel-mechanics-heavy-truck-maintenance\.html$ /diesel-mechanics-heavy-truck-maintenance/ [R=301,L]
+RewriteRule ^nccer-training\.html$ /nccer-training/ [R=301,L]
+RewriteRule ^driver-improvement\.html$ /driver-improvement/ [R=301,L]
+RewriteRule ^driver\.html$ /driver-improvement/ [R=301,L]
+RewriteRule ^operator\.html$ /certified-heavy-equipment-training/ [R=301,L]
+RewriteRule ^fiber\.html$ /admissions-funding/ [R=301,L]
+
+# Info pages
+RewriteRule ^tennessee-student-information\.html$ /tennessee-student-information/ [R=301,L]
+RewriteRule ^virginia-residents-financial-aid--pell-grant--packet\.html$ /financial-aid/ [R=301,L]
+RewriteRule ^info/tuition\.htm$ /admissions-funding/ [R=301,L]
+RewriteRule ^info/info-for-tn-students\.htm$ /tennessee-student-information/ [R=301,L]
+RewriteRule ^info/business-neighbors\.htm$ /about-us/ [R=301,L]
+RewriteRule ^our-news\.htm$ / [R=301,L]
+RewriteRule ^links\.html$ /about-us/ [R=301,L]
+RewriteRule ^directions\.html$ /contact-us/ [R=301,L]
+RewriteRule ^directions\.htm$ /contact-us/ [R=301,L]
+RewriteRule ^programs\.html$ /training-programs/ [R=301,L]
+RewriteRule ^courses\.htm$ /training-programs/ [R=301,L]
+
+# Product subdirectory URLs
+RewriteRule ^Products/1(/.*)?$ /commercial-driver-training-class-a-cdl/ [R=301,L]
+RewriteRule ^Products/2(/.*)?$ /certified-heavy-equipment-training/ [R=301,L]
+RewriteRule ^Products/3(/.*)?$ /admissions-funding/ [R=301,L]
+RewriteRule ^Products/6(/.*)?$ /diesel-mechanics-heavy-truck-maintenance/ [R=301,L]
+RewriteRule ^Products/7(/.*)?$ /admissions-funding/ [R=301,L]
+RewriteRule ^Products/8(/.*)?$ /admissions-funding/ [R=301,L]
+RewriteRule ^Products/9(/.*)?$ /driver-improvement/ [R=301,L]
