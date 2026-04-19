@@ -525,7 +525,21 @@ input, select, textarea { font: inherit; }
 .error-page__links a { color: var(--brand-light); font-size: 0.875rem; }
 .error-page__links a:hover { color: var(--brand-blue); text-decoration: underline; }
 
-/* --- 30. Misc / Utility --- */
+/* --- 30. Tuition Table --- */
+.tuition-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.tuition-table th { background: var(--brand-blue); color: var(--white); padding: 0.75rem 1rem; text-align: left; font-weight: 600; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.03em; }
+.tuition-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); }
+.tuition-table tr:nth-child(even) td { background: var(--gray-50); }
+.tuition-table tr:hover td { background: rgba(59,130,246,0.05); }
+
+/* --- 31. TN Info Banner --- */
+.tn-info-banner { background: #fef3c7; border: 1px solid #f59e0b; border-radius: var(--radius); padding: 1.5rem; }
+.tn-info-banner__title { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+.tn-info-banner__text { font-size: 0.875rem; color: var(--gray-700); line-height: 1.6; }
+.tn-info-banner__list { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0 0; font-size: 0.875rem; color: var(--gray-700); }
+.tn-info-banner__list li { margin-bottom: 0.25rem; }
+
+/* --- 32. Misc / Utility --- */
 .text-center { text-align: center; }
 .text-accent { color: var(--brand-accent); }
 .text-blue { color: var(--brand-blue); }
