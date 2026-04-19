@@ -33,7 +33,10 @@ $show_program  = $args['show_program'] ?? true;
                 <option>CDL Class "A" Training</option>
                 <option>Heavy Equipment Training</option>
                 <option>Diesel Mechanics</option>
+                <option>Fiber Optics Training</option>
                 <option>NCCER Training</option>
+                <option>OSHA &amp; Hazmat Training</option>
+                <option>Surface Mining Papers</option>
                 <option>Driver Improvement</option>
                 <option>Not Sure / Other</option>
             </select>
