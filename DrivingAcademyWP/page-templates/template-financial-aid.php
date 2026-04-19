@@ -107,6 +107,105 @@ $hero_img = get_the_post_thumbnail_url(get_the_ID(), 'hero-slide') ?: DAW_URI . 
     </div>
 </section>
 
+<!-- Tuition & Pricing -->
+<section class="section section--gray">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title"><?php esc_html_e('Tuition & Program Costs', 'drivingacademywp'); ?></h2>
+            <p class="section__subtitle"><?php esc_html_e('All costs include tuition, books, supplies, and certification fees unless otherwise noted.', 'drivingacademywp'); ?></p>
+        </div>
+        <div style="overflow-x:auto;">
+            <table class="tuition-table">
+                <thead>
+                    <tr>
+                        <th><?php esc_html_e('Program', 'drivingacademywp'); ?></th>
+                        <th><?php esc_html_e('Duration', 'drivingacademywp'); ?></th>
+                        <th><?php esc_html_e('Tuition', 'drivingacademywp'); ?></th>
+                        <th><?php esc_html_e('Includes', 'drivingacademywp'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong><?php esc_html_e('CDL Class A Training', 'drivingacademywp'); ?></strong></td>
+                        <td><?php esc_html_e('4 Weeks / 160 Hours', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('$3,800 - $4,500*', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('Training, books, supplies, DOT physical, drug screen', 'drivingacademywp'); ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong><?php esc_html_e('Heavy Equipment Training', 'drivingacademywp'); ?></strong></td>
+                        <td><?php esc_html_e('5-6 Weeks / 200 Hours', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('$4,250 - $4,900', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('Training, books, supplies, OSHA & flagman certifications', 'drivingacademywp'); ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong><?php esc_html_e('Diesel Mechanics', 'drivingacademywp'); ?></strong></td>
+                        <td><?php esc_html_e('11 Months', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('$21,500', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('Tuition, books, supplies, first ASE certification test', 'drivingacademywp'); ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong><?php esc_html_e('Fiber Optics Training', 'drivingacademywp'); ?></strong></td>
+                        <td><?php esc_html_e('3 Weeks / 120 Hours', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('$2,500', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('Training, materials, books, tools used in training', 'drivingacademywp'); ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong><?php esc_html_e('OSHA & Hazmat Training', 'drivingacademywp'); ?></strong></td>
+                        <td><?php esc_html_e('2 Days', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('$125', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('Training, materials, books', 'drivingacademywp'); ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong><?php esc_html_e('Surface Mining Papers', 'drivingacademywp'); ?></strong></td>
+                        <td><?php esc_html_e('2 Days', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('$125', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('Training and books', 'drivingacademywp'); ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong><?php esc_html_e('Driver Improvement Course', 'drivingacademywp'); ?></strong></td>
+                        <td><?php esc_html_e('1 Day (8 AM - 5 PM)', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('$75', 'drivingacademywp'); ?></td>
+                        <td><?php esc_html_e('Virginia-certified course, online option available ($50)', 'drivingacademywp'); ?></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="font-size:0.8125rem;color:var(--gray-600);margin-top:1rem;">
+            <?php esc_html_e('* CDL tuition varies by state of residence. Call for exact pricing for your state. HAZMAT endorsement training is included in CDL tuition, but DMV background check and endorsement fees are paid separately by the student.', 'drivingacademywp'); ?>
+        </p>
+    </div>
+</section>
+
+<!-- Pell Grant -->
+<section class="section">
+    <div class="container">
+        <div class="grid grid--2" style="align-items:center;">
+            <div>
+                <div class="aid-card__icon" style="margin-bottom:1rem;"><?php echo daw_icon('graduation', '', '24'); ?></div>
+                <h2 style="font-size:1.5rem;font-weight:700;color:var(--brand-blue);margin-bottom:0.75rem;"><?php esc_html_e('Pell Grant Eligibility', 'drivingacademywp'); ?></h2>
+                <p style="color:var(--gray-600);line-height:1.7;margin-bottom:1rem;">
+                    <?php esc_html_e('Some students may be eligible for a Federal Pell Grant for certain courses. Pell Grants do not need to be repaid and can significantly reduce your out-of-pocket costs. Eligibility is determined by the Federal Government based on your financial need.', 'drivingacademywp'); ?>
+                </p>
+                <h3 style="font-weight:600;margin-bottom:0.5rem;"><?php esc_html_e('Programs eligible for Pell Grant consideration:', 'drivingacademywp'); ?></h3>
+                <ul class="curriculum-section" style="margin-bottom:1rem;">
+                    <li><?php esc_html_e('Heavy Equipment Training', 'drivingacademywp'); ?></li>
+                    <li><?php esc_html_e('CDL Class A Commercial Driver Training', 'drivingacademywp'); ?></li>
+                </ul>
+                <p style="font-size:0.8125rem;color:var(--gray-600);font-style:italic;">
+                    <?php esc_html_e('Note: Pell Grants are not available for Tennessee residents. Contact our office for details on eligibility requirements.', 'drivingacademywp'); ?>
+                </p>
+            </div>
+            <div>
+                <div class="cta-card">
+                    <h3 class="cta-card__title"><?php esc_html_e('Request a Pell Grant Application', 'drivingacademywp'); ?></h3>
+                    <p class="cta-card__subtitle"><?php esc_html_e('Provide your email and we\'ll send you the application package with instructions.', 'drivingacademywp'); ?></p>
+                    <a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="btn btn--primary btn--lg" style="width:100%;"><?php esc_html_e('Contact Us for Application', 'drivingacademywp'); ?></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- CTA -->
 <section class="section section--gray">
     <div class="container">
