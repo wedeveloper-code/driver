@@ -17,9 +17,9 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
     ]);
 
     $contact_fields = [
-        'daw_address'   => ['Address', '123 Training Road, Lebanon, VA 24266'],
-        'daw_phone'     => ['Phone', '(276) 889-4042'],
-        'daw_email'     => ['Email', 'info@tricountydrivingacademy.com'],
+        'daw_address'   => ['Address', "1714 US Hwy 19 (Hansonville)\nP.O. Box 2109, Lebanon, VA 24266"],
+        'daw_phone'     => ['Phone', '(276) 794-7660'],
+        'daw_email'     => ['Email', 'tcda1@hotmail.com'],
         'daw_hours'     => ['Business Hours', 'Mon - Fri: 8:00 AM - 5:00 PM'],
         'daw_map_embed' => ['Google Maps Embed URL', ''],
     ];
