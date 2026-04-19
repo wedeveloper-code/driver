@@ -132,6 +132,52 @@ $hero_img = get_the_post_thumbnail_url(get_the_ID(), 'hero-slide') ?: DAW_URI . 
             <?php endforeach; ?>
         </div>
 
+        <!-- Additional Programs -->
+        <h2 class="faq-category"><?php esc_html_e('Additional Programs & Certifications', 'drivingacademywp'); ?></h2>
+        <div class="faq-group">
+            <?php
+            $additional = [
+                ['Do you offer Fiber Optics Training?', 'Yes. Our Fiber Optics program is a 3-week (120-hour) course that covers fiber optic design, installation, cable termination, and testing. Graduates earn a Certified Fiber Optic Technician certificate from the Fiber Optic Association (FOA). Tuition is $2,500.'],
+                ['What is OSHA & Hazmat Training?', 'We offer a 2-day OSHA and Hazmat Training course ($125) that covers workplace safety standards and hazardous materials handling. Classes start once per month. OSHA and Flagman certifications are also included in our Heavy Equipment Training program.'],
+                ['Do you offer Surface Mining certification?', 'Yes. Our Surface Mining Papers course is a 2-day program ($125) that provides the documentation needed for surface mining operations. Contact our office for the next available class date.'],
+                ['What is the HAZMAT endorsement for CDL?', 'Our CDL program includes HAZMAT endorsement training. You will learn everything needed to pass the HAZMAT written test. Note: students are responsible for paying the DMV background check and endorsement fees separately — these are not included in tuition.'],
+                ['Do you offer a CDL refresher course?', 'Yes. If you already have a CDL but need to brush up on your skills, we offer a refresher course. Contact our admissions office for details and pricing.'],
+                ['Can I earn college credits?', 'Through our partnership with Southwest Virginia Community College (SVCC), qualifying students may earn college credit hours: 12 credits for CDL Training, 12 credits for Heavy Equipment, and 10 credits for Fiber Optics. Credit availability may vary by state of residence.'],
+            ];
+            foreach ($additional as $faq) :
+            ?>
+            <details class="faq-item">
+                <summary class="faq-item__question">
+                    <?php echo esc_html($faq[0]); ?>
+                    <span class="faq-item__icon"><?php echo daw_icon('plus', '', '16'); ?></span>
+                </summary>
+                <div class="faq-item__answer"><p><?php echo esc_html($faq[1]); ?></p></div>
+            </details>
+            <?php endforeach; ?>
+        </div>
+
+        <!-- Practical Info -->
+        <h2 class="faq-category"><?php esc_html_e('Practical Information', 'drivingacademywp'); ?></h2>
+        <div class="faq-group">
+            <?php
+            $practical = [
+                ['Is there lodging available for out-of-town students?', 'Yes. We are located near affordable motels that offer rooms with small refrigerators at budget-friendly rates. Our staff is happy to help arrange lodging for the duration of your training program. Call our office for recommendations.'],
+                ['How do I get to the campus?', 'From Interstate 81, take Exit 14 (Abingdon). Turn right at the exit, then right on US 11, then left on US 19 North. Drive approximately 12-20 miles to the Valero/Exxon station at Hansonville. Turn right into the parking lot and follow the driveway to our building. See our Contact page for detailed step-by-step directions.'],
+                ['Do Tennessee residents have different requirements?', 'Yes. Tennessee students must have a high school diploma or GED before enrollment. Pell Grants and college credits are not available for Tennessee residents. Tuition rates may differ — contact our office for current TN pricing.'],
+                ['How often do new classes start?', 'CDL classes begin every 3 weeks. Heavy Equipment and Fiber Optics classes start on the first Monday of each month. OSHA, Hazmat, and Surface Mining classes are held once per month. Contact us for the next available start date.'],
+            ];
+            foreach ($practical as $faq) :
+            ?>
+            <details class="faq-item">
+                <summary class="faq-item__question">
+                    <?php echo esc_html($faq[0]); ?>
+                    <span class="faq-item__icon"><?php echo daw_icon('plus', '', '16'); ?></span>
+                </summary>
+                <div class="faq-item__answer"><p><?php echo esc_html($faq[1]); ?></p></div>
+            </details>
+            <?php endforeach; ?>
+        </div>
+
     </div>
 </section>
 
