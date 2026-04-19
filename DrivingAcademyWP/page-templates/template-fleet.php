@@ -101,6 +101,8 @@ $hero_img = get_the_post_thumbnail_url(get_the_ID(), 'hero-slide') ?: DAW_URI . 
                 ['Track Excavators', 'CAT 320 & Komatsu PC210', DAW_URI . '/assets/images/excavator-and-loader-training.jpg', ['Joystick ISO/SAE controls', 'Trenching & grading simulation', 'Enclosed ROPS/FOPS cabs']],
                 ['Wheel Loaders', 'John Deere 544L', DAW_URI . '/assets/images/bulldozer-with-a-bucket.jpg', ['Articulated steering', 'Stockpiling & truck loading', 'Quick-coupler attachments']],
                 ['Bulldozers', 'CAT D6N', DAW_URI . '/assets/images/bulldozer-training.jpg', ['6-Way PAT blade operation', 'GPS machine control basics', 'Rough & finish grading']],
+                ['Backhoes', 'Multi-Purpose Loader-Excavator', DAW_URI . '/assets/images/heavy.jpg', ['Digging & trenching operations', 'Loading & material handling', 'Versatile job-site workhorse']],
+                ['Forklifts', 'Warehouse & Job-Site Models', DAW_URI . '/assets/images/tractor_trailer_services.jpg', ['OSHA forklift certification included', 'Warehouse & rough-terrain models', 'Load capacity & safety protocols']],
             ];
             foreach ($equipment as $eq) :
             ?>
