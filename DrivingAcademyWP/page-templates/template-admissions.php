@@ -64,4 +64,55 @@ $hero_img = get_the_post_thumbnail_url(get_the_ID(), 'hero-slide') ?: DAW_URI . 
     </div>
 </section>
 
+<!-- Tennessee Students -->
+<section class="section section--gray">
+    <div class="container">
+        <div class="tn-info-banner">
+            <div class="tn-info-banner__title">
+                <?php echo daw_icon('shield', '', '18'); ?>
+                <?php esc_html_e('Important Information for Tennessee Residents', 'drivingacademywp'); ?>
+            </div>
+            <div class="tn-info-banner__text">
+                <p><?php esc_html_e('Tri-County Driving Academy is authorized for operation as a postsecondary educational institution by the Tennessee Higher Education Commission. The following conditions apply to students from Tennessee:', 'drivingacademywp'); ?></p>
+                <ul class="tn-info-banner__list">
+                    <li><?php esc_html_e('No Pell Grants are available for Tennessee students.', 'drivingacademywp'); ?></li>
+                    <li><?php esc_html_e('No college credits are available for Tennessee students.', 'drivingacademywp'); ?></li>
+                    <li><?php esc_html_e('Tennessee students are required to have a high school diploma or GED before enrollment in CDL, Heavy Equipment, or Fiber Optics programs.', 'drivingacademywp'); ?></li>
+                    <li><?php esc_html_e('Tuition rates may differ for Tennessee residents — contact our office for current pricing.', 'drivingacademywp'); ?></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SVCC College Credits -->
+<section class="section">
+    <div class="container" style="max-width:48rem;">
+        <div class="section__header">
+            <h2 class="section__title"><?php esc_html_e('Earn College Credits', 'drivingacademywp'); ?></h2>
+            <p class="section__subtitle"><?php esc_html_e('Through our partnership with Southwest Virginia Community College (SVCC), qualifying students may earn college credit hours toward Career Studies Diplomas.', 'drivingacademywp'); ?></p>
+        </div>
+        <div class="grid grid--3">
+            <div class="aid-card text-center">
+                <div class="aid-card__icon"><?php echo daw_icon('graduation', '', '24'); ?></div>
+                <h3 class="aid-card__title"><?php esc_html_e('CDL Training', 'drivingacademywp'); ?></h3>
+                <p class="aid-card__text"><?php esc_html_e('12 college credit hours toward a Career Studies Diploma from SVCC.', 'drivingacademywp'); ?></p>
+            </div>
+            <div class="aid-card text-center">
+                <div class="aid-card__icon"><?php echo daw_icon('excavator', '', '24'); ?></div>
+                <h3 class="aid-card__title"><?php esc_html_e('Heavy Equipment', 'drivingacademywp'); ?></h3>
+                <p class="aid-card__text"><?php esc_html_e('12 college credit hours toward a Career Studies Diploma from SVCC.', 'drivingacademywp'); ?></p>
+            </div>
+            <div class="aid-card text-center">
+                <div class="aid-card__icon"><?php echo daw_icon('cog', '', '24'); ?></div>
+                <h3 class="aid-card__title"><?php esc_html_e('Fiber Optics', 'drivingacademywp'); ?></h3>
+                <p class="aid-card__text"><?php esc_html_e('10 college credit hours toward a Career Studies Diploma from SVCC.', 'drivingacademywp'); ?></p>
+            </div>
+        </div>
+        <p class="text-center mt-2" style="font-size:0.8125rem;color:var(--gray-600);">
+            <?php esc_html_e('College credit availability may vary. Contact our admissions office for details specific to your state of residence.', 'drivingacademywp'); ?>
+        </p>
+    </div>
+</section>
+
 <?php get_footer(); ?>
