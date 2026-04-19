@@ -505,7 +505,27 @@ input, select, textarea { font: inherit; }
 .comment-respond textarea { width: 100%; padding: 0.625rem 1rem; border: 1px solid var(--gray-300); border-radius: 0.375rem; margin-bottom: 1rem; }
 .comment-respond textarea { min-height: 8rem; }
 
-/* --- 27. Misc / Utility --- */
+/* --- 27. Page Hero Short --- */
+.page-hero--short { min-height: 220px; padding: 3rem 0; }
+.page-hero--short .page-hero__content { padding: 2rem 0; }
+
+/* --- 28. FAQ Categories --- */
+.faq-category { font-size: 1.25rem; font-weight: 700; color: var(--brand-blue); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--brand-accent); }
+.faq-category:first-child { margin-top: 0; }
+.faq-group { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+
+/* --- 29. 404 Error Page --- */
+.error-page { padding: 5rem 0; }
+.error-page__code { font-size: 8rem; font-weight: 800; color: var(--brand-blue); line-height: 1; margin-bottom: 1rem; opacity: 0.15; }
+.error-page__title { font-size: 2rem; font-weight: 700; color: var(--gray-800); margin-bottom: 1rem; }
+.error-page__text { color: var(--gray-600); font-size: 1.125rem; max-width: 32rem; margin: 0 auto 2rem; line-height: 1.6; }
+.error-page__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.error-page__links { background: var(--gray-50); border-radius: var(--radius); padding: 1.5rem; display: inline-block; }
+.error-page__links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: center; }
+.error-page__links a { color: var(--brand-light); font-size: 0.875rem; }
+.error-page__links a:hover { color: var(--brand-blue); text-decoration: underline; }
+
+/* --- 30. Misc / Utility --- */
 .text-center { text-align: center; }
 .text-accent { color: var(--brand-accent); }
 .text-blue { color: var(--brand-blue); }
