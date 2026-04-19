@@ -142,11 +142,58 @@ $map_url  = get_theme_mod('daw_map_embed', 'https://www.google.com/maps/embed?pb
     </div>
 </section>
 
+<!-- Driving Directions -->
+<section class="section section--gray">
+    <div class="container">
+        <div class="grid grid--2" style="align-items:start;gap:3rem;">
+            <div>
+                <h2 style="font-size:1.5rem;font-weight:700;color:var(--brand-blue);margin-bottom:1rem;">
+                    <?php echo daw_icon('map', '', '20'); ?>
+                    <?php esc_html_e('Driving Directions', 'drivingacademywp'); ?>
+                </h2>
+                <div class="timeline">
+                    <?php
+                    $directions = [
+                        ['From Interstate 81', 'Take Virginia Exit 14 (Abingdon), just north of Bristol. Turn right at end of exit ramp.'],
+                        ['US Route 11', 'At the second red light, turn right onto Lee Highway / US 11 (T intersection).'],
+                        ['US Route 19 North', 'At the next red light, turn left onto US 19 N / Alt. 58 W. You will pass over a railroad overpass.'],
+                        ['Continue 12-20 Miles', 'Drive approximately 12-20 miles. You will pass a Dodge Dealership, then look for the Valero/Exxon gas station at Hansonville (3rd set of flashing yellow lights).'],
+                        ['Arrive at Campus', 'Turn right into the Valero/Exxon parking lot. Follow the driveway down the hill behind the station to our building.'],
+                    ];
+                    foreach ($directions as $d) :
+                    ?>
+                    <div class="timeline__step">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__title"><?php echo esc_html($d[0]); ?></div>
+                        <div class="timeline__text"><?php echo esc_html($d[1]); ?></div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div>
+                <h2 style="font-size:1.5rem;font-weight:700;color:var(--brand-blue);margin-bottom:1rem;">
+                    <?php echo daw_icon('building', '', '20'); ?>
+                    <?php esc_html_e('Student Accommodations', 'drivingacademywp'); ?>
+                </h2>
+                <div class="aid-card">
+                    <h3 class="aid-card__title"><?php esc_html_e('Lodging for Out-of-Town Students', 'drivingacademywp'); ?></h3>
+                    <p class="aid-card__text"><?php esc_html_e('Coming from out of town? We are located near affordable lodging options. Our staff is happy to help with lodging arrangements for the duration of your training program.', 'drivingacademywp'); ?></p>
+                    <p class="aid-card__text"><?php esc_html_e('Local motels offer rooms with small refrigerators at affordable nightly rates. Contact our admissions office and we\'ll help you find convenient, budget-friendly accommodations near campus.', 'drivingacademywp'); ?></p>
+                    <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', daw_get_contact('phone'))); ?>" class="btn btn--outline" style="margin-top:0.75rem;">
+                        <?php echo daw_icon('phone', '', '14'); ?>
+                        <?php esc_html_e('Call for Lodging Help', 'drivingacademywp'); ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php
 $content = get_the_content();
 if ($content) :
 ?>
-<section class="section section--gray">
+<section class="section">
     <div class="container curriculum-section">
         <?php the_content(); ?>
     </div>
