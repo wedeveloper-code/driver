@@ -39,6 +39,7 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 add_action('wp_head', function () {
+    echo '<link rel="preload" href="' . esc_url(DAW_URI . '/assets/fonts/inter/Inter-400.woff2') . '" as="font" type="font/woff2" crossorigin>' . "\n";
     echo '<link rel="preload" href="' . esc_url(DAW_URI . '/assets/fonts/inter/Inter-700.woff2') . '" as="font" type="font/woff2" crossorigin>' . "\n";
 }, 1);
 

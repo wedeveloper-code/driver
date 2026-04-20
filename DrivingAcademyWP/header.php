@@ -3,8 +3,8 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="<?php echo esc_url(DAW_URI . '/assets/images/favicon.ico'); ?>" type="image/x-icon">
     <link rel="icon" href="<?php echo esc_url(DAW_URI . '/assets/images/favicon.png'); ?>" type="image/png">
+    <link rel="icon" href="<?php echo esc_url(DAW_URI . '/assets/images/favicon.ico'); ?>" sizes="32x32">
     <?php daw_seo_meta(); ?>
     <?php daw_schema_local_business(); ?>
     <?php wp_head(); ?>
@@ -20,7 +20,7 @@
                 $logo_id = get_theme_mod('custom_logo');
                 $logo_url = wp_get_attachment_image_url($logo_id, 'full');
                 ?>
-                <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>" class="site-logo__img" width="160" height="45">
+                <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>" class="site-logo__img" width="160" height="45" fetchpriority="high">
             <?php else : ?>
                 <?php echo daw_icon('truck', 'site-logo__icon', '32'); ?>
                 <span class="site-logo__text">Tri-County <span class="site-logo__accent">Academy</span></span>

@@ -79,11 +79,11 @@ function daw_breadcrumb() {
                 esc_html(get_the_title($ancestor_id))
             );
         }
-        echo '<span class="breadcrumb__current">' . esc_html(get_the_title()) . '</span>';
+        echo '<span class="breadcrumb__current" aria-current="page">' . esc_html(get_the_title()) . '</span>';
     } elseif (is_single()) {
         echo '<a href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '">News</a>';
         echo '<span class="breadcrumb__sep">/</span>';
-        echo '<span class="breadcrumb__current">' . esc_html(get_the_title()) . '</span>';
+        echo '<span class="breadcrumb__current" aria-current="page">' . esc_html(get_the_title()) . '</span>';
     } elseif (is_home()) {
         echo '<span class="breadcrumb__current">News</span>';
     } elseif (is_404()) {
