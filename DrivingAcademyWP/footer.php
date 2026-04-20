@@ -11,7 +11,7 @@
                         $logo_id = get_theme_mod('custom_logo');
                         $logo_url = wp_get_attachment_image_url($logo_id, 'full');
                         ?>
-                        <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>" width="140" height="40">
+                        <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>" width="140" height="40" loading="lazy">
                     <?php else : ?>
                         <?php echo daw_icon('truck', 'site-logo__icon', '28'); ?>
                         <span class="site-logo__text" style="color:var(--white);">Tri-County <span class="site-logo__accent">Academy</span></span>
