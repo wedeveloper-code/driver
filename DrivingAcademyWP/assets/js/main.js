@@ -6,25 +6,35 @@
   var mainNav = document.getElementById('mainNav');
   var navOpen = false;
 
+  function closeMenu() {
+    if (!navOpen) return;
+    navOpen = false;
+    mainNav.classList.remove('open');
+    navToggle.innerHTML = '<svg class="daw-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>';
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  function openMenu() {
+    navOpen = true;
+    mainNav.classList.add('open');
+    navToggle.innerHTML = '<svg class="daw-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M6 18L18 6"/></svg>';
+    navToggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
+  }
+
   if (navToggle && mainNav) {
     navToggle.addEventListener('click', function () {
-      navOpen = !navOpen;
-      mainNav.classList.toggle('open', navOpen);
-      navToggle.innerHTML = navOpen
-        ? '<svg class="daw-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M6 18L18 6"/></svg>'
-        : '<svg class="daw-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>';
-      navToggle.setAttribute('aria-expanded', navOpen ? 'true' : 'false');
+      navOpen ? closeMenu() : openMenu();
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && navOpen) {
-        navToggle.click();
-      }
+      if (e.key === 'Escape' && navOpen) closeMenu();
     });
 
     document.addEventListener('click', function (e) {
       if (navOpen && !mainNav.contains(e.target) && !navToggle.contains(e.target)) {
-        navToggle.click();
+        closeMenu();
       }
     });
   }
@@ -69,7 +79,7 @@
     timer = setInterval(nextSlide, 6500);
   }
 
-  if (slides.length > 0) {
+  if (slides.length > 1) {
     showSlide(0);
     startAutoplay();
 
@@ -97,18 +107,22 @@
     if (carousel) {
       carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
       carousel.addEventListener('mouseleave', startAutoplay);
-    }
 
-    document.addEventListener('keydown', function (e) {
-      if (!carousel) return;
-      var rect = carousel.getBoundingClientRect();
-      if (rect.top > window.innerHeight || rect.bottom < 0) return;
-      if (e.key === 'ArrowLeft') { showSlide(current - 1); startAutoplay(); }
-      if (e.key === 'ArrowRight') { showSlide(current + 1); startAutoplay(); }
-    });
+      document.addEventListener('keydown', function (e) {
+        var rect = carousel.getBoundingClientRect();
+        if (rect.top > window.innerHeight || rect.bottom < 0) return;
+        if (e.key === 'ArrowLeft') { showSlide(current - 1); startAutoplay(); }
+        if (e.key === 'ArrowRight') { showSlide(current + 1); startAutoplay(); }
+      });
+    }
+  } else if (slides.length === 1) {
+    showSlide(0);
   }
 
   // --- Smooth Scroll ---
+  var header = document.querySelector('.site-header');
+  var scrollOffset = header ? header.offsetHeight + 20 : 100;
+
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
       var id = this.getAttribute('href');
@@ -116,17 +130,16 @@
       var target = document.querySelector(id);
       if (target) {
         e.preventDefault();
-        var offset = 100;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - scrollOffset;
         window.scrollTo({ top: top, behavior: 'smooth' });
-        if (navOpen && navToggle) navToggle.click();
+        if (navOpen) closeMenu();
       }
     });
   });
 
   // --- IntersectionObserver Counters ---
   var counters = document.querySelectorAll('[data-counter]');
-  if (counters.length) {
+  if (counters.length && 'IntersectionObserver' in window) {
     var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;

@@ -1,27 +1,38 @@
 (function () {
   'use strict';
 
-  var form = document.getElementById('dawContactForm');
+  var form = document.getElementById('daw-contact-form');
   if (!form) return;
 
-  var captchaQuestion = document.getElementById('captchaQuestion');
-  var captchaInput = document.getElementById('captchaAnswer');
-  var captchaToken = document.getElementById('captchaToken');
-  var messageBox = document.getElementById('formMessage');
+  var captchaQuestion = document.getElementById('captcha-question');
+  var captchaInput = document.getElementById('cf-captcha');
+  var captchaToken = document.getElementById('cf-captcha-token');
+  var messageBox = document.getElementById('form-status');
   var submitBtn = form.querySelector('button[type="submit"]');
+  var isSubmitting = false;
+
+  if (!captchaQuestion || !captchaInput || !captchaToken || !messageBox || !submitBtn) return;
 
   function loadCaptcha() {
+    if (typeof dawAjax === 'undefined') return;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', dawAjax.url, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
       if (xhr.status === 200) {
-        var data = JSON.parse(xhr.responseText);
-        if (data.success) {
-          captchaQuestion.textContent = data.data.question;
-          captchaToken.value = data.data.token;
+        try {
+          var data = JSON.parse(xhr.responseText);
+          if (data.success && data.data) {
+            captchaQuestion.textContent = data.data.question;
+            captchaToken.value = data.data.token;
+          }
+        } catch (e) {
+          captchaQuestion.textContent = 'Captcha unavailable. Please refresh.';
         }
       }
+    };
+    xhr.onerror = function () {
+      captchaQuestion.textContent = 'Captcha unavailable. Please refresh.';
     };
     xhr.send('action=daw_captcha_generate');
   }
@@ -30,30 +41,36 @@
 
   function showMessage(text, type) {
     messageBox.textContent = text;
-    messageBox.className = 'form-message form-message--' + type;
-    messageBox.style.display = 'block';
+    messageBox.className = 'form-status ' + type;
   }
 
   function hideMessage() {
-    messageBox.style.display = 'none';
+    messageBox.textContent = '';
+    messageBox.className = 'form-status';
   }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (isSubmitting) return;
     hideMessage();
 
-    var name = form.querySelector('[name="name"]').value.trim();
-    var email = form.querySelector('[name="email"]').value.trim();
-    var message = form.querySelector('[name="message"]').value.trim();
+    var name = (form.querySelector('[name="name"]') || {}).value || '';
+    var email = (form.querySelector('[name="email"]') || {}).value || '';
+    var phone = (form.querySelector('[name="phone"]') || {}).value || '';
+    var subject = (form.querySelector('[name="subject"]') || {}).value || '';
+    var message = (form.querySelector('[name="message"]') || {}).value || '';
     var captcha = captchaInput.value.trim();
+
+    name = name.trim();
+    email = email.trim();
+    message = message.trim();
 
     if (!name || !email || !message) {
       showMessage('Please fill in all required fields.', 'error');
       return;
     }
 
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showMessage('Please enter a valid email address.', 'error');
       return;
     }
@@ -63,14 +80,17 @@
       return;
     }
 
+    isSubmitting = true;
     submitBtn.disabled = true;
-    var originalText = submitBtn.textContent;
+    var originalHTML = submitBtn.innerHTML;
     submitBtn.textContent = 'Sending...';
 
     var params = 'action=daw_contact'
       + '&nonce=' + encodeURIComponent(dawAjax.nonce)
       + '&name=' + encodeURIComponent(name)
       + '&email=' + encodeURIComponent(email)
+      + '&phone=' + encodeURIComponent(phone)
+      + '&subject=' + encodeURIComponent(subject)
       + '&message=' + encodeURIComponent(message)
       + '&captcha=' + encodeURIComponent(captcha)
       + '&captcha_token=' + encodeURIComponent(captchaToken.value);
@@ -79,26 +99,28 @@
     xhr.open('POST', dawAjax.url, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
+      isSubmitting = false;
       submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
+      submitBtn.innerHTML = originalHTML;
 
-      if (xhr.status === 200) {
+      try {
         var data = JSON.parse(xhr.responseText);
         if (data.success) {
-          showMessage(data.data.message, 'success');
+          showMessage(data.data.message || 'Message sent successfully!', 'success');
           form.reset();
           loadCaptcha();
         } else {
-          showMessage(data.data.message || 'An error occurred.', 'error');
+          showMessage((data.data && data.data.message) || 'An error occurred.', 'error');
           loadCaptcha();
         }
-      } else {
-        showMessage('Network error. Please try again.', 'error');
+      } catch (e) {
+        showMessage('Unexpected server response. Please try again.', 'error');
       }
     };
     xhr.onerror = function () {
+      isSubmitting = false;
       submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
+      submitBtn.innerHTML = originalHTML;
       showMessage('Network error. Please try again.', 'error');
     };
     xhr.send(params);
