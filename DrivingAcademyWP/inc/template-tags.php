@@ -152,3 +152,102 @@ function daw_schema_local_business() {
         wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT)
     );
 }
+
+function daw_default_page_content($slug) {
+    $pages = [
+        'privacy-policy' => '
+<h2>Information We Collect</h2>
+<p>When you visit our website or contact us, we may collect the following information:</p>
+<ul>
+<li><strong>Personal Information:</strong> Name, email address, phone number, and mailing address when you submit our contact or enrollment forms.</li>
+<li><strong>Educational Records:</strong> Training progress, certifications earned, and attendance records for enrolled students.</li>
+<li><strong>Website Usage Data:</strong> IP address, browser type, pages visited, and time spent on our site through standard web server logs.</li>
+</ul>
+
+<h2>How We Use Your Information</h2>
+<ul>
+<li>To respond to your inquiries and enrollment requests</li>
+<li>To process admissions applications and financial aid</li>
+<li>To maintain student training records as required by FMCSA, Virginia DMV, and accrediting bodies</li>
+<li>To send program updates, class schedules, and career opportunities (with your consent)</li>
+<li>To improve our website and training programs</li>
+</ul>
+
+<h2>Information Sharing</h2>
+<p>We do not sell, rent, or trade your personal information. We may share information with:</p>
+<ul>
+<li><strong>Regulatory Bodies:</strong> FMCSA, Virginia DMV, SCHEV, and NCCER as required for licensing and certification</li>
+<li><strong>Hiring Partners:</strong> Only with your explicit written consent for job placement purposes</li>
+<li><strong>Financial Aid Providers:</strong> WIOA offices and VA benefits administrators to process your funding</li>
+</ul>
+
+<h2>Data Security</h2>
+<p>We implement appropriate security measures to protect your personal information, including encrypted form submissions and secure record storage. Student records are maintained in compliance with applicable federal and state regulations.</p>
+
+<h2>Your Rights</h2>
+<p>You may request access to, correction of, or deletion of your personal information by contacting us at <a href="mailto:' . esc_attr(daw_get_contact('email')) . '">' . esc_html(daw_get_contact('email')) . '</a> or calling ' . esc_html(daw_get_contact('phone')) . '.</p>
+
+<h2>Contact Us</h2>
+<p>If you have questions about this Privacy Policy, please contact:</p>
+<p>Tri-County Driving Academy, Inc.<br>' . esc_html(daw_get_contact('address')) . '<br>Phone: ' . esc_html(daw_get_contact('phone')) . '<br>Email: <a href="mailto:' . esc_attr(daw_get_contact('email')) . '">' . esc_html(daw_get_contact('email')) . '</a></p>
+
+<p><em>Last updated: January 2025</em></p>',
+
+        'terms-of-service' => '
+<h2>Enrollment Agreement</h2>
+<p>By enrolling in any training program at Tri-County Driving Academy, Inc., you agree to the following terms and conditions.</p>
+
+<h2>Admissions Requirements</h2>
+<ul>
+<li>Students must meet all program-specific prerequisites as listed on the respective program page</li>
+<li>CDL students must be at least 18 years old (21 for interstate driving) and hold a valid driver\'s license</li>
+<li>All students must pass required DOT physical and drug screening where applicable</li>
+<li>Tri-County Driving Academy reserves the right to deny admission based on driving record review</li>
+</ul>
+
+<h2>Tuition & Payment</h2>
+<ul>
+<li>Tuition is due in full prior to the start of training unless a payment plan or financial aid has been arranged</li>
+<li>Payment plans are available interest-free with no credit check required</li>
+<li>Financial aid through WIOA, Veterans Benefits, and employer reimbursement may cover partial or full tuition</li>
+<li>All fees are subject to change; current pricing is listed on our Financial Aid page</li>
+</ul>
+
+<h2>Attendance & Conduct</h2>
+<ul>
+<li>Students are expected to attend all scheduled training sessions</li>
+<li>Excessive absences may result in dismissal from the program</li>
+<li>Students must comply with all safety regulations and instructor directions</li>
+<li>Use of alcohol, drugs, or any controlled substance during training is grounds for immediate dismissal</li>
+<li>Students dismissed for conduct violations are not eligible for tuition refunds</li>
+</ul>
+
+<h2>Refund Policy</h2>
+<ul>
+<li>Students who withdraw before the first day of class receive a full refund minus the registration fee</li>
+<li>Refunds after the start of training are prorated based on the percentage of training completed</li>
+<li>No refund is given after 50% of the program has been completed</li>
+<li>Refund requests must be submitted in writing to the academy administration</li>
+</ul>
+
+<h2>Certification & Licensing</h2>
+<ul>
+<li>Successful completion of training does not guarantee passing state licensing exams</li>
+<li>Students are responsible for all DMV fees, endorsement fees, and licensing costs</li>
+<li>Tri-County Driving Academy provides test preparation but the licensing authority makes all pass/fail determinations</li>
+</ul>
+
+<h2>Job Placement</h2>
+<p>Tri-County Driving Academy offers lifetime job placement assistance to graduates. While we maintain partnerships with 30+ hiring companies and have a 94% placement rate, we do not guarantee employment.</p>
+
+<h2>Limitation of Liability</h2>
+<p>Tri-County Driving Academy, Inc. is not liable for any injuries sustained during training beyond what is covered by our insurance policies. Students participate in all training activities at their own risk and must follow all safety protocols.</p>
+
+<h2>Contact</h2>
+<p>For questions about these terms, contact:<br>Tri-County Driving Academy, Inc.<br>' . esc_html(daw_get_contact('address')) . '<br>Phone: ' . esc_html(daw_get_contact('phone')) . '<br>Email: <a href="mailto:' . esc_attr(daw_get_contact('email')) . '">' . esc_html(daw_get_contact('email')) . '</a></p>
+
+<p><em>Last updated: January 2025</em></p>',
+    ];
+
+    return $pages[$slug] ?? '<p>This page is being updated. Please check back soon.</p>';
+}
